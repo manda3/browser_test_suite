@@ -1,0 +1,326 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/main.js">
+    </script>
+    <script type="text/javascript" src="../js/private_test.js"></script>
+    <script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+
+        function goToTop () {
+            window.open("../../index.htm", "_self", false);
+        }
+
+    </script>
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+              
+        </div>
+        <div class="col-xs-2">
+            
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回首页</button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <ul class="nav nav-pills" id="tabs">
+            <li class="active dropdown">
+                <a href="#" data-toggle="dropdown" role="button" id="drop1">av对象<b class="caret"></b></a>
+                <ul class="dropdown-menu" role="menu" aria-labelleby="drop1">
+                    <li><a href="#id_private" data-toggle="tab">id</a></li>
+                    <li><a href="#serviceID_private" data-toggle="tab">service</a></li>
+                    
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" data-toggle="dropdown" role="button" id="drop2">movieWnd对象<b class="caret"></b></a>
+                <ul class="dropdown-menu" role="menu" aria-labelleby="drop2">
+                    <li><a href="#getVolume_private" data-toggle="tab">getVolume</a></li>
+                    <li><a href="#setVolume_private" data-toggle="tab">setVolume</a></li>
+                    
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" data-toggle="dropdown" role="button" id="drop3">iPanel对象<b class="caret"></b></a>
+                <ul class="dropdown-menu" role="menu" aria-labelleby="drop3">
+                    <li><a href="#ioctlRead_func_private" data-toggle="tab">ioctlRead()</a></li>
+                    <li><a href="#ioctlWrite_func_private" data-toggle="tab">ioctlWrite()</a></li>
+                    
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" data-toggle="dropdown" role="button" id="drop4">guangxi对象<b class="caret"></b></a>
+                <ul class="dropdown-menu" role="menu" aria-labelleby="drop4">
+                    <li><a href="#System_network_macAddress_private" data-toggle="tab">System.network.macAddress</a></li>
+                    <li><a href="#setGlobalVar_func_private" data-toggle="tab">setGlobalVar()</a></li>
+                    <li><a href="#getGlobalVar_func_private" data-toggle="tab">getGlobalVar()</a></li>
+                    <li><a href="#getStbNum_private" data-toggle="tab">getStbNum</a></li>
+                    
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" data-toggle="dropdown" role="button" id="drop5">外部接口<b class="caret"></b></a>
+                <ul class="dropdown-menu" role="menu" aria-labelleby="drop5">
+                    <li><a href="#STBApp_private" data-toggle="tab">STBApp</a></li>
+                    <li><a href="#STBNo_private" data-toggle="tab">STBNo</a></li>
+                    <li><a href="#ITVHome_private" data-toggle="tab">ITVHome</a></li>
+                    <li><a href="#ITVURL_private" data-toggle="tab">ITVURL</a></li>
+                    <li><a href="#ITVWindowPosition_private" data-toggle="tab">ITVWindowPosition</a></li>
+                    <li><a href="#ITVVolume_private" data-toggle="tab">ITVVolume</a></li>
+                    <li><a href="#ITVControl_private" data-toggle="tab">ITVControl</a></li>
+                    <li><a href="#TVFullScreen_private" data-toggle="tab">TVFullScreen</a></li>
+                    <li><a href="#ITVBackURL_private" data-toggle="tab">ITVBackURL</a></li>
+                    <li><a href="#IPMacAddress_private" data-toggle="tab">IPMacAddress</a></li>
+                    <li><a href="#TRY_KEY_private" data-toggle="tab">TRY_KEY</a></li>
+                    <li><a href="#ITVSequence_private" data-toggle="tab">ITVSequence</a></li>
+                    <li><a href="#ITVChannel_private" data-toggle="tab">ITVChannel</a></li>
+                    <li><a href="#ITVType_private" data-toggle="tab">ITVType</a></li>
+                    <li><a href="#ITVScreen_private" data-toggle="tab">ITVScreen</a></li>
+                    <li><a href="#ITVRTSPURL_private" data-toggle="tab">ITVRTSPURL</a></li>
+                    <li><a href="#ITVVODState_private" data-toggle="tab">ITVVODState</a></li>
+                    
+                </ul>
+
+            </li>
+            
+        </ul>
+
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="id_private">
+                <h3>此页面用于测试javascript dom中的私有属性中的id</h3>
+                <p></p>
+                <av id="movieWnd" style="width:327px; height:250px;" serviceid="152"></av>
+                
+                <p></p>
+                <div id="showbox_id"></div>
+            </div>
+
+            <div class="tab-pane" id="serviceID_private">
+                <h3>此页面用于测试javascript dom中的私有属性中的serviceID</h3>
+                <p></p>
+                <av id="movieWnd_av2" serviceid="152" style="height:320px; height:250px;"></av>
+                <p></p>
+                <div id="showbox_serviceID"></div>
+            </div>
+
+            <div class="tab-pane" id="getVolume_private">
+                <h3>此页面用于测试javascript dom中的私有属性中的getVolume</h3>
+                <p></p>
+                <button onclick="testGetVolumeOfPrivate()">click getVolume of private</button>
+                <p></p>
+                <div id="showbox_getVolume"></div>
+            </div>
+
+            <div class="tab-pane" id="setVolume_private">
+                <h3>此页面用于测试javascript dom中的私有属性中的setVolume</h3>
+                <p></p>
+                <button onclick="testSetVolumeOfPrivate()">click setVolume of private</button>
+                <p></p>
+                <div id="showbox_setVolume"></div>
+            </div>
+
+            <div class="tab-pane" id="ioctlRead_func_private">
+                <h3>此页面用于测试javascript dom中的私有属性中的ioctlRead()</h3>
+                <p></p>
+                <button onclick="testIoctlReadFuncOfPrivate()">click ioctlRead() of private</button>
+                <p></p>
+                <div id="showbox_ioctlRead"></div>
+            </div>
+
+            <div class="tab-pane" id="ioctlWrite_func_private">
+                <h3>此页面用于测试javascript dom中的私有属性中的ioctlWrite()</h3>
+                <p></p>
+                <button onclick="testIoctlWriteFuncOfPrivate()">click ioctlWrite() of private</button>
+                <p></p>
+                <div id="showbox_ioctlWrite"></div>
+            </div>
+
+            <div class="tab-pane" id="System_network_macAddress_private">
+                <h3>此页面用于测试javascript dom中的私有属性中的System.network.macAddress</h3>
+                <p></p>
+                <button onclick="testSystemNetworkMacAddressOfPrivate()">click System.network.macAddress of private</button>
+                <p></p>
+                <div id="showbox_System_network_macAddress"></div>
+            </div>
+
+            <div class="tab-pane" id="setGlobalVar_func_private">
+                <h3>此页面用于测试javascript dom中的私有属性中的setGloabalVar()</h3>
+                <p></p>
+                <button onclick="testSetGlobalVarFuncOfPrivate()">click setGlobalVar() of private</button>
+                <p></p>
+                <div id="showbox_setGlobalVar"></div>
+            </div>
+
+            <div class="tab-pane" id="getGlobalVar_func_private">
+                <h3>此页面用于测试javascript dom中的私有属性中的getGlobalVar()</h3>
+                <p></p>
+                <button onclick="testGetGlobalVarFuncOfPrivate()">click getGlobalVar() of private</button>
+                <p></p>
+                <div id="showbox_getGlobalVar"></div>
+            </div>
+
+            <div class="tab-pane" id="getStbNum_private">
+                <h3>此页面用于测试javascript dom中的私有属性中的getStbNum</h3>
+                <p></p>
+                <button onclick="testGetStbNumOfPrivate()">click getStbNum of private</button>
+                <p></p>
+                <div id="showbox_getStbNum"></div>
+            </div>
+
+            <div class="tab-pane" id="STBApp_private">
+                <h3>此页面用于测试javascript dom中的私有属性中的STBApp</h3>
+                <p></p>
+                <button onclick="testSTBAppOfPrivate()">click STBApp of private</button>
+                <p></p>
+                <div id="showbox_STBApp"></div>
+            </div>
+
+            <div class="tab-pane" id="STBNo_private">
+                <h3>此页面用于测试javascript dom中的私有属性中的STBNo</h3>
+                <p></p>
+                <button onclick="testSTBNoOfPrivate()">click STBNo of private</button>
+                <p></p>
+                <div id="showbox_STBNo"></div>
+            </div>
+
+            <div class="tab-pane" id="ITVHome_private">
+                <h3>此页面用于测试javascript dom中的私有属性中的ITVHome</h3>
+                <p></p>
+                <button onclick="testITVHomeOfPrivate()">click ITVHome of private</button>
+                <p></p>
+                <div id="showbox_ITVHome"></div>
+            </div>
+
+            <div class="tab-pane" id="ITVURL_private">
+                <h3>此页面用于测试javascript dom中的私有属性中的ITVURL</h3>
+                <p></p>
+                <button onclick="testITVURLOfPrivate()">click ITVURL of private</button>
+                <p></p>
+                <div id="showbox_ITVURL"></div>
+            </div>
+
+            <div class="tab-pane" id="ITVWindowPosition_private">
+                <h3>此页面用于测试javascript dom中的私有属性中的ITVWindowPosition</h3>
+                <p></p>
+                <button onclick="testITVWindowPositionOfPrivate()">click ITVWindowPosition of private</button>
+                <p></p>
+                <div id="showbox_ITVWindowPosition"></div>
+            </div>
+
+            <div class="tab-pane" id="ITVVolume_private">
+                <h3>此页面用于测试javascript dom中的私有属性中的ITVVolume</h3>
+                <p></p>
+                <button onclick="testITVVolumeOfPrivate()">click ITVVolume of private</button>
+                <p></p>
+                <div id="showbox_ITVVolume"></div>
+            </div>
+
+            <div class="tab-pane" id="ITVControl_private">
+                <h3>此页面用于测试javascript dom中的私有属性中的ITVControl</h3>
+                <p></p>
+                <button onclick="testITVControlOfPrivate()">click ITVControl of private</button>
+                <p></p>
+                <div id="showbox_ITVControl"></div>
+            </div>  
+
+            <div class="tab-pane" id="TVFullScreen_private">
+                <h3>此页面用于测试javascript dom中的私有属性中的TVFullScreen</h3>
+                <p></p>
+                <button onclick="testTVFullScreenOfPrivate()">click TVFullScreen of private</button>
+                <p></p>
+                <div id="showbox_TVFullScreen"></div>
+            </div>
+
+            <div class="tab-pane" id="ITVBackURL_private">
+                <h3>此页面用于测试javascript dom中的私有属性中的ITVBackURL</h3>
+                <p></p>
+                <button onclick="testITVBackURLOfPrivate()">click ITVBackURL of private</button>
+                <p></p>
+                <div id="showbox_ITVBackURL"></div>
+            </div>
+
+            <div class="tab-pane" id="IPMacAddress_private">
+                <h3>此页面用于测试javascript dom中的私有属性中的IPMacAddress</h3>
+                <p></p>
+                <button onclick="testIPMacAddressOfPrivate()">click IPMacAddress of private</button>
+                <p></p>
+                <div id="showbox_IPMacAddress"></div>
+            </div>
+
+            <div class="tab-pane" id="TRY_KEY_private">
+                <h3>此页面用于测试javascript dom中的私有属性中的TRY_KEY</h3>
+                <p></p>
+                <button onclick="testTRYKEYOfPrivate()">click TRY_KEY of private</button>
+                <p></p>
+                <div id="showbox_TRY_KEY"></div>
+            </div>
+
+            <div class="tab-pane" id="ITVSequence_private">
+                <h3>此页面用于测试javascript dom中的私有属性中的ITVSequence</h3>
+                <p></p>
+                <button onclick="testITVSequenceOfPrivate()">click id of private</button>
+                <p></p>
+                <div id="showbox_ITVSequence"></div>
+            </div>
+
+            <div class="tab-pane" id="ITVChannel_private">
+                <h3>此页面用于测试javascript dom中的私有属性中的ITVChannel</h3>
+                <p></p>
+                <button onclick="testITVChannelOfPrivate()">click ITVChannel of private</button>
+                <p></p>
+                <div id="showbox_ITVChannel"></div>
+            </div>
+
+            <div class="tab-pane" id="ITVType_private">
+                <h3>此页面用于测试javascript dom中的私有属性中的ITVType</h3>
+                <p></p>
+                <button onclick="testITVTypeOfPrivate()">click ITVType of private</button>
+                <p></p>
+                <div id="showbox_ITVType"></div>
+            </div>
+
+            <div class="tab-pane" id="ITVScreen_private">
+                <h3>此页面用于测试javascript dom中的私有属性中的ITVScreen</h3>
+                <p></p>
+                <button onclick="testITVScreenOfPrivate()">click ITVScreen of private</button>
+                <p></p>
+                <div id="showbox_ITVScreen"></div>
+            </div>
+
+            <div class="tab-pane" id="ITVRTSPURL_private">
+                <h3>此页面用于测试javascript dom中的私有属性中的ITVRTSPURL</h3>
+                <p></p>
+                <button onclick="testITVRTSPURLOfPrivate()">click ITVRTSPURL of private</button>
+                <p></p>
+                <div id="showbox_ITVRTSPURL"></div>
+            </div>
+
+            <div class="tab-pane" id="ITVVODState_private">
+                <h3>此页面用于测试javascript dom中的私有属性中的ITVVODState</h3>
+                <p></p>
+                <button onclick="testITVVODStateOfPrivate()">click ITVVODState of private</button>
+                <p></p>
+                <div id="showbox_ITVVODState"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        testIdOfPrivate ();
+        testServiceIDOfPrivate ();
+    </script>
+</body>
+</html>

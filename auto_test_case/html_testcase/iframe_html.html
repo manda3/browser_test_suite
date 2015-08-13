@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/main.js">
+    </script>
+    <script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("img_html.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("i_html.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../../index.htm", "_self", false);
+        }
+    </script>
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回首页</button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <ul class="nav nav-pills" id="tabs">
+            <li class="active"><a href="#iframe" data-toggle="tab">iframe</a></li>
+            <li><a href="#frameborder" data-toggle="tab">frameborder</a></li>
+            <li><a href="#height" data-toggle="tab">height</a></li>
+            <li><a href="#longdesc" data-toggle="tab">longdesc</a></li>
+            <li><a href="#marginheight" data-toggle="tab">marginheight</a></li>
+            <li><a href="#marginwidth" data-toggle="tab">marginwidth</a></li>
+            <li><a href="#name" data-toggle="tab">name</a></li>
+            <li><a href="#scrolling" data-toggle="tab">scrolling</a></li>
+            <li><a href="#width" data-toggle="tab">width</a></li>
+            <li><a href="#src" data-toggle="tab">src</a></li>
+        </ul>
+
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="iframe">
+                <h3>此页面用于测试&lt;iframe&gt;标签</h3>
+                <iframe src="./iframe_attribute_html/iframe_test_html.html"></iframe>
+                
+            </div>
+
+            <div class="tab-pane" id="frameborder">
+                <h3>此页面用于测试&lt;iframe&gt;标签的frameborder</h3>
+                <h3>此属性已在html5中废除，不建议使用,请使用css</h3>
+                <iframe src="./iframe_attribute_html/iframe_test_html.html" frameborder="0"></iframe>
+            </div>
+
+            <div class="tab-pane" id="height">
+                <h3>此页面用于测试&lt;iframe&gt;标签的height</h3>
+                
+                <iframe src="./iframe_attribute_html/iframe_test_html.html" height="200px" width="200px"></iframe>
+                <iframe src="./iframe_attribute_html/iframe_test_html.html" height="300px" width="200px"></iframe>
+            </div>
+
+            <div class="tab-pane" id="longdesc">
+                <h3>此页面用于测试&lt;iframe&gt;标签的longdesc</h3>
+                <h3>此属性不被主流浏览器支持，并已在html5中废除，不建议使用</h3>
+                <iframe src="./iframe_attribute_html/iframe_test_html.html" longdesc="../../object/iframe_longdesc_html.txt"></iframe>
+            </div>
+
+            <div class="tab-pane" id="marginheight">
+                <h3>此页面用于测试&lt;iframe&gt;标签的marginheight</h3>
+                <h3>此属性已在html5中废除，不建议使用</h3>
+                <iframe src="./iframe_attribute_html/iframe_test_html.html" marginheight="50" width="200px"></iframe>
+                <iframe src="./iframe_attribute_html/iframe_test_html.html" width="200px"></iframe>
+            </div>
+
+            <div class="tab-pane" id="marginwidth">
+                <h3>此页面用于测试&lt;iframe&gt;标签的marginwidth</h3>
+                <h3>此属性已在html5中废除，不建议使用</h3>
+                <iframe src="./iframe_attribute_html/iframe_test_html.html" marginwidth="50" width="200px"></iframe>
+                <iframe src="./iframe_attribute_html/iframe_test_html.html"width="200px"></iframe>
+            </div>
+
+            <div class="tab-pane" id="name">
+                <h3>此页面用于测试&lt;iframe&gt;标签的name</h3>
+                <iframe src="./iframe_attribute_html/iframe_test_html.html" name="ifm1"></iframe>
+                <a href="./iframe_attribute_html/iframe_test1_html.html" target="ifm1">点击显示</a>
+            </div>
+
+            <div class="tab-pane" id="scrolling">
+                <h3>此页面用于测试&lt;iframe&gt;标签的scrolling</h3>
+                <h3>此属性已在html5中废除，不建议使用</h3>
+                <p>iframe without scrolling</p>
+                <iframe src="./iframe_attribute_html/iframe_test_html.html" scrolling="no" width="100px"></iframe>
+                <p>iframe with scrolling</p>
+                <iframe src="./iframe_attribute_html/iframe_test_html.html" scrolling="yes" width="100px"></iframe>
+            </div>
+
+            <div class="tab-pane" id="width">
+                <h3>此页面用于测试&lt;iframe&gt;标签的width</h3>
+                <iframe src="./iframe_attribute_html/iframe_test_html.html" height="200px" width="200px"></iframe>
+                <iframe src="./iframe_attribute_html/iframe_test_html.html" height="200px" width="100px"></iframe>
+            </div>
+
+            <div class="tab-pane" id="src">
+                <h3>此页面用于测试&lt;iframe&gt;标签的src</h3>
+                <iframe src="./iframe_attribute_html/iframe_test_html.html"></iframe>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

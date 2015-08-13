@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/main.js">
+    </script>
+    <script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("h1_h6_html.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("fieldset_html.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../../index.htm", "_self", false);
+        }
+    </script>
+    
+    <script type="text/javascript">
+        function submitForm7 () {
+            document.forms["form7"].submit();
+        }
+    </script>
+
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回首页</button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <ul class="nav nav-pills" id="tabs">
+            <li class="active"><a href="#form" data-toggle="tab">form</a></li>
+            <li><a href="#action" data-toggle="tab">action</a></li>
+            <!--<li><a href="#accept" data-toggle="tab">accept</a></li>
+            <li><a href="#accept-charset" data-toggle="tab">accept-charset</a></li>
+            <li><a href="#enctype" data-toggle="tab">enctype</a></li>-->
+            <li><a href="#method" data-toggle="tab">method</a></li>
+            <li><a href="#name" data-toggle="tab">name</a></li>
+            <!--<li><a href="#target" data-toggle="tab">target</a></li>-->
+        </ul>
+
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="form">
+                <h3>此页面用于测试&lt;form&gt;标签</h3>
+                <form action="#" id="form1"> 
+                    姓名：<input type="text" name="name" /><p></p>
+                    电邮：<input type="text" name="email" /><p></p>
+                    <input type="submit" value="点击提交" />
+
+                </form>
+            </div>
+
+            <div class="tab-pane" id="action">
+                <h3>此页面用于测试&lt;form&gt;标签的action属性（测试的时候运行js文件夹中的sever.js）</h3>
+                <form action="http://192.168.200.50:8888/" method="POST" id="form2">
+                    姓名：<input type="text" name="name" /><p></p>
+                    电邮：<input type="text" name="email" /><p></p>
+                    <input type="submit" value="点击提交" />
+                </form>
+            </div>
+
+            <div class="tab-pane" id="accept">
+                <h3>此页面用于测试&lt;form&gt;标签的accept属性</h3>
+                <h3>此属性暂时无法测试，此标签不被任何主流浏览器支持，并已在html5中废除，上传文件类型验证不应在本地进行，不建议使用。</h3>
+                <form action="#" id="form3" accept="image/gif,image/jpeg" action="http://192.168.200.50:8888/" method="POST"> 
+                    姓名：<input type="text" name="name" /><p></p>
+                    电邮：<input type="text" name="email" /><p></p>
+                    <input type="file" name="upload" id="upload" />
+                    <input type="submit" value="点击提交" />
+                    
+                </form>
+            </div>
+
+            <div class="tab-pane" id="accept-charset">
+                <h3>此页面用于测试&lt;form&gt;标签的accept-charset属性</h3>
+                <h3>此属性暂时无法测试，此标签不被任何主流浏览器支持，并已在html5中废除，上传文件类型验证不应在本地进行，不建议使用。</h3>
+                <form action="#" id="form4" accept-charset="UTF-8" action="http://192.168.200.50:8888/" method="POST"> 
+                    姓名：<input type="text" name="name" /><p></p>
+                    电邮：<input type="text" name="email" /><p></p>
+                    <input type="file" name="upload" id="upload" />
+                    <input type="submit" value="点击提交" />
+                    
+                </form>
+            </div>
+
+            <div class="tab-pane" id="enctype">
+                <h3>此页面用于测试&lt;form&gt;标签的entype属性（application/x-www-form-urlencoded）</h3>
+                <form action="http://192.168.200.50:8888/" method="POST" id="form5" enctype="application/x-www-form-urlencoded">
+                    姓名：<input type="text" name="name" /><p></p>
+                    电邮：<input type="text" name="email" /><p></p>
+                    <input type="submit" value="点击提交" />
+                </form>
+            </div>
+
+            <div class="tab-pane" id="method">
+                <h3>此页面用于测试&lt;form&gt;标签的method属性（POST）</h3>
+                <form action="http://192.168.200.50:8888/" method="POST" id="form6">
+                    姓名：<input type="text" name="name" /><p></p>
+                    电邮：<input type="text" name="email" /><p></p>
+                    <input type="submit" value="点击提交" />
+                </form>
+            </div>
+
+            <div class="tab-pane" id="name">
+                <h3>此页面用于测试&lt;form&gt;标签的name属性</h3>
+                <h4>表单name：form7</h4>
+                <form name="form7" action="http://192.168.200.50:8888/" method="POST"> 
+                    姓名：<input type="text" name="name" /><p></p>
+                    电邮：<input type="text" name="email" /><p></p>
+                    <input type="button" value="点击提交" onclick="submitForm7()" />
+                </form>
+            </div>
+
+            <div class="tab-pane" id="target">
+                <h3>此页面用于测试&lt;form&gt;标签target属性</h3>
+                <form action="http://192.168.200.50:8888/" method="POST" id="form8" target="_self">
+                    姓名：<input type="text" name="name" /><p></p>
+                    电邮：<input type="text" name="email" /><p></p>
+                    <input type="submit" value="点击提交" />
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

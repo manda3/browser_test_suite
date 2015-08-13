@@ -1,0 +1,258 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/main.js">
+    </script>
+    <script type="text/javascript" src="../js/JSTestCaseLib/document_dom_test.js"></script>
+    <script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("anchor_dom_js.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("location_dom_js.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../../index.htm", "_self", false);
+        }
+    </script>
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回首页</button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <ul class="nav nav-pills" id="tabs">
+            <li class="active"><a href="#all_dom_js" data-toggle="tab">all[]</a></li>
+            <li><a href="#anchors_dom_js" data-toggle="tab">anchors[]</a></li>
+            <li><a href="#applets_dom_js" data-toggle="tab">applets</a></li>
+            <li><a href="#forms_dom_js" data-toggle="tab">forms[]</a></li>
+            <li><a href="#images_dom_js" data-toggle="tab">images[]</a></li>
+            <li><a href="#links_dom_js" data-toggle="tab">links[]</a></li>
+            <li><a href="#body_dom_js" data-toggle="tab">body</a></li>
+            <li><a href="#cookie_dom_js" data-toggle="tab">cookie</a></li>
+            <li><a href="#domain_dom_js" data-toggle="tab">domain</a></li>
+            <li><a href="#lastModified_dom_js" data-toggle="tab">lastModified</a></li>
+            <li><a href="#referrer_dom_js" data-toggle="tab">referrer</a></li>
+            <li><a href="#title_dom_js" data-toggle="tab">title</a></li>
+            <li><a href="#URL_dom_js" data-toggle="tab">URL</a></li>
+            <li><a href="#close_func_dom_js" data-toggle="tab">close()</a></li>
+            <li><a href="#getElementById_func_dom_js" data-toggle="tab">getElementById()</a></li>
+            <li><a href="#getElementsByName_func_dom_js" data-toggle="tab">getElementsByName()</a></li>
+            <li><a href="#getElementsByTagName_func_dom_js" data-toggle="tab">getElementsByTagName()</a></li>
+            <li><a href="#open_func_dom_js" data-toggle="tab">open()</a></li>
+            <li><a href="#write_func_dom_js" data-toggle="tab">write()</a></li>
+            <li><a href="#writeln_func_dom_js" data-toggle="tab">writeln()</a></li>
+            
+        </ul>
+
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="all_dom_js">
+                <h3>此页面用于测试javascript dom中的document对象中的all[]</h3>
+                <p></p>
+                <button onclick="testAllOfDoc();">click to check all of document</button>
+                <p></p>
+                <div id="showbox_doc1"></div>
+            </div>
+
+            <div class="tab-pane" id="anchors_dom_js">
+                <h3>此页面用于测试javascript dom中的document对象中的anchors[]</h3>
+                <p></p>
+                <a href="#" name="amazon">Amazon</a>
+                <a href="#" name="google">Google</a>
+                <a href="#" name="apple">Apple</a>
+                <a href="#" name="facebook">Facebook</a>
+                <p></p>
+                <button onclick="testAnchorsOfDoc();">click to check anchors of document</button>
+                <p></p>
+                <div id="showbox_doc2"></div>
+            </div>
+
+            <div class="tab-pane" id="applets_dom_js">
+                <h3>此页面用于测试javascript dom中的document对象中的applets</h3>
+                <p></p>
+                <button onclick="testAppletsOfDoc();">click to check applets of document</button>
+                <p></p>
+                <div id="showbox_doc3"></div>
+            </div>
+
+            <div class="tab-pane" id="forms_dom_js">
+                <h3>此页面用于测试javascript dom中的document对象中的forms[]</h3>
+                <form action="#" id="form1">
+                    <input type="text" name="" id="input1" />
+                    <input type="submit" value="submit" />
+                </form>
+
+                <form action="#" id="form2">
+                    <input type="text" name="" id="input2" />
+                    <input type="submit" value="submit" />
+                </form>
+
+                <p></p>
+                <button onclick="testFormsOfDoc();">click to change form`s input text background color</button>
+                <p></p>
+                <div id="showbox_doc4"></div>
+            </div>
+            
+            <div class="tab-pane" id="images_dom_js">
+                <h3>此页面用于测试javascript dom中的document对象中的images[]</h3>
+                <img src="../images/Aurora.jpg" alt="" height="200px" width="200px" />
+                <img src="../images/sky.jpg" alt="" height="200px" width="200px" />
+                <p></p>
+                <button onclick="testImagesOfDoc();">click to change images`height of document</button>
+                <p></p>
+                <div id="showbox_doc5"></div>
+            </div>
+
+            <div class="tab-pane" id="links_dom_js">
+                <h3>此页面用于测试javascript dom中的document对象中的links[]</h3>
+                <p></p>
+                <button onclick="testLinksOfDoc();">click to check links of document</button>
+                <p></p>
+                <div id="showbox_doc6"></div>
+            </div>
+
+            <div class="tab-pane" id="body_dom_js">
+                <h3>此页面用于测试javascript dom中的document对象中的body</h3>
+                <p>html基本元素，不支持就别叫浏览器了</p>
+                <p></p>
+                <button onclick="testBodyOfDoc();">click to check childnodes number of body</button>
+                <p></p>
+                <div id="showbox_doc7"></div>
+            </div>
+
+            <div class="tab-pane" id="cookie_dom_js">
+                <h3>此页面用于测试javascript dom中的document对象中的cookie</h3>
+                <p></p>
+                <button onclick="testCookieOfDoc();">click to check cookie of document</button>
+                <p></p>
+                <div id="showbox_doc8"></div>
+            </div>
+
+            <div class="tab-pane" id="domain_dom_js">
+                <h3>此页面用于测试javascript dom中的document对象中的domain</h3>
+                <p></p>
+                <button onclick="testDomainOfDoc();">click to check domain of document</button>
+                <p></p>
+                <div id="showbox_doc9"></div>
+            </div>
+
+            <div class="tab-pane" id="lastModified_dom_js">
+                <h3>此页面用于测试javascript dom中的document对象中的lastModified</h3>
+                <p></p>
+                <button onclick="testLastModifiedOfDoc();">click to check lastModified of document</button>
+                <p></p>
+                <div id="showbox_doc10"></div>
+            </div>
+
+            <div class="tab-pane" id="referrer_dom_js">
+                <h3>此页面用于测试javascript dom中的document对象中的referrer</h3>
+                <p></p>
+                <button onclick="testReferrerOfDoc();">click to check referrer of document</button>
+                <p></p>
+                <div id="showbox_doc11"></div>
+            </div>
+
+            <div class="tab-pane" id="title_dom_js">
+                <h3>此页面用于测试javascript dom中的document对象中的title</h3>
+                <p></p>
+                <button onclick="testTitleOfDoc();">click to check title of document</button>
+                <p></p>
+                <div id="showbox_doc12"></div>
+            </div>
+
+            <div class="tab-pane" id="URL_dom_js">
+                <h3>此页面用于测试javascript dom中的document对象中的URL</h3>
+                <p></p>
+                <button onclick="testURLOfDoc();">click to check URL of document</button>
+                <p></p>
+                <div id="showbox_doc13"></div>
+            </div>
+
+            <div class="tab-pane" id="close_func_dom_js">
+                <h3>此页面用于测试javascript dom中的document对象中的close()</h3>
+                <p>该属性暂时无法测试,机顶盒不要点击</p>
+                <p></p>
+                <div id="showbox_doc14"></div>
+            </div>
+
+            <div class="tab-pane" id="getElementById_func_dom_js">
+                <h3>此页面用于测试javascript dom中的document对象中的getElementById()</h3>
+                <p></p>
+                <button onclick="testGetElementByIdOfDoc();">click to check getElementById() of document</button>
+                
+                <p></p>
+                <div id="showbox_doc15"></div>
+            </div>
+            
+            <div class="tab-pane" id="getElementsByName_func_dom_js">
+                <h3>此页面用于测试javascript dom中的document对象中的getElementsByName()</h3>
+                <p></p>
+                <button onclick="testGetElementsByNameOfDoc();">click to check getElementsByName() of document</button>
+                
+                <p></p>
+                <div id="showbox_doc16"></div>
+                <p></p>
+                Google:
+                <input type="radio" name="company" id="google" />
+                Amazon:
+                <input type="radio" name="company" id="amazon" />
+            </div>
+
+            <div class="tab-pane" id="getElementsByTagName_func_dom_js">
+                <h3>此页面用于测试javascript dom中的document对象中的getElementsByTagName()</h3>
+                <p></p>
+                <button onclick="testGetElementsByTagNameOfDoc();">click to check getElementsByTagName() of document</button>
+                
+                <p></p>
+                <div id="showbox_doc17"></div>
+                <p></p>
+                <iframe src="#" frameborder="1"></iframe>
+            </div>
+
+            <div class="tab-pane" id="open_func_dom_js">
+                <h3>此页面用于测试javascript dom中的document对象中的open()</h3>
+                <p>该属性暂时无法测试,机顶盒不要点击</p>
+            </div>
+
+            <div class="tab-pane" id="write_func_dom_js">
+                <h3>此页面用于测试javascript dom中的document对象中的write()</h3>
+                <p>可能会导致某些垃圾机顶盒挂死，请谨慎操作</p>
+                <button onclick="testWriteFuncOfDoc();">click to check write() of document</button>
+                <p></p>
+                <div id="showbox_doc18"></div>
+            </div>
+
+            <div class="tab-pane" id="writeln_func_dom_js">
+                <h3>此页面用于测试javascript dom中的document对象中的writeln()</h3>
+                <p>可能会导致某些垃圾机顶盒挂死，请谨慎操作</p>
+                <button onclick="testWritelnFuncOfDoc();">click to check writeln() of document</button>
+                <p></p>
+                <div id="showbox_doc19"></div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

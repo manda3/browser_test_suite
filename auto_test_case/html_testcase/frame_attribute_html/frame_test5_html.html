@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+
+	<style>
+		body{
+			background-color: yellow;
+		}
+	</style>
+
+	<script type="text/javascript">
+		function resizeFrameOne () {
+			var frameset = document.getElementsByTagName('frameset')[0];
+			frameset.cols = "10%,*,25%";
+		}
+
+		function resizeFrameTwo () {
+			var frameset = document.getElementsByTagName('frameset')[0];
+			frameset.cols = "25%,10%,*";
+		}
+	</script>
+</head>
+<body>
+	<button onclick="resizeFrameOne()">点击调整frame1的宽度</button>
+	<button onclick="resizeFrameTwo()">点击调整frame2的宽度</button>
+</body>
+</html>

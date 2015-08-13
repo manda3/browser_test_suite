@@ -1,0 +1,345 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/main.js">
+    </script>
+    <script type="text/javascript" src="../js/JSTestCaseLib/date_object_test.js"></script>
+    <script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("array_js.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("string_js.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../../index.htm", "_self", false);
+        }
+    </script>
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回首页</button>
+        </div>
+    </div>
+    
+    <div class="content">
+
+    	<ul class="nav nav-pills" id="tabs">
+            <li class="active"><a href="#one_date" data-toggle="tab">page 1</a></li>
+            <li><a href="#two_date" data-toggle="tab">page 2</a></li>
+            <li><a href="#three_date" data-toggle="tab">page 3</a></li>
+            <li><a href="#four_date" data-toggle="tab">page 4</a></li>
+            <li><a href="#five_date" data-toggle="tab">page 5</a></li>
+            <li><a href="#six_date" data-toggle="tab">page 6</a></li>
+            <li><a href="#seven_date" data-toggle="tab">page 7</a></li>
+            
+        </ul>
+
+    	<div class="tab-content">
+
+            <div class="tab-pane active" id="one_date">
+                <h3>此页面用于测试javascript的date对象</h3>
+                <div class="content_item" id="constructor_date">
+            		<div></div>
+            		<div></div>
+            		<div></div>
+        		</div>
+        		<div class="content_item" id="prototype_date">
+            		<div></div>
+            		<div></div>
+            		<div></div>
+        		</div>
+        		<div class="content_item" id="Date_func_date">
+            		<div></div>
+            		<div></div>
+            		<div></div>
+        		</div>
+        		<div class="content_item" id="getDate_func_date">
+            		<div></div>
+            		<div></div>
+            		<div></div>
+        		</div>
+        		<div class="content_item" id="getDay_func_date">
+            		<div></div>
+            		<div></div>
+            		<div></div>
+        		</div>
+        		<div class="content_item" id="getMonth_func_date">
+            		<div></div>
+            		<div></div>
+            		<div></div>
+        		</div>
+        		<div class="content_item" id="getFullYear_func_date">
+            		<div></div>
+            		<div></div>
+            		<div></div>
+        		</div>
+        		<div class="content_item" id="getYear_func_date">
+            		<div></div>
+            		<div></div>
+            		<div></div>
+        		</div>
+            </div>
+            
+            <div class="tab-pane" id="two_date">
+                <h3>此页面用于测试javascript的date对象</h3>
+                <div class="content_item" id="getHours_func_date">
+            		<div></div>
+            		<div></div>
+            		<div></div>
+        		</div>
+        		<div class="content_item" id="getMinutes_func_date">
+            		<div></div>
+            		<div></div>
+            		<div></div>
+        		</div>
+        		<div class="content_item" id="getSeconds_func_date">
+            		<div></div>
+            		<div></div>
+            		<div></div>
+        		</div>
+        		<div class="content_item" id="getMilliseconds_func_date">
+            		<div></div>
+            		<div></div>
+            		<div></div>
+        		</div>
+        		<div class="content_item" id="getTime_func_date">
+            		<div></div>
+            		<div></div>
+            		<div></div>
+        		</div>
+        		<div class="content_item" id="getTimezoneOffset_func_date">
+            		<div></div>
+            		<div></div>
+            		<div></div>
+        		</div>
+        		<div class="content_item" id="getUTCDate_func_date">
+            		<div></div>
+            		<div></div>
+            		<div></div>
+        		</div>
+        		<div class="content_item" id="getUTCDay_func_date">
+            		<div></div>
+            		<div></div>
+            		<div></div>
+        		</div>
+            </div>
+
+            <div class="tab-pane" id="three_date">
+            	<h3>此页面用于测试javascript的date对象</h3>
+            	<div class="content_item" id="getUTCMonth_func_date">
+            		<div></div>
+            		<div></div>
+            		<div></div>
+        		</div>
+        		<div class="content_item" id="getUTCFullYear_func_date">
+            		<div></div>
+            		<div></div>
+            		<div></div>
+        		</div>
+        		<div class="content_item" id="getUTCHours_func_date">
+            		<div></div>
+            		<div></div>
+            		<div></div>
+        		</div>
+        		<div class="content_item" id="getUTCMinutes_func_date">
+            		<div></div>
+            		<div></div>
+            		<div></div>
+        		</div>
+        		<div class="content_item" id="getUTCSeconds_func_date">
+            		<div></div>
+            		<div></div>
+            		<div></div>
+        		</div>
+        		<div class="content_item" id="getUTCMilliseconds_func_date">
+            		<div></div>
+            		<div></div>
+            		<div></div>
+        		</div>
+        		<div class="content_item" id="parse_func_date">
+            		<div></div>
+            		<div></div>
+            		<div></div>
+        		</div>
+        		<div class="content_item" id="setDate_func_date">
+            		<div></div>
+            		<div></div>
+            		<div></div>
+        		</div>
+            </div>
+
+            <div class="tab-pane" id="four_date">
+            	<h3>此页面用于测试javascript的date对象</h3>
+            	 <div class="content_item" id="setMonth_func_date">
+            		<div></div>
+            		<div></div>
+            		<div></div>
+        		</div>
+        		<div class="content_item" id="setFullYear_func_date">
+            		<div></div>
+            		<div></div>
+            		<div></div>
+        		</div>
+        		<div class="content_item" id="setYear_func_date">
+            		<div></div>
+            		<div></div>
+            		<div></div>
+        		</div>
+        		<div class="content_item" id="setHours_func_date">
+            		<div></div>
+            		<div></div>
+            		<div></div>
+        		</div>
+        		<div class="content_item" id="setMinutes_func_date">
+            		<div></div>
+            		<div></div>
+            		<div></div>
+        		</div>
+        		<div class="content_item" id="setSeconds_func_date">
+            		<div></div>
+            		<div></div>
+            		<div></div>
+        		</div>
+        		<div class="content_item" id="setMilliseconds_func_date">
+            		<div></div>
+            		<div></div>
+            		<div></div>
+        		</div>
+        		<div class="content_item" id="setTime_func_date">
+            		<div></div>
+            		<div></div>
+            		<div></div>
+        		</div>
+            </div>
+
+            <div class="tab-pane" id="five_date">
+            	<h3>此页面用于测试javascript的date对象</h3>
+            	<div class="content_item" id="setUTCDate_func_date">
+            		<div></div>
+            		<div></div>
+            		<div></div>
+        		</div>
+        		<div class="content_item" id="setUTCMonth_func_date">
+            		<div></div>
+            		<div></div>
+            		<div></div>
+        		</div>
+        		<div class="content_item" id="setUTCFullYear_func_date">
+            		<div></div>
+            		<div></div>
+            		<div></div>
+        		</div>
+        		<div class="content_item" id="setUTCHours_func_date">
+            		<div></div>
+            		<div></div>
+            		<div></div>
+        		</div>
+        		<div class="content_item" id="setUTCMinutes_func_date">
+            		<div></div>
+            		<div></div>
+            		<div></div>
+        		</div>
+        		<div class="content_item" id="setUTCSeconds_func_date">
+            		<div></div>
+            		<div></div>
+            		<div></div>
+        		</div>
+        		<div class="content_item" id="setUTCMilliseconds_func_date">
+            		<div></div>
+            		<div></div>
+            		<div></div>
+        		</div>
+        		<div class="content_item" id="toSource_func_date">
+            		<div></div>
+            		<div></div>
+            		<div></div>
+        		</div>
+            </div>
+
+            <div class="tab-pane" id="six_date">
+            	<h3>此页面用于测试javascript的date对象</h3>
+            	<div class="content_item" id="toString_func_date">
+            		<div></div>
+            		<div></div>
+            		<div></div>
+        		</div>
+        		<div class="content_item" id="toTimeString_func_date">
+            		<div></div>
+            		<div></div>
+            		<div></div>
+        		</div>
+        		<div class="content_item" id="toDateString_func_date">
+            		<div></div>
+            		<div></div>
+            		<div></div>
+        		</div>
+        		<div class="content_item" id="toGMTString_func_date">
+            		<div></div>
+            		<div></div>
+            		<div></div>
+        		</div>
+        		<div class="content_item" id="toUTCString_func_date">
+            		<div></div>
+            		<div></div>
+            		<div></div>
+        		</div>
+        		<div class="content_item" id="toLocaleString_func_date">
+            		<div></div>
+            		<div></div>
+            		<div></div>
+        		</div>
+        		<div class="content_item" id="toLocaleTimeString_func_date">
+            		<div></div>
+            		<div></div>
+            		<div></div>
+        		</div>
+        		<div class="content_item" id="toLocaleDateString_func_date">
+            		<div></div>
+            		<div></div>
+            		<div></div>
+        		</div>
+            </div>
+
+            <div class="tab-pane" id="seven_date">
+            	<h3>此页面用于测试javascript的date对象</h3>
+            	<div class="content_item" id="UTC_func_date">
+            		<div></div>
+            		<div></div>
+            		<div></div>
+        		</div>
+        		<div class="content_item" id="valueOf_func_date">
+            		<div></div>
+            		<div></div>
+            		<div></div>
+        		</div>
+            </div>
+
+        </div>
+      
+    </div>
+
+    <script type="text/javascript">
+        testDateObject ();
+    </script>
+</body>
+</html>

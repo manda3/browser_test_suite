@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/main.js">
+    </script>
+    <script type="text/javascript" src="../js/JSTestCaseLib/anchor_dom_test.js"></script>
+    <script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("area_dom_js.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("document_dom_js.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../../index.htm", "_self", false);
+        }
+    </script>
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回首页</button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <ul class="nav nav-pills" id="tabs">
+            <li class="active"><a href="#accessKey_dom_js" data-toggle="tab">accessKey</a></li>
+            <li><a href="#coords_dom_js" data-toggle="tab">coords</a></li>
+            <li><a href="#charset_dom_js" data-toggle="tab">charset</a></li>
+            <li><a href="#href_dom_js" data-toggle="tab">href</a></li>
+            <li><a href="#hreflang_dom_js" data-toggle="tab">hreflang</a></li>
+            <li><a href="#id_dom_js" data-toggle="tab">id</a></li>
+            <li><a href="#innerHTML_dom_js" data-toggle="tab">innerHTML</a></li>
+            <li><a href="#name_dom_js" data-toggle="tab">name</a></li>
+            <li><a href="#rel_dom_js" data-toggle="tab">rel</a></li>
+            <li><a href="#rev_dom_js" data-toggle="tab">rev</a></li>
+            <li><a href="#shape_dom_js" data-toggle="tab">shape</a></li>
+            <li><a href="#target_dom_js" data-toggle="tab">target</a></li>
+            <li><a href="#tabIndex_dom_js" data-toggle="tab">tabIndex</a></li>
+            <li><a href="#type_dom_js" data-toggle="tab">type</a></li>
+            <li><a href="#focus_func_dom_js" data-toggle="tab">focus()</a></li>
+            <li><a href="#blur_func_dom_js" data-toggle="tab">blur()</a></li>
+        </ul>
+
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="accessKey_dom_js">
+                <h3>此页面用于测试javascript dom中的anchor对象中的accessKey</h3>
+                <p>使用键盘输入alt+w进行测试</p>
+                <a href="#" onclick="alert('oh, no, you clicked.');" id="a_anch1">www.google.com</a>
+                <p></p>
+                <div id="showbox_anch1"></div>
+            </div>
+
+            <div class="tab-pane" id="coords_dom_js">
+                <h3>此页面用于测试javascript dom中的anchor对象中的coords</h3>
+                <p>该属性暂时无法测试</p>
+            </div>
+
+            <div class="tab-pane" id="charset_dom_js">
+                <h3>此页面用于测试javascript dom中的anchor对象中的charset</h3>
+                <p>该属性已在html5中废除，不建议使用，网页编码应由网页头部说明，不应在链接上制定，因为处理优先级不明</p>
+                <a href="../html_testcase/a_attribute_html/a_charset_html.html" id="a_anch2">click to check</a>
+            </div>
+
+            <div class="tab-pane" id="href_dom_js">
+                <h3>此页面用于测试javascript dom中的anchor对象中的href</h3>
+                <p></p>
+                <button onclick="testHrefOfAnch ();">click to check href of anchor</button>
+                <p></p>
+                <a href="#" id="a_anch3">www.google.com</a>
+                <p></p>
+                <div id="showbox_anch3"></div>
+            </div>
+
+            <div class="tab-pane" id="hreflang_dom_js">
+                <h3>此页面用于测试javascript dom中的anchor对象中的hreflang</h3>
+                <p></p>
+                <button onclick="testHreflangOfAnch ();">click to check hreflang of anchor</button>
+                <p></p>
+                <a href="#" id="a_anch4" hreflang="en-us">www.google.com</a>
+                <p></p>
+                <div id="showbox_anch4"></div>
+            </div>
+
+            <div class="tab-pane" id="id_dom_js">
+                <h3>此页面用于测试javascript dom中的anchor对象中的id</h3>
+                <p></p>
+                <button onclick="testIdOfAnch ();">click to check id of anchor</button>
+                <p></p>
+                <a href="#" id="a_anch5">www.google.com</a>
+                <p></p>
+                <div id="showbox_anch5"></div>
+            </div>
+
+            <div class="tab-pane" id="innerHTML_dom_js">
+                <h3>此页面用于测试javascript dom中的anchor对象中的innerHTML</h3>
+                <p></p>
+                <button onclick="testInnerHTMLOfAnch ();">click to check innerHTML of anchor</button>
+                <p></p>
+                <a href="#" id="a_anch6"></a>
+                <p></p>
+                <div id="showbox_anch6"></div>
+            </div>
+
+            <div class="tab-pane" id="name_dom_js">
+                <h3>此页面用于测试javascript dom中的anchor对象中的name</h3>
+                <p>该属性已在html5中废除，不建议使用</p>
+                <p></p>
+                <button onclick="testNameOfAnch ();">click to check name of anchor</button>
+                <p></p>
+                <a href="#" id="a_anch7" name="a_anch7">www.google.com</a>
+                <p></p>
+                <div id="showbox_anch7"></div>
+            </div>
+
+            <div class="tab-pane" id="rel_dom_js">
+                <h3>此页面用于测试javascript dom中的anchor对象中的rel</h3>
+                <p>搜索引擎使用，无视觉效果</p>
+                <p></p>
+                <button onclick="testRelOfAnch ();">click to check rel of anchor</button>
+                <p></p>
+                <a href="#" id="a_anch8" rel="for America">www.google.com</a>
+                <p></p>
+                <div id="showbox_anch8"></div>
+            </div>
+
+            <div class="tab-pane" id="rev_dom_js">
+                <h3>此页面用于测试javascript dom中的anchor对象中的rev</h3>
+                <p>搜索引擎使用，无视觉效果</p>
+                <p></p>
+                <button onclick="testRevOfAnch ();">click to check rev of anchor</button>
+                <p></p>
+                <a href="#" id="a_anch9" rev="for America">www.google.com</a>
+                <p></p>
+                <div id="showbox_anch9"></div>
+            </div>
+
+            <div class="tab-pane" id="shape_dom_js">
+                <h3>此页面用于测试javascript dom中的anchor对象中的shape</h3>
+                <p>该属性暂时无法测试</p>
+            </div>
+
+            <div class="tab-pane" id="target_dom_js">
+                <h3>此页面用于测试javascript dom中的anchor对象中的target</h3>
+                <p></p>
+                <button onclick="testTargetOfAnch ();">click to set anchor target to _blank</button>
+                <p></p>
+                <a href="./document_dom_js.html" id="a_anch11">link to previous page</a>
+                <p></p>
+                <div id="showbox_anch11"></div>
+            </div>
+
+            <div class="tab-pane" id="tabIndex_dom_js">
+                <h3>此页面用于测试javascript dom中的anchor对象中的tabIndex</h3>
+                <p>use tab key to change the focus</p>
+                <button onclick="testTabIndexOfAnch ();">click to change the tabIndex of anchors</button>
+                <p></p>
+                <a href="#" id="a1_anch12">Google</a>
+                <a href="#" id="a2_anch12">Amazon</a>
+                <p></p>
+            </div>
+
+            <div class="tab-pane" id="type_dom_js">
+                <h3>此页面用于测试javascript dom中的anchor对象中的type</h3>
+                <p></p>
+                <button onclick="testTypeOfAnch ();">click to check type of anchor</button>
+                <p></p>
+                <a href="#" id="a_anch13" type="text/html">www.google.com</a>
+                <p></p>
+                <div id="showbox_anch13"></div>
+            </div>
+
+            <div class="tab-pane" id="focus_func_dom_js">
+                <h3>此页面用于测试javascript dom中的anchor对象中的focus()</h3>
+                <p></p>
+                <a href="#" id="a1_anch14" onfocus="this.style.backgroundColor='red';" onblur="this.style.backgroundColor=''">google.com</a>
+                <a href="#" id="a2_anch14">amazon.com</a>
+                <p></p>
+                <button onclick="testFocusFuncOfAnch('a1_anch14')">click to set focus to google</button>
+                <button onclick="testBlurFuncOfAnch('a1_anch14')">click to lost focus from google</button>
+            </div>
+
+            <div class="tab-pane" id="blur_func_dom_js">
+                <h3>此页面用于测试javascript dom中的anchor对象中的blur()</h3>
+                <p></p>
+                <a href="#" id="a1_anch15" onfocus="this.style.backgroundColor='red';" onblur="this.style.backgroundColor=''">google.com</a>
+                <a href="#" id="a2_anch15">amazon.com</a>
+                <p></p>
+                <button onclick="testFocusFuncOfAnch('a1_anch15')">click to set focus to google</button>
+                <button onclick="testBlurFuncOfAnch('a1_anch15')">click to lost focus from google</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        testAccessKeyOfAnch ();
+    </script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/main.js">
+    </script>
+    <script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("sub_html.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("strong_html.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../../index.htm", "_self", false);
+        }
+    </script>
+
+    <style type="text/css">
+        h1 {color:red;}
+        p {color:yellow;}
+    </style>
+
+    <style>
+        h2{
+            color: green;
+        }
+
+        #img2{
+            height: 200px;
+            width: auto;
+        }
+    </style>
+
+    <style media="screen and (max-height:100px)">
+        #img1{
+            height: 200px;
+            width: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回首页</button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <ul class="nav nav-pills" id="tabs">
+            <li class="active"><a href="#style" data-toggle="tab">style</a></li>
+            <li><a href="#media" data-toggle="tab">media</a></li>
+            <li><a href="#type" data-toggle="tab">type</a></li>
+        </ul>
+
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="style">
+                <h3>此页面用于测试&lt;style&gt;标签</h3>
+                <p></p>
+                <h1>This is a heading（红色）</h1>
+                <p>This is a paragraph.（黄色）</p>
+            </div>
+            
+            <div class="tab-pane" id="media">
+                <h3>此页面用于测试&lt;style&gt;标签media</h3>
+                <p>此属性暂时无法测试</p>
+                <img src="../images/Aurora.jpg" alt="aurora" id="img1" />
+
+                <img src="../images/Aurora.jpg" alt="aurora" id="img2" />
+            </div>
+
+            <div class="tab-pane" id="type">
+                <h3>此页面用于测试&lt;style&gt;标签type</h3>
+                <p>type属性有无都不影响style的正常功能，无法测试，不建议使用</p>
+                <h2>This is a heading（绿色）</h2>
+                <p>This is a paragraph.（黄色）</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

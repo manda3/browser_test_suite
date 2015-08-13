@@ -1,0 +1,245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/main.js">
+    </script>
+    <script type="text/javascript" src="../js/JSTestCaseLib/form_dom_test.js"></script>
+    <script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("frame_dom_js.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("event_dom_js.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../../index.htm", "_self", false);
+        }
+    </script>
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回首页</button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <ul class="nav nav-pills" id="tabs">
+            <li class="active"><a href="#elements_dom_js" data-toggle="tab">elements</a></li>
+            <li><a href="#acceptCharset_dom_js" data-toggle="tab">acceptCharset</a></li>
+            <li><a href="#action_dom_js" data-toggle="tab">action</a></li>
+            <li><a href="#enctype_dom_js" data-toggle="tab">enctype</a></li>
+            <li><a href="#id_dom_js" data-toggle="tab">id</a></li>
+            <li><a href="#length_dom_js" data-toggle="tab">length</a></li>
+            <li><a href="#method_dom_js" data-toggle="tab">method</a></li>
+            <li><a href="#name_dom_js" data-toggle="tab">name</a></li>
+            <li><a href="#target_dom_js" data-toggle="tab">target</a></li>
+            <li><a href="#reset_func_dom_js" data-toggle="tab">reset()</a></li>
+            <li><a href="#submit_func_dom_js" data-toggle="tab">submit()</a></li>
+            <li><a href="#onreset_func_dom_js" data-toggle="tab">onreset()</a></li>
+            <li><a href="#onsubmit_func_dom_js" data-toggle="tab">onsubmit()</a></li>
+        </ul>
+
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="elements_dom_js">
+                <h3>此页面用于测试javascript dom中的form对象中的elements</h3>
+                <p></p>
+                <form action="#" id="form1"> 
+                    姓名：<input type="text" name="name" value="Your name...." /><p></p>
+                    电邮：<input type="text" name="email" value="Your email...." /><p></p>
+                    <input type="submit" value="点击提交" />
+                </form>
+                <p></p>
+                <button onclick="testElementsOfForm();">click to check elements of form</button>
+                <p></p>
+                <div id="showbox_form1"></div>
+            </div>
+
+            <div class="tab-pane" id="acceptCharset_dom_js">
+                <h3>此页面用于测试javascript dom中的form对象中的acceptCharset</h3>
+                <p></p>
+                <form action="#" id="form2" accept-charset="ISO-8859-1"> 
+                    姓名：<input type="text" name="name" /><p></p>
+                    电邮：<input type="text" name="email" /><p></p>
+                    <input type="submit" value="点击提交" />
+                </form>
+                <p></p>
+                <button onclick="testAcceptCharsetOfForm();">click to check acceptCharset of form</button>
+                <p></p>
+                <div id="showbox_form2"></div>
+            </div>
+
+            <div class="tab-pane" id="action_dom_js">
+                <h3>此页面用于测试javascript dom中的form对象中的action</h3>
+                <p></p>
+                <form id="form3" action="http://192.168.200.50:8888/" method="POST"> 
+                    姓名：<input type="text" name="name" /><p></p>
+                    电邮：<input type="text" name="email" /><p></p>
+                    <input type="submit" value="点击提交" />
+                </form>
+                <p></p>
+                <button onclick="testActionOfForm();">click to check action of form</button>
+                <p></p>
+                <div id="showbox_form3"></div>
+            </div>
+
+            <div class="tab-pane" id="enctype_dom_js">
+                <h3>此页面用于测试javascript dom中的form对象中的enctype</h3>
+                <p></p>
+                <form action="#" id="form4"> 
+                    姓名：<input type="text" name="name" /><p></p>
+                    电邮：<input type="text" name="email" /><p></p>
+                    <input type="submit" value="点击提交" />
+                </form>
+                <p></p>
+                <button onclick="testEnctypeOfForm();">click to check ectype of form</button>
+                <p></p>
+                <div id="showbox_form4"></div>
+            </div>
+
+            <div class="tab-pane" id="id_dom_js">
+                <h3>此页面用于测试javascript dom中的form对象中的id</h3>
+                <p></p>
+                <form action="#" id="form5"> 
+                    姓名：<input type="text" name="name" /><p></p>
+                    电邮：<input type="text" name="email" /><p></p>
+                    <input type="submit" value="点击提交" />
+                </form>
+                <p></p>
+                <button onclick="testIdOfForm();">click to check id of form</button>
+                <p></p>
+                <div id="showbox_form5"></div>
+            </div>
+
+            <div class="tab-pane" id="length_dom_js">
+                <h3>此页面用于测试javascript dom中的form对象中的length</h3>
+                <p></p>
+                <form action="#" id="form6"> 
+                    姓名：<input type="text" name="name" /><p></p>
+                    电邮：<input type="text" name="email" /><p></p>
+                    <input type="submit" value="点击提交" />
+                </form>
+                <p></p>
+                <button onclick="testLengthOfForm();">click to check length of form</button>
+                <p></p>
+                <div id="showbox_form6"></div>
+            </div>
+
+            <div class="tab-pane" id="method_dom_js">
+                <h3>此页面用于测试javascript dom中的form对象中的method</h3>
+                <p></p>
+                <form id="form7" action="http://192.168.200.50:8888/" method="POST"> 
+                    姓名：<input type="text" name="name" /><p></p>
+                    电邮：<input type="text" name="email" /><p></p>
+                    <input type="submit" value="点击提交" />
+                </form>
+                <p></p>
+                <button onclick="testMethodOfForm();">click to check method of form</button>
+                <p></p>
+                <div id="showbox_form7"></div>
+            </div>
+
+            <div class="tab-pane" id="name_dom_js">
+                <h3>此页面用于测试javascript dom中的form对象中的name</h3>
+                <p></p>
+                <form action="#" id="form8" name="form8"> 
+                    姓名：<input type="text" name="name" /><p></p>
+                    电邮：<input type="text" name="email" /><p></p>
+                    <input type="submit" value="点击提交" />
+                </form>
+                <p></p>
+                <button onclick="testNameOfForm();">click to check name of form</button>
+                <p></p>
+                <div id="showbox_form8"></div>
+            </div>
+
+            <div class="tab-pane" id="target_dom_js">
+                <h3>此页面用于测试javascript dom中的form对象中的target</h3>
+                <p></p>
+                <form action="#" id="form9" target="_self"> 
+                    姓名：<input type="text" name="name" /><p></p>
+                    电邮：<input type="text" name="email" /><p></p>
+                    <input type="submit" value="点击提交" />
+                </form>
+                <p></p>
+                <button onclick="testTargetOfForm();">click to check target of form</button>
+                <p></p>
+                <div id="showbox_form9"></div>
+            </div>
+
+            <div class="tab-pane" id="reset_func_dom_js">
+                <h3>此页面用于测试javascript dom中的form对象中的reset()</h3>
+                <p></p>
+                <form action="#" id="form10"> 
+                    姓名：<input type="text" name="name" /><p></p>
+                    电邮：<input type="text" name="email" /><p></p>
+                    <input type="submit" value="点击提交" />
+                </form>
+                <p></p>
+                <button onclick="testResetFuncOfForm();">click to reset the form</button>
+            </div>
+
+            <div class="tab-pane" id="submit_func_dom_js">
+                <h3>此页面用于测试javascript dom中的form对象中的submit()</h3>
+                <p>Please use node.js to check the result.</p>
+                <form id="form11" action="http://192.168.200.50:8888/" method="POST"> 
+                    姓名：<input type="text" name="name" /><p></p>
+                    电邮：<input type="text" name="email" /><p></p>
+                    
+                </form>
+                <p></p>
+                <button onclick="testSubmitFuncOfForm();">click to submit the form</button>
+            </div>
+
+            <div class="tab-pane" id="onreset_func_dom_js">
+                <h3>此页面用于测试javascript dom中的form对象中的onreset()</h3>
+                <p></p>
+                <form action="#" id="form12"> 
+                    姓名：<input type="text" name="name" /><p></p>
+                    电邮：<input type="text" name="email" /><p></p>
+                    <input type="submit" value="点击提交" />
+                </form>
+                <p></p>
+                <button onclick="testOnresetFuncOfForm();">click to check onreset of form</button>
+            </div>
+
+            <div class="tab-pane" id="onsubmit_func_dom_js">
+                <h3>此页面用于测试javascript dom中的form对象中的onsubmit()</h3>
+                <p></p>
+                <form id="form13" action="http://192.168.200.50:8888/" method="POST"> 
+                    姓名：<input type="text" name="name" /><p></p>
+                    电邮：<input type="text" name="email" /><p></p>
+                    <input type="submit" value="点击提交" />
+                </form>
+                <p></p>
+                <button onclick="testOnsubmitFuncOfForm();">click to check onsubmit of form</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script type="text/javascript">
+
+    </script>
+</body>
+</html>

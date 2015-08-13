@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/main.js">
+    </script>
+    <script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("marquee_html.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("link_html.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../../index.htm", "_self", false);
+        }
+    </script>
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回首页</button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <h3>此网页用于测试&lt;map&gt;标签及其name和id属性</h3>
+        
+        <ul class="nav nav-pills" id="tabs">
+            <li class="active"><a href="#map" data-toggle="tab">map</a></li>
+            <li><a href="#name" data-toggle="tab">name</a></li>
+            <li><a href="#id" data-toggle="tab">id</a></li>
+            
+            
+        </ul>
+
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="map">
+                <h3>此页面用于测试&lt;link&gt;标签</h3>
+                <img src="../images/Aurora.gif" alt="Aurora" usemap="#aurora" width="300px" height="300px">
+                <map id="aurora">
+                    <area shape="rect" coords="0,0,100,100" href="./map_attribute_html/map_test_html.html" alt="aurora">
+                    <area shape="circle" coords="200,200,50" href="./map_attribute_html/map_test_html.html" alt="aurora">
+                </map>
+            </div>
+
+            <div class="tab-pane" id="name">
+                <h3>此页面用于测试&lt;link&gt;标签name</h3>
+                <a href="./map_attribute_html/map_name_html.html">点击查看</a>
+            </div>
+
+            <div class="tab-pane" id="id">
+                <h3>此页面用于测试&lt;link&gt;标签id</h3>
+                <a href="./map_attribute_html/map_id_html.html">点击查看</a>
+            </div>
+        </div>
+
+        
+    </div>
+</body>
+</html>

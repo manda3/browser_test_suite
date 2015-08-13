@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/main.js">
+    </script>
+    <script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("meta_html.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("map_html.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../../index.htm", "_self", false);
+        }
+    </script>
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回首页</button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <ul class="nav nav-pills" id="tabs">
+            <li class="active"><a href="#marquee" data-toggle="tab">marquee</a></li>
+            <li><a href="#direction" data-toggle="tab">direction</a></li>
+            <li><a href="#behavior" data-toggle="tab">behavior</a></li>
+            <li><a href="#loop" data-toggle="tab">loop</a></li>
+            <li><a href="#align" data-toggle="tab">align</a></li>
+            <li><a href="#bgcolor" data-toggle="tab">bgcolor</a></li>
+            <li><a href="#height" data-toggle="tab">height</a></li>
+            <li><a href="#width" data-toggle="tab">width</a></li>
+            <li><a href="#hspace" data-toggle="tab">hspace</a></li>
+            <li><a href="#vspace" data-toggle="tab">vspace</a></li>
+            <li><a href="#id" data-toggle="tab">id</a></li>
+            <li><a href="#scrollAmount" data-toggle="tab">scrollAmount</a></li>
+            <li><a href="#scrollDelay" data-toggle="tab">scrollDelay</a></li>
+            
+        </ul>
+
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="marquee">
+                <h3>此页面用于测试&lt;marquee&gt;标签</h3>
+                <marquee behavior="scroll" direction="left">这里是用来测试的文字.</marquee>
+            </div>
+
+            <div class="tab-pane" id="direction">
+                <h3>此页面用于测试&lt;marquee&gt;标签direction</h3>
+                <marquee behavior="scroll" direction="left">文字向左滚动</marquee>
+                <marquee behavior="scroll" direction="right">文字向右滚动</marquee>
+                <marquee behavior="scroll" direction="up">文字向上滚动</marquee>
+                <marquee behavior="scroll" direction="down">文字向下滚动</marquee>
+            </div>
+
+            <div class="tab-pane" id="behavior">
+                <h3>此页面用于测试&lt;marquee&gt;标签behavior</h3>
+                <marquee behavior="scroll" direction="left">文字不断滚动</marquee>
+                <marquee behavior="slide" direction="left">文字划入后停止</marquee>
+                <marquee behavior="alternate" direction="">文字左右移动</marquee>
+            </div>
+
+            <div class="tab-pane" id="loop">
+                <h3>此页面用于测试&lt;marquee&gt;标签loop</h3>
+                <marquee behavior="slide" direction="left" loop=1>这里是用来测试的文字（一次停止）.</marquee>
+                <marquee behavior="slide" direction="left" loop=2>这里是用来测试的文字（两次停止）.</marquee>
+                <marquee behavior="slide" direction="left" loop=3>这里是用来测试的文字（三次停止）.</marquee>
+            </div>
+
+            <div class="tab-pane" id="align">
+                <h3>此页面用于测试&lt;marquee&gt;标签align</h3>
+                <p>这里是参考文字</p>
+                <marquee behavior="scroll" direction="up" bgcolor="red" align="left" height="100px" width="300px">这里是用来测试的文字（一）.</marquee>
+                <p>这里是参考文字</p>
+                <marquee behavior="scroll" direction="up" bgcolor="blue" align="right" height="100px" width="300px">这里是用来测试的文字（两）.</marquee>
+                <p>这里是参考文字</p>
+                <marquee behavior="scroll" direction="up" bgcolor="green" align="middle" height="100px" width="300px">这里是用来测试的文字（三）.</marquee>
+                <p>这里是参考文字</p>
+            </div>
+
+            <div class="tab-pane" id="bgcolor">
+                <h3>此页面用于测试&lt;marquee&gt;标签bgcolor</h3>
+                <marquee behavior="scroll" direction="left" bgcolor="red">这里是用来测试的文字（一）.</marquee>
+                <marquee behavior="scroll" direction="left" bgcolor="blue">这里是用来测试的文字（两）.</marquee>
+                <marquee behavior="scroll" direction="left" bgcolor="green">这里是用来测试的文字（三）.</marquee>
+            </div>
+
+            <div class="tab-pane" id="height">
+                <h3>此页面用于测试&lt;marquee&gt;标签height</h3>
+                <p>这里是参照文字</p>
+                <marquee behavior="scroll" direction="left" height="100px" bgcolor="red">这里是用来测试的文字（一）.</marquee>
+                <p>这里是参照文字</p>
+                <marquee behavior="scroll" direction="left" height="50px" bgcolor="yellow">这里是用来测试的文字（两）.</marquee>
+                <p>这里是参照文字</p>
+                <marquee behavior="scroll" direction="left" bgcolor="blue">这里是用来测试的文字（三）.</marquee>
+            </div>
+
+            <div class="tab-pane" id="width">
+                <h3>此页面用于测试&lt;marquee&gt;标签width</h3>
+                <p>这里是参照文字<marquee behavior="scroll" direction="left" width="200px" bgcolor="yellow">这里是用来测试的文字（一）.</marquee>这里是参照文字</p>
+                <p>这里是参照文字<marquee behavior="scroll" direction="left" width="100px" bgcolor="yellow">这里是用来测试的文字（两）.</marquee>这里是参照文字</p>
+                <p>这里是参照文字<marquee behavior="scroll" direction="left" width="50px" bgcolor="yellow">这里是用来测试的文字（三）.</marquee>这里是参照文字</p>
+            </div>
+
+            <div class="tab-pane" id="hspace">
+                <p>这里是参照文字<marquee behavior="scroll" direction="left" hspace="100" width="100px" bgcolor="yellow">这里是用来测试的文字（一）.</marquee>这里是参照文字</p>
+                <p>这里是参照文字<marquee behavior="scroll" direction="left" hspace="50" width="100px" bgcolor="yellow">这里是用来测试的文字（两）.</marquee>这里是参照文字</p>
+                <p>这里是参照文字<marquee behavior="scroll" direction="left" width="100px" bgcolor="yellow">这里是用来测试的文字（三）.</marquee>这里是参照文字</p>
+            </div>
+
+            <div class="tab-pane" id="vspace">
+                <h3>此页面用于测试&lt;marquee&gt;标签vspace</h3>
+                <p>这里是参照文字</p>
+                <marquee behavior="scroll" direction="left" vspace="60" bgcolor="yellow">这里是用来测试的文字（一）.</marquee>
+                <p>这里是参照文字</p>
+                <marquee behavior="scroll" direction="left" vspace="30" bgcolor="yellow">这里是用来测试的文字（两）.</marquee>
+                <p>这里是参照文字</p>
+                <marquee behavior="scroll" direction="left" bgcolor="yellow">这里是用来测试的文字（三）.</marquee>
+                <p>这里是参照文字</p>
+            </div>
+
+            <div class="tab-pane" id="id">
+                <h3>此页面用于测试&lt;marquee&gt;标签id</h3>
+                <p>id是一般属性，肯定支持</p>
+                <marquee behavior="scroll" direction="left" loop=1>这里是用来测试的文字（一次停止）.</marquee>
+                <marquee behavior="scroll" direction="left" loop=2>这里是用来测试的文字（两次停止）.</marquee>
+                <marquee behavior="scroll" direction="left" loop=3>这里是用来测试的文字（三次停止）.</marquee>
+            </div>
+
+            <div class="tab-pane" id="scrollAmount">
+                <h3>此页面用于测试&lt;marquee&gt;标签scrollAmount</h3>
+                <marquee behavior="scroll" direction="left" scrollamount="1">Slow scroll speed</marquee>
+                <marquee behavior="scroll" direction="left" scrollamount="20">Medi scroll speed</marquee>
+                <marquee behavior="scroll" direction="left" scrollamount="40">Fast scroll speed</marquee>
+            </div>
+
+            <div class="tab-pane" id="scrollDelay">
+                <h3>此页面用于测试&lt;marquee&gt;标签scrollDelay</h3>
+                
+                <marquee behavior="slide" direction="left" scrolldelay=1000>这里是用来测试的文字.（延迟1秒）</marquee>
+                <marquee behavior="slide" direction="left" scrolldelay=500>这里是用来测试的文字.（延迟半秒）</marquee>
+                <marquee behavior="slide" direction="left">这里是用来测试的文字.（默认）</marquee>
+            </div>
+
+
+        </div>
+    </div>
+</body>
+</html>

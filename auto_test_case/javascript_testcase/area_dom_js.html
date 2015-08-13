@@ -1,0 +1,252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/main.js">
+    </script>
+    <script type="text/javascript" src="../js/JSTestCaseLib/area_dom_test.js"></script>
+    <script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("base_dom_js.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("anchor_dom_js.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../../index.htm", "_self", false);
+        }
+    </script>
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回首页</button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <ul class="nav nav-pills" id="tabs">
+            <li class="active"><a href="#accessKey_dom_js" data-toggle="tab">accessKey</a></li>
+            <li><a href="#alt_dom_js" data-toggle="tab">alt</a></li>
+            <li><a href="#coords_dom_js" data-toggle="tab">coords</a></li>
+            <li><a href="#hash_dom_js" data-toggle="tab">hash</a></li>
+            <li><a href="#host_dom_js" data-toggle="tab">host</a></li>
+            <li><a href="#href_dom_js" data-toggle="tab">href</a></li>
+            <li><a href="#id_dom_js" data-toggle="tab">id</a></li>
+            <li><a href="#noHref_dom_js" data-toggle="tab">noHref</a></li>
+            <li><a href="#pathname_dom_js" data-toggle="tab">pathname</a></li>
+            <li><a href="#protocol_dom_js" data-toggle="tab">protocol</a></li>
+            <li><a href="#search_dom_js" data-toggle="tab">search</a></li>
+            <li><a href="#shape_dom_js" data-toggle="tab">shape</a></li>
+            <li><a href="#tabIndex_dom_js" data-toggle="tab">tabIndex</a></li>
+            <li><a href="#target_dom_js" data-toggle="tab">target</a></li>
+            
+        </ul>
+
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="accessKey_dom_js">
+                <h3>此页面用于测试javascript dom中的area对象中的accessKey</h3>
+                <p>使用键盘输入alt+q, alt+w进行测试</p>
+                <img src="../images/Aurora.gif" alt="Aurora" usemap="#aurora" width="450px" height="300px">
+                <map name="aurora">
+                    <area shape="rect" coords="0,0,100,100" href="./area_dom_js/area_test_js.html" alt="aurora" id="ex1_area1">
+                    <area shape="circle" coords="200,200,50" href="./area_dom_js/area_test_js.html" alt="aurora" id="ex2_area1">
+                </map>
+                <div id="showbox_area1"></div>
+            </div>
+
+            <div class="tab-pane" id="alt_dom_js">
+                <h3>此页面用于测试javascript dom中的area对象中的alt</h3>
+                <img src="../images/Aurora.gif" alt="Aurora" usemap="#aurora" width="450px" height="300px">
+                <map name="aurora">
+                    <area shape="rect" coords="0,0,100,100" href="./area_dom_js/area_test_js.html" alt="aurora" id="ex1_area2" alt="area_rect">
+                    <area shape="circle" coords="200,200,50" href="./area_dom_js/area_test_js.html" alt="aurora" id="ex2_area2" alt="area_circle">
+                </map>
+                <p></p>
+                <button onclick="testAltOfArea ();">click to check alt of area</button>
+                <p></p>
+                <div id="showbox_area2"></div>
+            </div>
+
+            <div class="tab-pane" id="coords_dom_js">
+                <h3>此页面用于测试javascript dom中的area对象中的coords</h3>
+                <img src="../images/Aurora.gif" alt="Aurora" usemap="#aurora" width="450px" height="300px">
+                <map name="aurora">
+                    <area shape="rect" coords="0,0,100,100" href="./area_dom_js/area_test_js.html" alt="aurora" id="ex1_area3" alt="area_rect">
+                    <area shape="circle" coords="200,200,50" href="./area_dom_js/area_test_js.html" alt="aurora" id="ex2_area3" alt="area_circle">
+                </map>
+                <p></p>
+                <button onclick="testCoordsOfArea ();">click to check coords of area</button>
+                <p></p>
+                <div id="showbox_area3"></div>
+            </div>
+
+            <div class="tab-pane" id="hash_dom_js">
+                <h3>此页面用于测试javascript dom中的area对象中的hash</h3>
+                <img src="../images/Aurora.gif" alt="Aurora" usemap="#aurora" width="450px" height="300px">
+                <map name="aurora">
+                    <area shape="rect" coords="0,0,100,100" href="./area_dom_js/area_test_js.html#America" alt="aurora" id="ex1_area4" alt="area_rect">
+                    <area shape="circle" coords="200,200,50" href="./area_dom_js/area_test_js.html#America" alt="aurora" id="ex2_area4" alt="area_circle">
+                </map>
+                <p></p>
+                <button onclick="testHashOfArea ();">click to check hash of area</button>
+                <p></p>
+                <div id="showbox_area4"></div>
+            </div>
+
+            <div class="tab-pane" id="host_dom_js">
+                <h3>此页面用于测试javascript dom中的area对象中的host</h3>
+                <img src="../images/Aurora.gif" alt="Aurora" usemap="#aurora" width="450px" height="300px">
+                <map name="aurora">
+                    <area shape="rect" coords="0,0,100,100" href="./area_dom_js/area_test_js.html" alt="aurora" id="ex1_area5" alt="area_rect">
+                    <area shape="circle" coords="200,200,50" href="./area_dom_js/area_test_js.html" alt="aurora" id="ex2_area5" alt="area_circle">
+                </map>
+                <p></p>
+                <button onclick="testHostOfArea ();">click to check host of area</button>
+                <p></p>
+                <div id="showbox_area5"></div>
+            </div>
+
+            <div class="tab-pane" id="href_dom_js">
+                <h3>此页面用于测试javascript dom中的area对象中的href</h3>
+                <img src="../images/Aurora.gif" alt="Aurora" usemap="#aurora" width="450px" height="300px">
+                <map name="aurora">
+                    <area shape="rect" coords="0,0,100,100" href="./area_dom_js/area_test_js.html" alt="aurora" id="ex1_area6" alt="area_rect">
+                    <area shape="circle" coords="200,200,50" href="./area_dom_js/area_test_js.html" alt="aurora" id="ex2_area6" alt="area_circle">
+                </map>
+                <p></p>
+                <button onclick="testHrefOfArea ();">click to check href of area</button>
+                <p></p>
+                <div id="showbox_area6"></div>
+            </div>
+
+            <div class="tab-pane" id="id_dom_js">
+                <h3>此页面用于测试javascript dom中的area对象中的id</h3>
+                <img src="../images/Aurora.gif" alt="Aurora" usemap="#aurora" width="450px" height="300px">
+                <map name="aurora">
+                    <area shape="rect" coords="0,0,100,100" href="./area_dom_js/area_test_js.html" alt="aurora" id="ex1_area7" alt="area_rect">
+                    <area shape="circle" coords="200,200,50" href="./area_dom_js/area_test_js.html" alt="aurora" id="ex2_area7" alt="area_circle">
+                </map>
+                <p></p>
+                <button onclick="testIdOfArea ();">click to check id of area</button>
+                <p></p>
+                <div id="showbox_area7"></div>
+            </div>
+
+            <div class="tab-pane" id="noHref_dom_js">
+                <h3>此页面用于测试javascript dom中的area对象中的noHref</h3>
+                <img src="../images/Aurora.gif" alt="Aurora" usemap="#aurora" width="450px" height="300px">
+                <map name="aurora">
+                    <area shape="rect" coords="0,0,100,100" alt="aurora" id="ex1_area8" alt="area_rect" nohref="nohref">
+                    <area shape="circle" coords="200,200,50" alt="aurora" id="ex2_area8" alt="area_circle" nohref="nohref">
+                </map>
+                <p></p>
+                <button onclick="testNoHrefOfArea ();">click to check nohref of area</button>
+                <p></p>
+                <div id="showbox_area8"></div>
+            </div>
+
+            <div class="tab-pane" id="pathname_dom_js">
+                <h3>此页面用于测试javascript dom中的area对象中的pathname</h3>
+                <img src="../images/Aurora.gif" alt="Aurora" usemap="#aurora" width="450px" height="300px">
+                <map name="aurora">
+                    <area shape="rect" coords="0,0,100,100" href="./area_dom_js/area_test_js.html" alt="aurora" id="ex1_area9" alt="area_rect">
+                    <area shape="circle" coords="200,200,50" href="./area_dom_js/area_test_js.html" alt="aurora" id="ex2_area9" alt="area_circle">
+                </map>
+                <p></p>
+                <button onclick="testPathnameOfArea ();">click to check pathname of area</button>
+                <p></p>
+                <div id="showbox_area9"></div>
+            </div>
+
+            <div class="tab-pane" id="protocol_dom_js">
+                <h3>此页面用于测试javascript dom中的area对象中的protocol</h3>
+                <img src="../images/Aurora.gif" alt="Aurora" usemap="#aurora" width="450px" height="300px">
+                <map name="aurora">
+                    <area shape="rect" coords="0,0,100,100" href="./area_dom_js/area_test_js.html" alt="aurora" id="ex1_area10" alt="area_rect">
+                    <area shape="circle" coords="200,200,50" href="./area_dom_js/area_test_js.html" alt="aurora" id="ex2_area10" alt="area_circle">
+                </map>
+                <p></p>
+                <button onclick="testProtocolOfArea ();">click to check protocol of area</button>
+                <p></p>
+                <div id="showbox_area10"></div>
+            </div>
+
+            <div class="tab-pane" id="search_dom_js">
+                <h3>此页面用于测试javascript dom中的area对象中的search</h3>
+                <img src="../images/Aurora.gif" alt="Aurora" usemap="#aurora" width="450px" height="300px">
+                <map name="aurora">
+                    <area shape="rect" coords="0,0,100,100" href="./area_dom_js/area_test_js.html?usr=America" alt="aurora" id="ex1_area11" alt="area_rect">
+                    <area shape="circle" coords="200,200,50" href="./area_dom_js/area_test_js.html?usr=America" alt="aurora" id="ex2_area11" alt="area_circle">
+                </map>
+                <p></p>
+                <button onclick="testSearchOfArea ();">click to check search of area</button>
+                <p></p>
+                <div id="showbox_area11"></div>
+            </div>
+
+            <div class="tab-pane" id="shape_dom_js">
+                <h3>此页面用于测试javascript dom中的area对象中的shape</h3>
+                <img src="../images/Aurora.gif" alt="Aurora" usemap="#aurora" width="450px" height="300px">
+                <map name="aurora">
+                    <area shape="rect" coords="0,0,100,100" href="./area_dom_js/area_test_js.html?usr=America" alt="aurora" id="ex1_area12" alt="area_rect">
+                    <area shape="circle" coords="200,200,50" href="./area_dom_js/area_test_js.html?usr=America" alt="aurora" id="ex2_area12" alt="area_circle">
+                </map>
+                <p></p>
+                <button onclick="testShapeOfArea ();">click to check shape of area</button>
+                <p></p>
+                <div id="showbox_area12"></div>
+            </div>
+
+            <div class="tab-pane" id="tabIndex_dom_js">
+                <h3>此页面用于测试javascript dom中的area对象中的tabIndex</h3>
+                <img src="../images/Aurora.gif" alt="Aurora" usemap="#aurora" width="450px" height="300px">
+                <map name="aurora">
+                    <area shape="rect" coords="0,0,100,100" href="./area_dom_js/area_test_js.html?usr=America" alt="aurora" id="ex1_area13" alt="area_rect">
+                    <area shape="circle" coords="200,200,50" href="./area_dom_js/area_test_js.html?usr=America" alt="aurora" id="ex2_area13" alt="area_circle">
+                </map>
+                <p></p>
+                <button onclick="testTabIndexOfArea ();">click to change tabIndex of area</button>
+                <p></p>
+                <div id="showbox_area13"></div>
+            </div>
+
+            <div class="tab-pane" id="target_dom_js">
+                <h3>此页面用于测试javascript dom中的area对象中的target</h3>
+                <img src="../images/Aurora.gif" alt="Aurora" usemap="#aurora" width="450px" height="300px">
+                <map name="aurora">
+                    <area shape="rect" coords="0,0,100,100" href="./area_dom_js/area_test_js.html?usr=America" alt="aurora" id="ex1_area14" alt="area_rect">
+                    <area shape="circle" coords="200,200,50" href="./area_dom_js/area_test_js.html?usr=America" alt="aurora" id="ex2_area14" alt="area_circle">
+                </map>
+                <p></p>
+                <button onclick="testTargetOfArea ();">click to change target of area</button>
+                <p></p>
+                <div id="showbox_area14"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        testAccessKeyOfArea ();
+    </script>
+</body>
+</html>

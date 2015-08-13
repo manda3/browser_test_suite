@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/main.js">
+    </script>
+    <script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("margin_css.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("list_css.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../../index.htm", "_self", false);
+        }
+    </script>
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回首页</button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <ul class="nav nav-pills" id="tabs">
+            <li class="active"><a href="#bottom_css" data-toggle="tab">bottom</a></li>
+            <li><a href="#clear_css" data-toggle="tab">clear</a></li>
+            <li><a href="#clip_css" data-toggle="tab">clip</a></li>
+            <li><a href="#cursor_css" data-toggle="tab">cursor</a></li>
+             <li><a href="#display_css" data-toggle="tab">display</a></li>
+            <li><a href="#float_css" data-toggle="tab">float</a></li>
+            <li><a href="#left_css" data-toggle="tab">left</a></li>
+             <li><a href="#overflow_css" data-toggle="tab">overflow</a></li>
+            <li><a href="#position_css" data-toggle="tab">position</a></li>
+            <li><a href="#right_css" data-toggle="tab">right</a></li>
+             <li><a href="#top_css" data-toggle="tab">top</a></li>
+            <li><a href="#vertical-align_css" data-toggle="tab">vertical-align</a></li>
+            <li><a href="#visibility_css" data-toggle="tab">visibility</a></li>
+            <li><a href="#z-index_css" data-toggle="tab">z-index</a></li>
+        </ul>
+        
+
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="bottom_css">
+                <h3>此页面用于测试定位属性中的bottom</h3>
+
+                <img id="star1" src="../images/star.gif" alt="star" />
+
+                <h1>This is the heading1.（原来上面有一张图片）</h1>
+
+                <img id="star2" src="../images/star.gif" alt="star" />
+
+                <h1>This is the heading2.（原来图片都在上面）</h1>
+                  
+            </div>
+
+            <div class="tab-pane" id="clear_css">
+                <h3>此页面用于测试定位属性中的clear</h3>
+                <img src="../images/star.gif" alt="star" width="100px" height="100px" />
+
+                <p>This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.</p>
+                <p id="clear">This is also some text. This is also some text. This is also some text. This is also some text. This is also some text. This is also some text.</p>
+            </div>
+
+            <div class="tab-pane" id="clip_css">
+                <h3>此页面用于测试定位属性中的clip</h3>
+
+                <img src="../images/Aurora.jpg" alt="aurora" width="400px" height="300px" />
+
+
+            </div>
+
+            <div class="tab-pane" id="cursor_css">
+                <h3>此页面用于测试定位属性中的cursor</h3>
+                <p>此属性在看不到鼠标的设备上无法看到效果</p>
+                <p>将鼠标移到文字上以改变游标效果</p>
+
+                <span id="cross">cross chair</span>
+                <p></p>
+                <span id="progress">progress</span>
+                <p></p>
+                <span id="help">help</span>
+                <p></p>
+                <span id="pointer">pointer</span>
+            </div>
+
+            <div class="tab-pane" id="display_css">
+                <h3>此页面用于测试定位属性中的display</h3>
+
+                <h4>原来的效果：</h4>
+                <p>This is a paragraph.</p>
+                <p>This is a paragraph.</p>
+                <p>This is a paragraph.</p>
+                <p>This is a paragraph.</p>
+                <p></p>
+                <h4>之后的效果：</h4>
+                <p class="p_display_css">This is a paragraph.</p>
+                <p class="p_display_css">This is a paragraph.</p>
+                <p class="p_display_css">This is a paragraph.</p>
+                <p class="p_display_css">This is a paragraph.</p>
+            </div>
+
+            <div class="tab-pane" id="float_css">
+                <h3>此页面用于测试定位属性中的float</h3>
+
+                <img id="pic1" src="../images/Aurora.jpg" alt="aurora" height="100px" width="100px" />
+                <img id="pic2" src="../images/star.gif" alt="star" />
+                <p>This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.</p>
+                <p>This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.</p>
+            </div>
+
+            <div class="tab-pane" id="left_css">
+                <h3>此页面用于测试定位属性中的left</h3>
+
+                <img id="star1" src="../images/star.gif" alt="star" />
+
+                <h1>This is the heading1.</h1>
+
+                <img id="star2" src="../images/star.gif" alt="star" />
+
+                <h1>This is the heading2.</h1>
+            </div>
+
+            <div class="tab-pane" id="overflow_css">
+                <h3>此页面用于测试定位属性中的overflow</h3>
+
+                <p>The overflow property specifies what to do if the content of an element exceeds the size of the element's box.</p>
+
+                <p>overflow:scroll</p>
+                <div id="scroll">You can use the overflow property when you want to have better control of the layout. The default value is visible.</div>
+
+                <p>overflow:hidden</p>
+                <div id="hidden">You can use the overflow property when you want to have better control of the layout. The default value is visible.</div>
+
+            </div>
+
+            <div class="tab-pane" id="position_css">
+                <h3>此页面用于测试定位属性中的position</h3>
+
+                
+                <h2>This is a heading with an absolute position</h2>
+                <p>With absolute positioning, an element can be placed anywhere on a page. The heading below is placed 100px from the left of the page and 150px from the top of the page.</p>
+            </div>
+
+            <div class="tab-pane" id="right_css">
+                <h3>此页面用于测试定位属性中的right</h3>
+
+                <img id="star1" src="../images/star.gif" alt="star" />
+
+                <h1>This is the heading1.</h1>
+
+                <img id="star2" src="../images/star.gif" alt="star" />
+
+                <h1>This is the heading2.</h1>
+            </div>
+
+            <div class="tab-pane" id="top_css">
+                <h3>此页面用于测试定位属性中的top</h3>
+
+                <img id="star1" src="../images/star.gif" alt="star" />
+
+                <h1>This is the heading1.（本来上面有一幅图片）</h1>
+
+                <img id="star2" src="../images/star.gif" alt="star" />
+
+                <h1>This is the heading2.（本来上面有两幅图片）</h1>
+            </div>
+
+            <div class="tab-pane" id="vertical-align_css">
+                <h3>此页面用于测试定位属性中的vertical-align</h3>
+
+                <p>An <img src="../images/star.gif" alt="star" width="100px" height="100px" /> image with a default alignment.</p> 
+                <p>An <img src="../images/star.gif" alt="star" width="100px" height="100px" id="top" /> image with a text-top alignment.</p> 
+                <p>An <img src="../images/star.gif" alt="star" width="100px" height="100px" id="bottom" /> image with a text-bottom alignment.</p>
+            </div>
+
+            <div class="tab-pane" id="visibility_css">
+                <h3>此页面用于测试定位属性中的visibility</h3>
+
+                <h1 id="visible">This is a visible heading</h1>
+                <h1 id="hidden">This is an invisible heading</h1>
+                <p>Notice that the invisible heading still takes up space.</p>
+            </div>
+
+            <div class="tab-pane" id="z-index_css">
+                <h3>此页面用于测试定位属性中的z-index</h3>
+
+                <h1>This is a heading</h1>
+                <img src="../images/Aurora.gif" width="100" height="140" />
+                <p>Because the image has a z-index of -1, it will be placed behind the text.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/main.js">
+    </script>
+    <script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/ajax_test.js"></script>
+
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("xml_node_list_ajax.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("xml_doc_ajax.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../../index.htm", "_self", false);
+        }
+    </script>
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回首页</button>
+        </div>
+    </div>
+    <div class="content" style="float:left">
+        
+        <h2>nodeName</h2>
+        <script type="text/javascript">
+        xmlDoc=loadXMLDoc("books.xml");	
+        var x=xmlDoc.getElementsByTagName("title")[0];
+        document.write(x.nodeName);
+        </script>  
+        
+        <h2>nodeValue</h2>
+        <script type="text/javascript">
+        //xmlDoc=gxloadXMLDoc("books.xml");   
+		xmlDoc=loadXMLDoc("books.xml");  
+        document.write(xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodeValue);
+        document.write("<br />");
+        document.write(xmlDoc.getElementsByTagName("author")[0].childNodes[0].nodeValue);
+        document.write("<br />");
+        document.write(xmlDoc.getElementsByTagName("year")[0].childNodes[0].nodeValue);
+        </script>
+        
+        <h2>firstChild</h2>
+        <script type="text/javascript">
+		xmlDoc=loadXMLDoc("books.xml");		
+		var x=get_firstchild(xmlDoc);
+		document.write("Nodename: " + x.nodeName);
+		document.write(" (nodetype: " + x.nodeType + ")");
+        </script>  
+        
+        <h2>lastChild</h2>
+        <script type="text/javascript">
+		xmlDoc=loadXMLDoc("books.xml");		
+		var x=get_lastchild(xmlDoc);
+		document.write("Nodename: " + x.nodeName);
+		document.write(" (nodetype: " + x.nodeType + ")");
+        </script>          
+     </div>
+     <div class="content" style="float:left">   
+        <h2>previouseSibing</h2>
+        <script type="text/javascript">
+		xmlDoc=loadXMLDoc("books.xml");
+		
+		var x=xmlDoc.getElementsByTagName("author")[0];
+		document.write(x.nodeName);
+		document.write(" = ");
+		document.write(x.childNodes[0].nodeValue);
+		
+		var y=get_previoussibling(x);
+		
+		document.write("<br />Previous sibling: ");
+		document.write(y.nodeName);
+		document.write(" = ");
+		document.write(y.childNodes[0].nodeValue);
+        </script>               
+        
+         <h2>nextSibling</h2>
+        <script type="text/javascript">
+		xmlDoc=loadXMLDoc("books.xml");
+		
+		var x=xmlDoc.getElementsByTagName("title")[0];
+		document.write(x.nodeName);
+		document.write(" = ");
+		document.write(x.childNodes[0].nodeValue);
+		
+		var y=get_nextsibling(x);
+		
+		document.write("<br />Next sibling: ");
+		document.write(y.nodeName);
+		document.write(" = ");
+		document.write(y.childNodes[0].nodeValue);
+        </script>                   
+    
+
+        <h2>insertBefore()</h2>
+        <script type="text/javascript">
+
+		xmlDoc=loadXMLDoc("books.xml");
+		
+		newNode=xmlDoc.createElement("book");
+		
+		x=xmlDoc.documentElement;
+		y=xmlDoc.getElementsByTagName("book");
+		
+		document.write("Book elements before: " + y.length);
+		document.write("<br />");
+		x.insertBefore(newNode,y[3]);
+		
+		y=xmlDoc.getElementsByTagName("book");
+		document.write("Book elements after: " + y.length);
+		</script>
+        
+        <h2>replaceChild()</h2>
+        <script type="text/javascript">
+		xmlDoc=loadXMLDoc("books.xml");
+		//create a title element and a text node
+		var newNode=xmlDoc.createElement("title");
+		var newText=xmlDoc.createTextNode("Giada's Family Dinners");
+		//add the text node to the title node,
+		newNode.appendChild(newText);
+		
+		//replace the first child node with the new node
+		var x=xmlDoc.getElementsByTagName("book")[0];
+		x.replaceChild(newNode,get_firstchild(x));		
+		//output all titles
+		var y=xmlDoc.getElementsByTagName("title");
+		for (i=0;i<y.length;i++)
+		  {
+		  document.write(y[i].childNodes[0].nodeValue);
+		  document.write("<br />");
+		  }
+		</script>
+      </div>
+      
+      <div class="content" style="float:left">  
+        
+        <h2>removeChild()</h2>
+        <script type="text/javascript">
+		xmlDoc=loadXMLDoc("books.xml");
+		document.write("book 节点的数目：");
+		document.write(xmlDoc.getElementsByTagName('book').length);
+		document.write("<br />");
+		
+		var lastNode=get_lastchild(xmlDoc.documentElement);
+		var delNode=xmlDoc.documentElement.removeChild(lastNode);
+		
+		document.write("removeChild() 方法执行后 book 节点的数目：");
+		document.write(xmlDoc.getElementsByTagName('book').length);
+		</script>
+        
+        <h2>appendChild()</h2>
+        <script type="text/javascript">
+		xmlDoc=loadXMLDoc("books.xml");
+		var newel=xmlDoc.createElement('edition');
+		var newtext=xmlDoc.createTextNode('First');
+		newel.appendChild(newtext);
+		
+		var x=xmlDoc.getElementsByTagName('book')[0];
+		x.appendChild(newel);
+		
+		var y=x.childNodes;
+		for (var i=0;i<y.length;i++)
+		{ 
+		//Display only element nodes
+		if (y[i].nodeType==1)
+		  { 
+		  document.write(y[i].nodeName);
+		  document.write("<br />");
+		  } 
+		}
+		</script>
+        
+        <h2>setAttribute()</h2>
+        <script type="text/javascript">
+		xmlDoc=loadXMLDoc("books.xml");		
+		var x=xmlDoc.getElementsByTagName('book');
+		
+		for(i=0;i<x.length;i++)
+		  {
+		  x.item(i).setAttribute("category","BESTSELLER");
+		  }
+		  
+		//Output all attribute values
+		for (i=0;i<x.length;i++)
+		  {
+		  document.write(x[i].getAttribute('category'));
+		  document.write("<br />");
+		  }
+		</script>
+        
+        <h2>getAttribute()</h2>
+        <script type="text/javascript">
+		xmlDoc=loadXMLDoc("books.xml");		
+		txt=xmlDoc.getElementsByTagName("title")[0].getAttribute("lang");
+		document.write(txt);
+		</script>
+        
+        </div>
+        
+        
+        <div class="content" style="float:left">
+        
+        <h2>selectNodes()</h2>
+        <div id="result-select-nodes"></div>
+        <script type="text/javascript">
+		
+		</script>
+        
+        
+        <h2>selectSingleNode()</h2>
+        <div id="result-select-single-node"></div>
+        <script type="text/javascript">
+		
+		</script>
+    </div>
+</body>
+</html>

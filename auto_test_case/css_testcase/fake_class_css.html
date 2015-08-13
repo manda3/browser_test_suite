@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/main.js">
+    </script>
+    <script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("fake_element_css.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("content_css.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../../index.htm", "_self", false);
+        }
+    </script>
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回首页</button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <ul class="nav nav-pills" id="tabs">
+            <li class="active"><a href="#active_css" data-toggle="tab">:active</a></li>
+            <li><a href="#focus_css" data-toggle="tab">:focus</a></li>
+            <li><a href="#hover_css" data-toggle="tab">:hover</a></li>
+            <li><a href="#link_css" data-toggle="tab">:link</a></li>
+            <li><a href="#visited_css" data-toggle="tab">:visited</a></li>
+            <li><a href="#first-child_css" data-toggle="tab">:first-child</a></li>
+            <li><a href="#lang_css" data-toggle="tab">:lang()</a></li>
+        </ul>
+
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="active_css">
+                <h3>此页面用于测试伪类中的:active</h3>
+                <p>点击链接时看见黄色</p>
+                <a href="#">www.google.com</a>
+                <a href="#">www.wikipedia.org</a>
+
+            </div>
+
+            <div class="tab-pane" id="focus_css">
+                <h3>此页面用于测试伪类中的:focus</h3>
+                <p>聚焦输入框看见黄色</p>
+                <p>Click inside the text fields to see a yellow background:</p>
+
+                <form>
+                    First name: <input type="text" name="firstname" /><br>
+                    Last name: <input type="text" name="lastname" />
+                </form>
+            </div>
+
+            <div class="tab-pane" id="hover_css">
+                <h3>此页面用于测试伪类中的:hover</h3>
+                <p>光标放到链接上时看到黄色</p>
+                <a href="#">www.google.com</a>
+                <a href="#">www.wikipedia.org</a>
+            </div>
+
+            <div class="tab-pane" id="link_css">
+                <h3>此页面用于测试伪类中的:link</h3>
+                <p>链接背景变黄色</p>
+                <a href="#">www.google.com</a>
+                <a href="#">www.wikipedia.org</a>
+            </div>
+
+            <div class="tab-pane" id="visited_css">
+                <h3>此页面用于测试伪类中的:visited</h3>
+                <p>注意！:visited属性在chrome(webkit)，firefox(genko)和IE9之后的IE中为了防止css漏洞，已经进行了限制，较新的浏览器可能看不到效果。</p>
+                <iframe src="" frameborder="0" name="ifm" id="ifm"></iframe>
+                <a href="./border_css.html" target="ifm">点击查看</a>
+            </div>
+
+            <div class="tab-pane" id="first-child_css">
+                <h3>此页面用于测试伪类中的:first-child</h3>
+                <p>看见第一个段落变黄色了么</p>
+                <div>
+                    <p>This paragraph is the first child of its parent (div).</p>
+                    <p>This paragraph is not the first child of its parent.</p>
+                </div>
+            </div>
+
+            <div class="tab-pane" id="lang_css">
+                <h3>此页面用于测试伪类中的:lang()</h3>
+                <p>I live in Italy.</p>
+                <p lang="it">Ciao bella!(lang=it)</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

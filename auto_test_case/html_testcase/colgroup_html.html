@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/main.js">
+    </script>
+    <script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("dd_html.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("col_html.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../../index.htm", "_self", false);
+        }
+    </script>
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回首页</button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <ul class="nav nav-pills" id="tabs">
+            <li class="active"><a href="#colgroup" data-toggle="tab">colgroup</a></li>
+            <li><a href="#align" data-toggle="tab">align</a></li>
+            <li><a href="#char" data-toggle="tab">char</a></li>
+            <li><a href="#charoff" data-toggle="tab">charoff</a></li>
+            <li><a href="#valign" data-toggle="tab">valign</a></li>
+            <li><a href="#width" data-toggle="tab">width</a></li>
+            <li><a href="#span" data-toggle="tab">span</a></li>
+        </ul>
+
+         <div class="tab-content">
+
+            <div class="tab-pane active" id="colgroup">
+                <table border="1px">
+                    <colgroup style="background-color: #a0f0a0;">
+                        <col style="background-color: #a0a0f0;" />
+                        <col span="2" />
+                    </colgroup>
+                    <tr>
+                        <td>苹果</td>
+                        <td>100元</td>
+                        <td>10个</td>
+                    </tr>
+                    <tr>
+                        <td>雪梨</td>
+                        <td>200元</td>
+                        <td>10个</td>
+                    </tr>
+                    <tr>
+                        <td>原子弹</td>
+                        <td>1元</td>
+                        <td>1个</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="tab-pane" id="align">
+                <h3>该属性只在opera和IE8及其以前版本支持，并在html5废除，不建议使用</h3>
+                <table border="1px" width="100%">
+                    <colgroup style="background-color: #a0f0a0;" align="left">
+                        <col style="background-color: #a0a0f0;" align="right" />
+                        <col span="2" />
+                    </colgroup>
+                    <tr>
+                        <td>苹果</td>
+                        <td>100元</td>
+                        <td>10个</td>
+                    </tr>
+                    <tr>
+                        <td>雪梨</td>
+                        <td>200元</td>
+                        <td>10个</td>
+                    </tr>
+                    <tr>
+                        <td>原子弹</td>
+                        <td>1元</td>
+                        <td>1个</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="tab-pane" id="char">
+                <h3>该属性不被主流浏览器支持，并在html5废除，不建议使用</h3>
+                <table border="1px">
+                    <colgroup style="background-color: #a0f0a0;" char="." align="char">
+                        <col style="background-color: #a0a0f0;" />
+                        <col span="2" />
+                    </colgroup>
+                    <tr>
+                        <td>苹果</td>
+                        <td>100.0元</td>
+                        <td>10.0个</td>
+                    </tr>
+                    <tr>
+                        <td>雪梨</td>
+                        <td>200.0元</td>
+                        <td>10.0个</td>
+                    </tr>
+                    <tr>
+                        <td>原子弹</td>
+                        <td>1.0元</td>
+                        <td>1.0个</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="tab-pane" id="charoff">
+                <h3>该属性不被主流浏览器支持，并在html5废除，不建议使用</h3>
+                <table border="1px">
+                    <colgroup style="background-color: #a0f0a0;" align="char" char="." charoff="2">
+                        <col style="background-color: #a0a0f0;" />
+                        <col span="2" />
+                    </colgroup>
+                    <tr>
+                        <td>苹果</td>
+                        <td>100.0元</td>
+                        <td>10.0个</td>
+                    </tr>
+                    <tr>
+                        <td>雪梨</td>
+                        <td>200.0元</td>
+                        <td>10.0个</td>
+                    </tr>
+                    <tr>
+                        <td>原子弹</td>
+                        <td>1.0元</td>
+                        <td>1.0个</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="tab-pane" id="valign">
+                <h3>该属性只在opera和IE支持，并在html5废除，不建议使用</h3>
+                <table border="1px">
+                    <colgroup style="background-color: #a0f0a0;" valign="bottom">
+                        <col style="background-color: #a0a0f0;" />
+                        <col span="2" />
+                    </colgroup>
+                    <tr>
+                        <td>苹果</td>
+                        <td>100元</td>
+                        <td>10个</td>
+                    </tr>
+                    <tr>
+                        <td>雪梨</td>
+                        <td>200元</td>
+                        <td>10个</td>
+                    </tr>
+                    <tr>
+                        <td>原子弹</td>
+                        <td>1元</td>
+                        <td>1个</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="tab-pane" id="width">
+                <table border="1px">
+                    <colgroup style="background-color: #a0f0a0;" width="100%">
+                        <col style="background-color: #a0a0f0;" />
+                        <col span="2" />
+                    </colgroup>
+                    <tr>
+                        <td>苹果</td>
+                        <td>100元</td>
+                        <td>10个</td>
+                    </tr>
+                    <tr>
+                        <td>雪梨</td>
+                        <td>200元</td>
+                        <td>10个</td>
+                    </tr>
+                    <tr>
+                        <td>原子弹</td>
+                        <td>1元</td>
+                        <td>1个</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="tab-pane" id="span">
+                <table border="1px">
+                    <colgroup style="background-color: #a0f0a0;" span="2">
+                        
+                    </colgroup>
+                    <tr>
+                        <td>苹果</td>
+                        <td>100元</td>
+                        <td>10个</td>
+                    </tr>
+                    <tr>
+                        <td>雪梨</td>
+                        <td>200元</td>
+                        <td>10个</td>
+                    </tr>
+                    <tr>
+                        <td>原子弹</td>
+                        <td>1元</td>
+                        <td>1个</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

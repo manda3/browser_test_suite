@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/main.js">
+    </script>
+    <script type="text/javascript" src="../js/JSTestCaseLib/base_dom_test.js"></script>
+    <script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("javascript_testcase/body_dom_js.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("javascript_testcase/area_dom_js.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../../index.htm", "_self", false);
+        }
+    </script>
+
+    <base href="/auto_test_case/" target="showBox" id="base" />
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回首页</button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <ul class="nav nav-pills" id="tabs">
+            <li class="active"><a href="#href_dom_js" data-toggle="tab">href</a></li>
+            <li><a href="#id_dom_js" data-toggle="tab">id</a></li>
+            <li><a href="#target_dom_js" data-toggle="tab">target</a></li>
+        </ul>
+
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="href_dom_js">
+                <h3>此页面用于测试javascript dom中的base对象中的href</h3>
+                <img src="images/Aurora.gif" alt="aurora" height="200px" width="400px" />
+                <p></p>
+                <button onclick="testHrefOfBase ();">click to check href of base</button>
+                <p></p>
+                <div id="showbox_base1"></div>
+            </div>
+
+            <div class="tab-pane" id="id_dom_js">
+                <h3>此页面用于测试javascript dom中的base对象中的id</h3>
+                <p></p>
+                <button onclick="testIdOfBase ();">click to check id of base</button>
+                <p></p>
+                <div id="showbox_base2"></div>
+            </div>
+
+            <div class="tab-pane" id="target_dom_js">
+                <h3>此页面用于测试javascript dom中的base对象中的target</h3>
+                <a href="javascript_testcase/anchor_dom_js.html">点击打开</a>
+                <p></p>
+                <button onclick="testTargetOfBase ();">click to check target of base</button>
+                <br></br>
+                <iframe src="" frameborder="1" name="showBox" height="200px" width="400px"></iframe>
+                
+                <p></p>
+                <div id="showbox_base3"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/main.js">
+    </script>
+    <script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("list_css.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("fake_element_css.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../../index.htm", "_self", false);
+        }
+    </script>
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回首页</button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <ul class="nav nav-pills" id="tabs">
+            <li class="active"><a href="#font_css" data-toggle="tab">font</a></li>
+            <li><a href="#font-family_css" data-toggle="tab">font-family</a></li>
+            <li><a href="#font-size_css" data-toggle="tab">font-size</a></li>
+            <li><a href="#font-size-adjust_css" data-toggle="tab">font-size-adjust</a></li>
+            <li><a href="#font-stretch_css" data-toggle="tab">font-stretch</a></li>
+            <li><a href="#font-style_css" data-toggle="tab">font-style</a></li>
+            <li><a href="#font-variant_css" data-toggle="tab">font-variant</a></li>
+            <li><a href="#font-weight_css" data-toggle="tab">font-weight</a></li>
+            
+        </ul>
+
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="font_css">
+                <h3>此页面用于测试字体属性中的font</h3>
+                <p id="ex1">This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph.</p>
+                <p id="ex2">This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph.</p>
+
+            </div>
+
+            <div class="tab-pane" id="font-family_css">
+                <h3>此页面用于测试字体属性中的font-family</h3>
+                <h1>CSS font-family</h1>
+                <p id="serif">This is a paragraph, shown in the Times New Roman font.</p>
+                <p id="sansserif">This is a paragraph, shown in the Arial font.</p>
+
+            </div>
+
+            <div class="tab-pane" id="font-size_css">
+                <h3>此页面用于测试字体属性中的font-size</h3>
+                <h1>This is heading</h1>
+                <h1 id="bigger">This is heading bigger</h1>
+                <p>This is a paragraph.</p>
+                <p id="bigger">This is a paragraph bigger.</p>
+            </div>
+
+            <div class="tab-pane" id="font-size-adjust_css">
+                <h3>此页面用于测试字体属性中的font-size-adjust</h3>
+                <p>此属性为css3属性,目前只在火狐中支持（测试有效性暂时保留）</p>
+                <p id="ex1">This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph.</p>
+                <p id="ex2">This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph.</p>
+            </div>
+
+            <div class="tab-pane" id="font-stretch_css">
+                <h3>此页面用于测试字体属性中的font-stretch</h3>
+                <p>该属性不被主流浏览器支持，不建议使用</p>
+                <div>
+                Some normal text in a div element.
+                </div>
+
+                <div id="div1">
+                Some condensed text in a div element.
+                </div>
+
+                <div id="div2">
+                Some expanded text in a div element.
+                </div>
+            </div>
+
+            <div class="tab-pane" id="font-style_css">
+                <h3>此页面用于测试字体属性中的font-style</h3>
+                <p id="normal">This is a paragraph, normal.</p>
+                <p id="italic">This is a paragraph, italic.</p>
+                <p id="oblique">This is a paragraph, oblique.</p>
+            </div>
+
+            <div class="tab-pane" id="font-variant_css">
+                <h3>此页面用于测试字体属性中的font-variant</h3>
+                <p id="normal">My name is Hege Refsnes.</p>
+                <p id="small">My name is Hege Refsnes.</p>
+            </div>
+
+            <div class="tab-pane" id="font-weight_css">
+                <h3>此页面用于测试字体属性中的font-weight</h3>
+                <p id="normal">This is a paragraph.</p>
+                <p id="light">This is a paragraph.</p>
+                <p id="thick">This is a paragraph.</p>
+                <p id="thicker">This is a paragraph.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/main.js" charset="ISO-8859-1" defer="defer">
+    </script>
+    <script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("select_html.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("samp_html.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../../index.htm", "_self", false);
+        }
+
+        function showText () {
+            var txt = document.getElementById('origin').innerHTML;
+            var show = document.getElementById('showBox');
+            show.innerHTML = "<strong>" + txt + "(copy by fun in script tag)</strong>";
+        }
+
+        
+    </script>
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回首页</button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <ul class="nav nav-pills" id="tabs">
+            <li class="active"><a href="#script" data-toggle="tab">script</a></li>
+            <li><a href="#charset" data-toggle="tab">charset</a></li>
+            <li><a href="#language" data-toggle="tab">language</a></li>
+            <li><a href="#type" data-toggle="tab">type</a></li>
+            <li><a href="#defer" data-toggle="tab">defer</a></li>
+            <li><a href="#src" data-toggle="tab">src</a></li>
+        </ul>
+
+         <div class="tab-content">
+
+            <div class="tab-pane active" id="script">
+                <h3>此页面用于测试&lt;script&gt;标签</h3>
+                <p id="origin">This is the normal text.</p>
+                <button onclick="showText()">点击查看</button>
+                <p></p>
+                <p id="showBox"></p>
+            </div>
+
+            <div class="tab-pane" id="charset">
+                <h3>此页面用于测试&lt;script&gt;标签charset</h3>
+                
+                <p id="origin2">Greek symbols: α β γ δ ε ζ η θ (with charset UTF-8)</p>
+                <button onclick="textShow()">点击查看</button>
+                <p></p>
+                <p id="showBox2"></p>
+            </div>
+
+            <div class="tab-pane" id="language">
+                <h3>此页面用于测试&lt;script&gt;标签language</h3>
+                <p>已在html4.01中弃用，并在html5中废除，不建议使用。</p>
+            </div>
+
+            <div class="tab-pane" id="type">
+                <h3>此页面用于测试&lt;script&gt;标签type</h3>
+                <p id="origin3">This is the normal text.</p>
+                <button onclick="showText2()">点击查看</button>
+                <p></p>
+                <p id="showBox3"></p>
+            </div>
+
+            <div class="tab-pane" id="defer">
+                <h3>此页面用于测试&lt;script&gt;标签defer</h3>
+                <p>暂时不能保证测试的有效性</p>
+                <p id="origin4">This is the normal text.</p>
+                <button onclick="showText3()">点击查看</button>
+                <p></p>
+                <p id="showBox4"></p>
+            </div>
+
+            <div class="tab-pane" id="src">
+                <h3>此页面用于测试&lt;script&gt;标签src</h3>
+                <p id="origin5">This is the normal text.</p>
+                <button onclick="showText4()">点击查看</button>
+                <p></p>
+                <p id="showBox5"></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

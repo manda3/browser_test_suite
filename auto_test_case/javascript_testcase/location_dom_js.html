@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/main.js">
+    </script>
+    <script type="text/javascript" src="../js/JSTestCaseLib/location_dom_test.js"></script>
+    <script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("document_dom_js.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("history_dom_js.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../../index.htm", "_self", false);
+        }
+    </script>
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回首页</button>
+        </div>
+    </div>
+    
+    <div class="content">
+         <ul class="nav nav-pills" id="tabs">
+            <li class="active"><a href="#hash_dom_js" data-toggle="tab">hash</a></li>
+            <li><a href="#host_dom_js" data-toggle="tab">host</a></li>
+            <li><a href="#hostname_dom_js" data-toggle="tab">hostname</a></li>
+            <li><a href="#href_dom_js" data-toggle="tab">href</a></li>
+            <li><a href="#pathname_dom_js" data-toggle="tab">pathname</a></li>
+            <li><a href="#port_dom_js" data-toggle="tab">port</a></li>
+            <li><a href="#protocol_dom_js" data-toggle="tab">protocol</a></li>
+            <li><a href="#search_dom_js" data-toggle="tab">search</a></li>
+            <li><a href="#assign_func_dom_js" data-toggle="tab">assign()</a></li>
+            <li><a href="#reload_func_dom_js" data-toggle="tab">reload()</a></li>
+            <li><a href="#replace_func_dom_js" data-toggle="tab">replace()</a></li>
+        </ul>
+
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="hash_dom_js">
+                <h3>此页面用于测试javascript dom中的location对象中的hash</h3>
+                <p></p>
+                <button onclick="testHashOfLoc();">click to test hash of location</button>
+                <p></p>
+                <div id="showbox_loc1"></div>
+            </div>
+
+            <div class="tab-pane" id="host_dom_js">
+                <h3>此页面用于测试javascript dom中的location对象中的host</h3>
+                <p></p>
+                <button onclick="testHostOfLoc();">click to test host of location</button>
+                <p></p>
+                <div id="showbox_loc2"></div>
+            </div>
+
+            <div class="tab-pane" id="hostname_dom_js">
+                <h3>此页面用于测试javascript dom中的location对象中的hostname</h3>
+                <p></p>
+                <button onclick="testHostnameOfLoc();">click to test hostname of location</button>
+                <p></p>
+                <div id="showbox_loc3"></div>
+            </div>
+
+            <div class="tab-pane" id="href_dom_js">
+                <h3>此页面用于测试javascript dom中的location对象中的href</h3>
+                <p></p>
+                <button onclick="testHrefOfLoc();">click to test href of location</button>
+                <p></p>
+                <div id="showbox_loc4"></div>
+            </div>
+            
+            <div class="tab-pane" id="pathname_dom_js">
+                <h3>此页面用于测试javascript dom中的location对象中的pathname</h3>
+
+                <p></p>
+                <button onclick="testPathnameOfLoc();">click to test pathname of location</button>
+                <p></p>
+                <div id="showbox_loc5"></div>
+            </div>
+
+            <div class="tab-pane" id="port_dom_js">
+                <h3>此页面用于测试javascript dom中的location对象中的port</h3>
+                <p></p>
+                <button onclick="testPortOfLoc();">click to test port of location</button>
+                <p></p>
+                <div id="showbox_loc6"></div>
+            </div>
+
+            <div class="tab-pane" id="protocol_dom_js">
+                <h3>此页面用于测试javascript dom中的location对象中的protocol</h3>
+                <p></p>
+                <button onclick="testProtocolOfLoc();">click to test protocol of location</button>
+                <p></p>
+                <div id="showbox_loc7"></div>
+            </div>
+
+            <div class="tab-pane" id="search_dom_js">
+                <h3>此页面用于测试javascript dom中的location对象中的search</h3>
+                <p>返回网址的查询部分，例如example.com/search.php?email=xxx中的?email=xxx</p>
+                <button onclick="testSearchOfLoc();">click to test search of location</button>
+                <p></p>
+                <div id="showbox_loc8"></div>
+            </div>
+
+            <div class="tab-pane" id="assign_func_dom_js">
+                <h3>此页面用于测试javascript dom中的location对象中的assign()</h3>
+                <p></p>
+                <button onclick="testAssignFuncOfLoc();">click to test assign() to go to front page</button>
+
+            </div>
+
+            <div class="tab-pane" id="reload_func_dom_js">
+                <h3>此页面用于测试javascript dom中的location对象中的reload()</h3>
+                <p></p>
+                <button onclick="testReloadFuncOfLoc();">click to test reload() to test current page</button>
+                <p></p>
+                <div id="showbox_loc10"></div>
+            </div>
+
+            <div class="tab-pane" id="replace_func_dom_js">
+                <h3>此页面用于测试javascript dom中的location对象中的replace()</h3>
+                <p></p>
+                <button onclick="testReplaceFuncOfLoc();">click to test replace to go to front page</button>
+                <p></p>
+                <div id="showbox_loc11"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

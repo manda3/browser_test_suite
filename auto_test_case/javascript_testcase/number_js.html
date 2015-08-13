@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/main.js">
+    </script>
+    <script type="text/javascript" src="../js/JSTestCaseLib/number_object_test.js"></script>
+
+    <script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("regexp_js.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("math_js.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../../index.htm", "_self", false);
+        }
+    </script>
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回首页</button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <ul class="nav nav-pills" id="tabs">
+            <li class="active"><a href="#one_number" data-toggle="tab">page 1</a></li>
+            <li><a href="#two_number" data-toggle="tab">page 2</a></li>
+
+        </ul>
+
+        <div class="tab-content">
+            <div class="tab-pane active" id="one_number">
+                <h3>此页面用于测试javascript的number对象</h3>
+                <div class="content_item" id="constructor_number">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+
+                <div class="content_item" id="MAX_VALUE_number">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="content_item" id="MIN_VALUE_number">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="content_item" id="NaN_number">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="content_item" id="NEGATIVE_INFINITY_number">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="content_item" id="POSITIVE_INFINITY_number">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="content_item" id="toString_func_number">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="content_item" id="toLocaleString_func_number">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+
+            <div class="tab-pane" id="two_number">
+
+                <h3>此页面用于测试javascript的number对象</h3>
+                <div class="content_item" id="toFixed_func_number">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="content_item" id="toExponential_func_number">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="content_item" id="toPrecision_func_number">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="content_item" id="valueOf_func_number">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        testNumberObject ();
+    </script>
+</body>
+</html>

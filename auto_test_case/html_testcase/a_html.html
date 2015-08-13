@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/main.js">
+    </script>
+    <script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+
+        $('#tabs a').click(
+            function(e){
+                e.preventDefault();
+                $(this).tab('show');
+            }
+        )
+
+        function goToNext () {
+            window.open("abbr_html.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("../../index.htm", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../../index.htm", "_self", false);
+        }
+    </script>
+</head>
+<body>
+	<div id="header" class="row">
+    	<div class="col-xs-2">
+        	<button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>	
+        </div>
+    	<div class="col-xs-2">
+        	<button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+        	<button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回首页</button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <ul class="nav nav-pills" id="tabs">
+            <li class="active"><a href="#a" data-toggle="tab">a</a></li>
+            <li><a href="#charset" data-toggle="tab">charset</a></li>
+            <li><a href="#coords" data-toggle="tab">coords</a></li>
+            <li><a href="#href" data-toggle="tab">href</a></li>
+            <li><a href="#hreflang" data-toggle="tab">hreflang</a></li>
+            <li><a href="#name" data-toggle="tab">name</a></li>
+            <li><a href="#rel" data-toggle="tab">rel</a></li>
+            <li><a href="#rev" data-toggle="tab">rev</a></li>
+            <li><a href="#shape" data-toggle="tab">shape</a></li>
+            <li><a href="#target" data-toggle="tab">target</a></li>
+            <li><a href="#type" data-toggle="tab">type</a></li>
+        </ul>
+
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="a">
+                <a href="./a_attribute_html/a_test_html.html">此处是超链接</a>    
+            </div>
+
+            <div class="tab-pane" id="charset">
+                <a charset="UTF-8" href="./a_attribute_html/a_charset_html.html">点击查看</a>
+                <br></br>
+                <p>charset属性暂时无法保证测试有效性，并已在html5中废除，不建议使用</p>
+            </div>
+        
+            <div class="tab-pane" id="coords">
+                <p>coords属性暂时无法保证测试有效性，并已在html5中废除，不建议使用</p>
+
+                <object data="../images/Aurora.gif" alt="Planets" type="image/gif" usemap="#Map1">
+                    <map name="Map1">
+                        <a href="./a_attribute_html/a_coords_html.html" shape="rect" coords="0,0,82,126">The Aurora</a>
+                    </map>
+                </object>
+            </div>
+        
+            <div class="tab-pane" id="href">
+                <a href="./a_attribute_html/a_href_html.html">此处是超链接</a>
+            </div>
+
+            <div class="tab-pane" id="hreflang">
+                <a href="./a_attribute_html/a_hreflang_html.html" hreflang="zh">此处是超链接</a>
+                <br></br>
+                <p>此属性纯粹用于提供信息，无其他功能，没有特殊又变态的需要则不建议使用</p>
+            </div>
+
+            <div class="tab-pane" id="name">
+                <a href="./a_attribute_html/a_name_html.html">点击查看</a>
+                <br></br>
+                <p>name属性已在xhtml和html5中废除，不建议使用，请使用id属性替代</p>
+            </div>
+
+            <div class="tab-pane" id="rel">
+                <a href="./a_attribute_html/a_rel_rev_html.html" rel="no follow">点击查看</a>
+                <br></br>
+                <p>rel属性用于为搜索引擎提供信息，浏览器不使用，无特殊需要则不建议使用</p>
+            </div>
+
+            <div class="tab-pane" id="rev">
+                <a href="./a_attribute_html/a_rel_rev_html.html" rev="no follow">点击查看</a>
+                <br></br>
+                <p>rev属性用于为搜索引擎提供信息，浏览器不使用，无特殊需要则不建议使用</p>
+            </div>
+
+            <div class="tab-pane" id="shape">
+                <a href="./a_attribute_html/a_shape_html.html">点击查看</a>
+                <br></br>
+                <p>shape属性暂时无法保证测试有效性，并已在html5中废除，不建议使用</p>
+            </div>
+
+            <div class="tab-pane" id="target">
+                <a href="./a_attribute_html/a_target_html.html" target="_blank">点击查看</a>
+                <p></p>
+                
+            </div>
+
+            <div class="tab-pane" id="type">
+                <a href="./a_attribute_html/a_type_html.html" type="text/html">点击查看</a>
+                <br></br>
+                <p>此属性纯粹用于提供信息，无其他功能，没有特殊又变态的需要则不建议使用</p>
+            </div>
+    </div>
+    </div>
+</body>
+</html>

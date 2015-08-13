@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/main.js">
+    </script>
+    <script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("border_css.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("../../index.htm", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../../index.htm", "_self", false);
+        }
+    </script>
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回首页</button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <ul class="nav nav-pills" id="tabs">
+            <li class="active"><a href="#background_css" data-toggle="tab">background</a></li>
+            <li><a href="#background-attachment_css" data-toggle="tab">background-attachment</a></li>
+            <li><a href="#background-color_css" data-toggle="tab">background-color</a></li>
+            <li><a href="#background-image_css" data-toggle="tab">background-image</a></li>
+            <li><a href="#background-repeat_css" data-toggle="tab">background-repeat</a></li>
+            <li><a href="#background-position_css" data-toggle="tab">background-position</a></li>
+        </ul>
+
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="background_css">
+                <h3>此页面用于测试背景属性中的background</h3>
+                <div></div>
+            </div>
+            
+            <div class="tab-pane" id="background-attachment_css">
+                <h3>此页面用于测试背景属性中的background-attachment</h3>
+                <div></div>
+            </div>
+
+            <div class="tab-pane" id="background-color_css">
+                <h3>此页面用于测试背景属性中的background-color</h3>
+                <div></div>
+            </div>
+
+            <div class="tab-pane" id="background-image_css">
+                <h3>此页面用于测试背景属性中的background-image</h3>
+                <div></div>
+            </div>
+
+            <div class="tab-pane" id="background-repeat_css">
+                <h3>此页面用于测试背景属性中的background-repeat</h3>
+                <p>no-repeat:</p>
+                <div id="no-repeat_background-repeat_css"></div>
+                <p>repeat:</p>
+                <div id="repeat_background-repeat_css"></div>
+                <p>repeat-x:</p>
+                <div id="repeat-x_background-repeat_css"></div>
+                <p>repeat-y:</p>
+                <div id="repeat-y_background-repeat_css"></div>
+            </div>
+
+            <div class="tab-pane" id="background-position_css">
+                <h3>此页面用于测试背景属性中的background-position</h3>
+                <p>center:</p>
+                <div id="center_background-position_css"></div>
+                <p>bottom:</p>
+                <div id="bottom_background-position_css"></div>
+                <p>top:</p>
+                <div id="top_background-position_css"></div>
+                <p>left:</p>
+                <div id="left_background-position_css"></div>
+                <p>right:</p>
+                <div id="right_background-position_css"></div>
+                <p>percentage:</p>
+                <div id="percentage_background-position_css"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

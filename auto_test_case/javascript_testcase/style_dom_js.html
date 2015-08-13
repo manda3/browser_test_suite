@@ -1,0 +1,909 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/main.js">
+    </script>
+    <script type="text/javascript" src="../js/JSTestCaseLib/style_dom_test.js"></script>
+    <script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("table_dom_js.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("select_dom_js.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../../index.htm", "_self", false);
+        }
+    </script>
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回首页</button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <ul class="nav nav-pills" id="tabs">
+            <li class="active dropdown">
+                <a href="#" data-toggle="dropdown" role="button" id="drop1">边框属性<b class="caret"></b></a>
+                <ul class="dropdown-menu" role="menu" aria-labelleby="drop1">
+                    <li><a href="#border_style_dom_js" data-toggle="tab">border</a></li>
+                    <li><a href="#borderColor_style_dom_js" data-toggle="tab">borderColor</a></li>
+                    <li><a href="#borderStyle_style_dom_js" data-toggle="tab">borderStyle</a></li>
+                    <li><a href="#borderWidth_style_dom_js" data-toggle="tab">borderWidth</a></li>
+                    <li><a href="#margin_style_dom_js" data-toggle="tab">margin</a></li>
+                    <li><a href="#outline_style_dom_js" data-toggle="tab">outline</a></li>
+                    <li><a href="#outlineColor_style_dom_js" data-toggle="tab">outlineColor</a></li>
+                    <li><a href="#outlineStyle_style_dom_js" data-toggle="tab">outlineStyle</a></li>
+                    <li><a href="#outlineWidth_style_dom_js" data-toggle="tab">outlineWidth</a></li>
+                    <li><a href="#padding_style_dom_js" data-toggle="tab">padding</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" data-toggle="dropdown" role="button" id="drop2">布局属性<b class="caret"></b></a>
+                <ul class="dropdown-menu" role="menu" aria-labelleby="drop2">
+                    <li><a href="#clear_style_dom_js" data-toggle="tab">clear</a></li>
+                    <li><a href="#clip_style_dom_js" data-toggle="tab">clip</a></li>
+                    <li><a href="#content_style_dom_js" data-toggle="tab">content</a></li>
+                    <li><a href="#counterIncrement_style_dom_js" data-toggle="tab">counterIncrement</a></li>
+                    <li><a href="#counterReset_style_dom_js" data-toggle="tab">counterReset</a></li>
+                    <li><a href="#cssFloat_style_dom_js" data-toggle="tab">cssFloat</a></li>
+                    <li><a href="#cursor_style_dom_js" data-toggle="tab">cursor</a></li>
+                    <li><a href="#direction_style_dom_js" data-toggle="tab">direction</a></li>
+                    <li><a href="#display_style_dom_js" data-toggle="tab">display</a></li>
+                    <li><a href="#height_style_dom_js" data-toggle="tab">height</a></li>
+                    <li><a href="#markerOffset_style_dom_js" data-toggle="tab">markerOffset</a></li>
+                    <li><a href="#marks_style_dom_js" data-toggle="tab">marks</a></li>
+                    <li><a href="#maxHeight_style_dom_js" data-toggle="tab">maxHeight</a></li>
+                    <li><a href="#maxWidth_style_dom_js" data-toggle="tab">maxWidth</a></li>
+                    <li><a href="#minHeight_style_dom_js" data-toggle="tab">minHeight</a></li>
+                    <li><a href="#minWidth_style_dom_js" data-toggle="tab">minWidth</a></li>
+                    <li><a href="#overflow_style_dom_js" data-toggle="tab">overflow</a></li>
+                    <li><a href="#verticalAlign_style_dom_js" data-toggle="tab">verticalAlign</a></li>
+                    <li><a href="#visibility_style_dom_js" data-toggle="tab">visibility</a></li>
+                    <li><a href="#width_style_dom_js" data-toggle="tab">width</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" data-toggle="dropdown" role="button" id="drop3">列表属性<b class="caret"></b></a>
+                <ul class="dropdown-menu" role="menu" aria-labelleby="drop3">
+                    <li><a href="#listStyle_style_dom_js" data-toggle="tab">listStyle</a></li>
+                    <li><a href="#listStyleImage_style_dom_js" data-toggle="tab">listStyleImage</a></li>
+                    <li><a href="#listStylePosition_style_dom_js" data-toggle="tab">listStylePosition</a></li>
+                    <li><a href="#listStyleType_style_dom_js" data-toggle="tab">listStyleType</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" data-toggle="dropdown" role="button" id="drop4">定位属性<b class="caret"></b></a>
+                <ul class="dropdown-menu" role="menu" aria-labelleby="drop4">
+                    <li><a href="#bottom_style_dom_js" data-toggle="tab">bottom</a></li>
+                    <li><a href="#left_style_dom_js" data-toggle="tab">left</a></li>
+                    <li><a href="#position_style_dom_js" data-toggle="tab">position</a></li>
+                    <li><a href="#right_style_dom_js" data-toggle="tab">right</a></li>
+                    <li><a href="#top_style_dom_js" data-toggle="tab">top</a></li>
+                    <li><a href="#zIndex_style_dom_js" data-toggle="tab">zIndex</a></li>
+
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" data-toggle="dropdown" role="button" id="drop5">表格属性<b class="caret"></b></a>
+                <ul class="dropdown-menu" role="menu" aria-labelleby="drop5">
+                    <li><a href="#borderCollapse_style_dom_js" data-toggle="tab">borderCollapse</a></li>
+                    <li><a href="#borderSpacing_style_dom_js" data-toggle="tab">borderSpacing</a></li>
+                    <li><a href="#emptyCells_style_dom_js" data-toggle="tab">emptyCells</a></li>
+                    <li><a href="#tableLayout_style_dom_js" data-toggle="tab">tableLayout</a></li>
+                    
+                </ul>
+
+            </li>
+            <li class="dropdown">
+                <a href="#" data-toggle="dropdown" role="button" id="drop6">文本属性<b class="caret"></b></a>
+                <ul class="dropdown-menu" role="menu" aria-labelleby="drop6">
+                    <li><a href="#color_style_dom_js" data-toggle="tab">color</a></li>
+                    <li><a href="#font_style_dom_js" data-toggle="tab">font</a></li>
+                    <li><a href="#fontFamily_style_dom_js" data-toggle="tab">fontFamily</a></li>
+                    <li><a href="#fontSize_style_dom_js" data-toggle="tab">fontSize</a></li>
+                    <li><a href="#fontSizeAdjust_style_dom_js" data-toggle="tab">fontSizeAdjust</a></li>
+                    <li><a href="#fontStyle_style_dom_js" data-toggle="tab">fontStyle</a></li>
+                    <li><a href="#fontVariant_style_dom_js" data-toggle="tab">fontVariant</a></li>
+                    <li><a href="#fontWeight_style_dom_js" data-toggle="tab">fontWeight</a></li>
+                    <li><a href="#letterSpacing_style_dom_js" data-toggle="tab">letterSpacing</a></li>
+                    <li><a href="#lineHeight_style_dom_js" data-toggle="tab">lineHeight</a></li>
+                    <li><a href="#quotes_style_dom_js" data-toggle="tab">quotes</a></li>
+                    <li><a href="#textAlign_style_dom_js" data-toggle="tab">textAlign</a></li>
+                    <li><a href="#textDecoration_style_dom_js" data-toggle="tab">textDecoration</a></li>
+                    <li><a href="#textIndent_style_dom_js" data-toggle="tab">textIndent</a></li>
+                    <li><a href="#textShadow_style_dom_js" data-toggle="tab">textShadow</a></li>
+                    <li><a href="#textTransform_style_dom_js" data-toggle="tab">textTransform</a></li>
+                    <li><a href="#whiteSpace_style_dom_js" data-toggle="tab">whiteSpace</a></li>
+                    <li><a href="#wordSpacing_style_dom_js" data-toggle="tab">wordSpacing</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" data-toggle="dropdown" role="button" id="drop7">背景属性<b class="caret"></b></a>
+                <ul class="dropdown-menu" role="menu" aria-labelleby="drop7">
+                    <li><a href="#background_style_dom_js" data-toggle="tab">background</a></li>
+                    <li><a href="#backgroundColor_style_dom_js" data-toggle="tab">backgroundColor</a></li>
+                    <li><a href="#backgroundImage_style_dom_js" data-toggle="tab">backgroundImage</a></li>
+                    <li><a href="#backgroundAttachment_style_dom_js" data-toggle="tab">backgroundAttachment</a></li>
+                    <li><a href="#backgroundRepeat_style_dom_js" data-toggle="tab">backgroundRepeat</a></li>
+                    <li><a href="#backgroundPosition_style_dom_js" data-toggle="tab">backgroundPosition</a></li>
+                    <li><a href="#backgroundPositionX_style_dom_js" data-toggle="tab">backgroundPositionX</a></li>
+                    <li><a href="#backgroundPositionY_style_dom_js" data-toggle="tab">backgroundPositionY</a></li>
+
+                </ul>
+            </li>
+        </ul>
+
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="border_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的border</h3>
+                <div id="border_style_js">border</div>
+                <div id="borderLeft_style_js">borderLeft</div>
+                <div id="borderRight_style_js">borderRight</div>
+                <div id="borderTop_style_js">borderTop</div>
+                <div id="borderBottom_style_js">borderBottom</div>
+                
+            </div>
+
+            <div class="tab-pane" id="borderColor_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的borderColor</h3>
+                <div id="borderColor_style_js">borderColor<br />(red)</div>
+                <div id="borderLeftColor_style_js">borderLeftColor<br />(blue)</div>
+                <div id="borderRightColor_style_js">borderRightColor<br />(green)</div>
+                <div id="borderTopColor_style_js">borderTopColor<br />(orange)</div>
+                <div id="borderBottomColor_style_js">borderBottomColor<br />(pink)</div>
+            </div>
+
+            <div class="tab-pane" id="borderStyle_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的borderStyle</h3>
+                <div id="borderStyle_style_js">borderStyle<br />(solid)</div>
+                <div id="borderLeftStyle_style_js">borderLeftStyle<br />(dotted)</div>
+                <div id="borderRightStyle_style_js">borderRightStyle<br />(dashed)</div>
+                <div id="borderTopStyle_style_js">borderTopStyle<br />(double)</div>
+                <div id="borderBottomStyle_style_js">borderBottomStyle<br />(groove)</div>
+            </div>
+
+            <div class="tab-pane" id="borderWidth_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的borderWidth</h3>
+                <div id="borderWidth_style_js">borderWidth<br />(5px)</div>
+                <div id="borderLeftWidth_style_js">borderLeftWidth<br />(10px)</div>
+                <div id="borderRightWidth_style_js">borderRightWidth<br />(15px)</div>
+                <div id="borderTopWidth_style_js">borderTopWidth<br />(20px)</div>
+                <div id="borderBottomWidth_style_js">borderBottomWidth<br />(25px)</div>
+            </div>
+
+            <div class="tab-pane" id="margin_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的margin</h3>
+                <div class="outbox_style_js">
+                    <div id="margin_style_js">margin</div>
+                    <p>This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.</p>
+                </div>
+                <div class="outbox_style_js">
+                    <div id="marginLeft_style_js">marginLeft</div>
+                    <p>This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.</p>
+                </div>
+                <div class="outbox_style_js">
+                    <div id="marginRight_style_js">marginRight</div>
+                    <p>This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.</p>
+                </div>
+                <div class="outbox_style_js">
+                    <div id="marginTop_style_js">marginTop</div>
+                    <p>This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.</p>
+                </div>
+                <div class="outbox_style_js">
+                    <div id="marginBottom_style_js">marginBottom</div>
+                    <p>This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.</p>
+                </div>
+            </div>
+
+            <div class="tab-pane" id="outline_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的outline</h3>
+                <div id="outline_style_js"></div>
+                
+            </div>
+
+            <div class="tab-pane" id="outlineColor_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的outlineColor</h3>
+                <div id="outlineColor_style_js">red</div>
+                <div id="outlineColor2_style_js">blue</div>
+                <div id="outlineColor3_style_js">green</div>
+            </div>
+
+            <div class="tab-pane" id="outlineStyle_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的outlineStyle</h3>
+                <div id="outlineStyle_style_js">dotted</div>
+                <div id="outlineStyle2_style_js">double</div>
+                <div id="outlineStyle3_style_js">groove</div>
+            </div>
+
+            <div class="tab-pane" id="outlineWidth_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的outlineWidth</h3>
+                <div id="outlineWidth_style_js">4px</div>
+                <div id="outlineWidth2_style_js">7px</div>
+                <div id="outlineWidth3_style_js">10px</div>
+            </div>
+
+            <div class="tab-pane" id="padding_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的padding</h3>
+                <div id="padding_style_js">
+                    <h4>padding:20px</h4>
+                    <p>This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.This is some text. This is some text. </p>
+                </div>
+                <div id="paddingLeft_style_js">
+                    <h4>paddingLeft:25px</h4>
+                    <p>This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.This is some text. This is some text. </p>
+                </div>
+                <div id="paddingRight_style_js">
+                    <h4>paddingRight:25px</h4>
+                    <p>This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.This is some text. This is some text. </p>
+                </div>
+                <div id="paddingTop_style_js">
+                    <h4>paddingTop:25px</h4>
+                    <p>This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.This is some text. This is some text. </p>
+                </div>
+                <div id="paddingBottom_style_js">
+                    <h4>paddingBottom:25px</h4>
+                    <p>This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.This is some text. This is some text. </p>
+                </div>
+            </div>
+
+
+            <div class="tab-pane" id="clear_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的clear</h3>
+                <p></p>
+                <p>如果浏览器不支持则图片会浮在段落左边</p>
+                <img src="../images/Aurora.jpg" alt="aurora" id="img_clear_style_js" width="200px" heihgt="200px" />
+                <p id="p_clear_style_js">This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.This is some text. This is some text. </p>
+            </div>
+
+            <div class="tab-pane" id="clip_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的clip</h3>
+                <p></p>
+                <p>看见图片被切了么</p>
+                <img src="../images/Aurora.jpg" alt="aurora" width="500px" height="340px" id="img_clip_style_js" />
+            </div>
+
+            <div class="tab-pane" id="content_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的content</h3>
+                <p>该属性暂时无法测试</p>
+            </div>
+
+            <div class="tab-pane" id="counterIncrement_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的counterIncrement</h3>
+                <p>该属性暂时无法测试</p>
+            </div>
+
+            <div class="tab-pane" id="counterReset_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的counterReset</h3>
+                <p>该属性暂时无法测试</p>
+            </div>
+
+            <div class="tab-pane" id="cssFloat_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的cssFloat</h3>
+                <p>看见图片在段落的左边了么</p>
+                <img src="../images/Aurora.jpg" alt="aurora" id="img_cssFloat_style_js" width="200px" heihgt="200px" />
+                <p id="p_cssFloat_style_js">This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.This is some text. This is some text. </p>
+            </div>
+
+            <div class="tab-pane" id="cursor_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的cursor</h3>
+                <p>鼠标移动到网址上来观看指针的变化效果</p>
+                
+                <span id="span_cursor_style_js">www.google.com</span>
+            </div>
+
+            <div class="tab-pane" id="direction_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的direction</h3>
+                <h4>Without direction:</h4>
+                <p>This is from Google.</p>
+                <h4>With direction(rtl):</h4>
+                <p id="p_direction_style_js">This is from Google.</p>
+                
+                
+            </div>
+
+            <div class="tab-pane" id="display_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的display</h3>
+                <h4>Without display:</h4>
+                <p style="border: 1px solid red;">This is from Google.</p>
+                <h4>With display(none):</h4>
+                <p>你应该看不到文字。</p>
+                <p id="p_display_style_js">This is from Google.</p>
+            </div>
+
+            <div class="tab-pane" id="height_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的height</h3>
+                <div id="div_height_style_js">height:200px</div>
+            </div>
+
+
+            <div class="tab-pane" id="markerOffset_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的markerOffset</h3>
+                <p>暂时无法测试</p>
+            </div>
+
+            <div class="tab-pane" id="marks_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的marks</h3>
+                <p>暂时无法测试</p>
+            </div>
+
+            <div class="tab-pane" id="maxHeight_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的maxHeight</h3>
+                <h4>看见文字溢出了么</h4>
+                <p id="p_maxHeight_style_js">The maximum height of this paragraph is set to 50px. The maximum height of this paragraph is set to 50px. The maximum height of this paragraph is set to 50px. The maximum height of this paragraph is set to 50px. The maximum height of this paragraph is set to 50px. The maximum height of this paragraph is set to 50px. The maximum height of this paragraph is set to 50px. The maximum height of this paragraph is set to 50px. The maximum height of this paragraph is set to 50px. The maximum height of this paragraph is set to 50px.The maximum height of this paragraph is set to 50px. The maximum height of this paragraph is set to 50px. The maximum height of this paragraph is set to 50px. The maximum height of this paragraph is set to 50px.</p>
+            </div>
+
+            <div class="tab-pane" id="maxWidth_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的maxWidth</h3>
+                <p id="p_maxWidth_style_js">The maximum width of this paragraph is set to 100px.</p>
+            </div>
+
+            <div class="tab-pane" id="minHeight_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的minHeight</h3>
+                <p id="p_minHeight_style_js">The minimum height of this paragraph is set to 100px.</p>
+            </div>
+
+            <div class="tab-pane" id="minWidth_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的minWidth</h3>
+                <p id="p_minWidth_style_js">The minimum width of this paragraph is set to 150px.</p>
+            </div>
+
+            <div class="tab-pane" id="overflow_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的overflow</h3>
+
+                <p>overflow:scroll</p>
+                <div id="scroll_overflow_style_js">You can use the overflow property when you want to have better control of the layout. The default value is visible.</div>
+
+                <p>overflow:hidden</p>
+                <div id="hidden_overflow_style_js">You can use the overflow property when you want to have better control of the layout. The default value is visible.</div>
+            </div>
+
+            <div class="tab-pane" id="verticalAlign_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的verticalAlign</h3>
+                <p>看到文字落到格子底部了么</p>
+                <table border="1" height="100px">
+                    <tr>
+                        <td id="td_verti_style_js">Some example text</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="tab-pane" id="visibility_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的visibility</h3>
+                <div id="div_visibility_style_js">
+                    <p>测试成功应该看不到黄色的段落</p>
+                    <p id="p_visibility_style_js">This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.This is some text. This is some text. </p>
+                </div>
+            </div>
+
+            <div class="tab-pane" id="width_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的width</h3>
+
+                <div id="div_width_style_js">width:200px</div>
+            </div>
+
+            <div class="tab-pane" id="listStyle_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的listStyle</h3>
+                <ul id="one_listStyle_style_js">
+                    List
+                    <li>List Item 1</li>
+                    <li>List Item 2</li>
+                    <li>List Item 3</li>
+                    <li>List Item 4</li>
+                </ul>
+                <ul id="two_listStyle_style_js">
+                    List2
+                    <li>List Item 1</li>
+                    <li>List Item 2</li>
+                    <li>List Item 3</li>
+                    <li>List Item 4</li>
+                </ul>
+            
+            </div>
+
+            <div class="tab-pane" id="listStyleImage_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的listStyleImage</h3>
+                <ul id="one_listStyleImage_style_js">
+                    List
+                    <li>List Item 1</li>
+                    <li>List Item 2</li>
+                    <li>List Item 3</li>
+                    <li>List Item 4</li>
+                </ul>
+                <ul id="two_listStyleImage_style_js">
+                    List2
+                    <li>List Item 1</li>
+                    <li>List Item 2</li>
+                    <li>List Item 3</li>
+                    <li>List Item 4</li>
+                </ul>
+            </div>
+
+            <div class="tab-pane" id="listStylePosition_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的listStylePosition</h3>
+                <ul id="one_listStylePosition_style_js">
+                    List(inside)
+                    <li>List Item 1</li>
+                    <li>List Item 2</li>
+                    <li>List Item 3</li>
+                    <li>List Item 4</li>
+                </ul>
+                <ul id="two_listStylePosition_style_js">
+                    List2(outside)
+                    <li>List Item 1</li>
+                    <li>List Item 2</li>
+                    <li>List Item 3</li>
+                    <li>List Item 4</li>
+                </ul>
+            </div>
+
+            <div class="tab-pane" id="listStyleType_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的listStyleType</h3>
+                <ul id="one_listStyleType_style_js">
+                    List(decimal)
+                    <li>List Item 1</li>
+                    <li>List Item 2</li>
+                    <li>List Item 3</li>
+                    <li>List Item 4</li>
+                </ul>
+                <ul id="two_listStyleType_style_js">
+                    List2(circle)
+                    <li>List Item 1</li>
+                    <li>List Item 2</li>
+                    <li>List Item 3</li>
+                    <li>List Item 4</li>
+                </ul>
+            </div>
+
+            <div class="tab-pane" id="bottom_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的bottom</h3>
+                
+                <img id="star1_bottom_style_js" src="../images/star.gif" alt="star" />
+
+                <h1>This is the heading1.（原来上面有一张图片）</h1>
+
+                <img id="star2_bottom_style_js" src="../images/star.gif" alt="star" />
+
+                <h1>This is the heading2.（原来图片都在上面）</h1>
+            </div>
+
+            <div class="tab-pane" id="left_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的left</h3>
+                
+                <img id="star1_left_style_js" src="../images/star.gif" alt="star" />
+
+                <h1>This is the heading1.</h1>
+
+                <img id="star2_left_style_js" src="../images/star.gif" alt="star" />
+
+                <h1>This is the heading2.</h1>
+            </div>
+
+            <div class="tab-pane" id="position_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的position</h3>
+   
+                <h2 id="h2_position_style_js">This is a heading with an absolute position</h2>
+                <p>With absolute positioning, an element can be placed anywhere on a page. The heading below is placed 100px from the left of the page and 150px from the top of the page.</p>
+            </div>
+
+            <div class="tab-pane" id="right_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的right</h3>
+                
+                <img id="star1_right_style_js" src="../images/star.gif" alt="star" />
+
+                <h1>This is the heading1.</h1>
+
+                <img id="star2_right_style_js" src="../images/star.gif" alt="star" />
+
+                <h1>This is the heading2.</h1>
+            </div>
+
+            <div class="tab-pane" id="top_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的top</h3>
+                
+                <img id="star1_top_style_js" src="../images/star.gif" alt="star" />
+
+                <h1>This is the heading1.（本来上面有一幅图片）</h1>
+
+                <img id="star2_top_style_js" src="../images/star.gif" alt="star" />
+
+                <h1>This is the heading2.（本来上面有两幅图片）</h1>
+            </div>
+
+            <div class="tab-pane" id="zIndex_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的zIndex</h3>
+                
+                <h1>This is a heading</h1>
+                <img src="../images/Aurora.gif" width="100" height="140" id="img_zIndex_style_js" />
+                <p>Because the image has a z-index of -1, it will be placed behind the text.</p>
+            </div>
+
+            <div class="tab-pane" id="borderCollapse_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的borderCollapse</h3>
+                
+                <table id="table_borderCollapse_style_js">
+                    <tr>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                    </tr>
+                    <tr>
+                        <td>Peter</td>
+                        <td>Griffin</td>
+                    </tr>
+                    <tr>
+                        <td>Lois</td>
+                        <td>Griffin</td>
+                    </tr>
+                </table>    
+            </div>
+
+            <div class="tab-pane" id="borderSpacing_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的borderSpacing</h3>
+                
+                <table id="table_borderSpacing_style_js">
+                    <tr>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                    </tr>
+                    <tr>
+                        <td>Peter</td>
+                        <td>Griffin</td>
+                    </tr>
+                    <tr>
+                        <td>Lois</td>
+                        <td>Griffin</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="tab-pane" id="emptyCells_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的emptyCells</h3>
+                <table id="table_emptyCells_style_js">
+                    <tr>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                    </tr>
+                    <tr>
+                        <td>Peter</td>
+                        <td>Griffin</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Griffin</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="tab-pane" id="tableLayout_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的tableLayout</h3>
+                
+                <table id="ex1_tableLayout_style_js">
+                    <tr>
+                        <td width="5%">1000000000000000000000000000</td>
+                        <td width="95%">10000000</td>
+                    </tr>
+                </table>
+
+                <table id="ex2_tableLayout_style_js">
+                    <tr>
+                        <td width="5%">1000000000000000000000000000</td>
+                        <td width="95%">10000000</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="tab-pane" id="color_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的color</h3>
+                <p id="p1_color_style_js">This is some text. See the font color? Nothing, uh?</p>
+                <p></p>
+                <p id="p2_color_style_js">This is some text. See the font color? Red, uh?</p>
+            </div>
+
+            <div class="tab-pane" id="font_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的font</h3>
+                <p id="p1_font_style_js">This is the text for testing, see the effecs ?</p>
+                <p></p>
+                <p id="p2_font_style_js">This is the text for testing, see the effecs ?</p>
+            </div>
+
+            <div class="tab-pane" id="fontFamily_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的fontFamily</h3>
+                <p id="p1_fontFamily_style_js">This is the text for testing, see the effecs ?</p>
+                <p></p>
+                <p id="p2_fontFamily_style_js">This is the text for testing, see the effecs ?</p>
+            </div>
+
+            <div class="tab-pane" id="fontSize_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的fontSize</h3>
+                <h1>This is the heading normal</h1>
+                <h1 id="h1_fontSize_style_js">This is the headding bigger</h1>
+                <p>This is the paragraph normal</p>
+                <p></p>
+                <p id="p_fontSize_style_js">This is the paragraph bigger</p>
+            </div>
+
+            <div class="tab-pane" id="fontSizeAdjust_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的fontSizeAdjust</h3>
+                <p>只在火狐中支持，暂时无法测试</p>
+            </div>
+
+            <div class="tab-pane" id="fontStyle_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的fontStyle</h3>
+                <p id="ex1_fontStyle_style_js">This is the paragragh normal.</p>
+                <p></p>
+                <p id="ex2_fontStyle_style_js">This is the paragraph with italic.</p>
+                <p></p>
+                <p id="ex3_fontStyle_style_js">This is the paragraph with oblique.</p>
+            </div>
+
+            <div class="tab-pane" id="fontVariant_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的fontVariant</h3>
+                <p id="ex1_fontVariant_style_js">This is the paragragh normal.</p>
+                <p></p>
+                <p id="ex2_fontVariant_style_js">This is the paragraph with small-caps.</p>
+                
+            </div>
+
+            <div class="tab-pane" id="fontWeight_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的fontWeight</h3>
+                <p id="ex1_fontWeight_style_js">This is the paragragh normal.</p>
+                <p></p>
+                <p id="ex2_fontWeight_style_js">This is the paragraph with lighter.</p>
+                <p></p>
+                <p id="ex3_fontWeight_style_js">This is the paragraph with bold.</p>
+            </div>
+
+            <div class="tab-pane" id="letterSpacing_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的letterSpacing</h3>
+                <h1 id="ex1_letterSpacing_style_js">This is the heading1.</h1>
+                <p></p>
+                <h2 id="ex2_letterSpacing_style_js">This is the heading2.</h2>
+                <p></p>
+                <h3 id="ex3_letterSpacing_style_js">This is the heading3(normal).</h3>
+            </div>
+
+            <div class="tab-pane" id="lineHeight_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的lineHeight</h3>
+                <p id="ex1_lineHeigt_style_js">
+                    This is a paragraph with a standard line-height.<br>
+                    This is a paragraph with a standard line-height.<br>
+                    The default line height in most browsers is about 110% to 120%.<br>
+                </p>
+                <p></p>
+                <p id="ex2_lineHeight_style_js">
+                    This is a paragraph with a smaller line-height.<br>
+                    This is a paragraph with a smaller line-height.<br>
+                    This is a paragraph with a smaller line-height.<br>
+                    This is a paragraph with a smaller line-height.<br>
+                </p>
+                <p></p>
+                <p id="ex3_lineHeight_style_js">
+                    This is a paragraph with a bigger line-height.<br>
+                    This is a paragraph with a bigger line-height.<br>
+                    This is a paragraph with a bigger line-height.<br>
+                    This is a paragraph with a bigger line-height.<br>
+                </p>
+            </div>
+
+            <div class="tab-pane" id="quotes_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的quotes</h3>
+                <p>看到引号变书名号了么</p>
+                <h2><q id="q1_quotes_style_js">This is a <q id="q2_quotes_style_js">big</q> quote.</q></h2>
+            </div>
+
+            <div class="tab-pane" id="textAlign_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的textAlign</h3>
+                
+                <h1 id="ex1_textAlign_style_js">This is heading 1</h1>
+                <h2 id="ex2_textAlign_style_js">This is heading 2</h2>
+                <h4 id="ex3_textAlign_style_js">This is heading 3</h4>
+            </div>
+
+            <div class="tab-pane" id="textDecoration_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的textDecoration</h3>
+                
+                <h1 id="ex1_textDecoration_style_js">This is heading 1</h1>
+                <h2 id="ex2_textDecoration_style_js">This is heading 2</h2>
+                <h4 id="ex3_textDecoration_style_js">This is heading 3</h4>
+            </div>
+
+            <div class="tab-pane" id="textIndent_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的textIndent</h3>
+                
+                <p id="p_textIndent_style_js">In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since. 'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this world haven't had the advantages that you've had.'</p>
+
+                <h4>看见首行递进了么</h4>
+            </div>
+
+            <div class="tab-pane" id="textShadow_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的textShadow</h3>
+                <p>此属性是css3属性，旧浏览器可能不支持</p>
+                <h1 id="h_textShadow_style_js">Text-shadow effect</h1>
+            </div>
+
+            <div class="tab-pane" id="textTransform_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的textTransform</h3>
+                
+                <p id="uppercase_textTransform_style_js">This is some text.</p>
+                <p id="lowercase_textTransform_style_js">This is some text.</p>
+                <p id="capitalize_textTransform_style_js">This is some text.</p>
+            </div>
+
+            <div class="tab-pane" id="whiteSpace_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的whiteSpace</h3>
+                
+                <p id="p_whiteSpace_style_js">
+                This is some text. This is some text. This is some text.
+                This is some text. This is some text. This is some text.
+                This is some text. This is some text. This is some text.
+                This is some text. This is some text. This is some text.
+                </p>
+
+                <p></p>
+
+                <p>看见段落变成一行了么</p>
+            </div>
+
+            <div class="tab-pane" id="wordSpacing_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的wordSpacing</h3>
+                
+                <p id="p_wordSpacing_style_dom_js">
+                This is some text. This is some text.
+                </p>
+            </div>
+
+            <div class="tab-pane" id="background_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的background</h3>
+                <div id="div_background_style_js"></div>
+            </div>
+
+            <div class="tab-pane" id="backgroundColor_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的backgroundColor</h3>
+                <div id="div_backgroundColor_style_js"></div>
+            </div>
+
+            <div class="tab-pane" id="backgroundImage_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的backgroundImage</h3>
+                <div id="div_backgroundImage_style_js"></div>
+            </div>
+
+            <div class="tab-pane" id="backgroundAttachment_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的backgroundAttachment</h3>
+                <div id="div_backgroundAttachment_style_js"></div>
+            </div>
+
+            <div class="tab-pane" id="backgroundRepeat_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的backgroundRepeat</h3>
+                <p>no-repeat:</p>
+                <div id="no-repeat_backgroundRepeat_style_js"></div>
+                <p>repeat:</p>
+                <div id="repeat_backgroundRepeat_style_js"></div>
+                <p>repeat-x:</p>
+                <div id="repeat-x_backgroundRepeat_style_js"></div>
+                <p>repeat-y:</p>
+                <div id="repeat-y_backgroundRepeat_style_js"></div>
+            </div>
+
+            <div class="tab-pane" id="backgroundPosition_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的backgroundPosition</h3>
+                <p>center:</p>
+                <div id="center_backgroundPosition_style_js"></div>
+                <p>bottom:</p>
+                <div id="bottom_backgroundPosition_style_js"></div>
+                <p>top:</p>
+                <div id="top_backgroundPosition_style_js"></div>
+                <p>left:</p>
+                <div id="left_backgroundPosition_style_js"></div>
+                <p>right:</p>
+                <div id="right_backgroundPosition_style_js"></div>
+                <p>percentage:</p>
+                <div id="percentage_backgroundPosition_style_js"></div>
+            </div>
+
+            <div class="tab-pane" id="backgroundPositionX_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的backgroundPositionX</h3>
+                <p>center:</p>
+                <div id="ex1_backgroundPositionX_style_js"></div>
+                <p>right:</p>
+                <div id="ex2_backgroundPositionX_style_js"></div>
+            </div>
+
+            <div class="tab-pane" id="backgroundPositionY_style_dom_js">
+                <h3>此页面用于测试javascript dom中的style对象中的backgroundPositionY</h3>
+                <p>center:</p>
+                <div id="ex1_backgroundPositionY_style_js"></div>
+                <p>bottom:</p>
+                <div id="ex2_backgroundPositionY_style_js"></div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        testBorderOfStyle ();
+        testBorderColorOfStyle ();
+        testBorderStyleOfStyle ();
+        testBorderWidthOfStyle ();
+        testMarginOfStyle ();
+        testOutlineOfStyle ();
+        testOutlineColorOfStyle ();
+        testOutlineStyleOfStyle ();
+        testOutlineWidthOfStyle ();
+        testPaddingOfStyle ();
+        testClearOfStyle ();
+        testClipOfStyle ();
+        testCssFloatOfStyle ();
+        testCursorOfStyle ();
+        testDirectionOfStyle ();
+        testDisplayOfStyle ();
+        testHeightOfStyle ();
+        testMaxHeightOfStyle ();
+        testMaxWidthOfStyle ();
+        testMinHeightOfStyle ();
+        testMinWidthOfStyle ();
+        testOverflowOfStyle ();
+        testVerticalAlignOfStyle ();
+        testVisibilityOfStyle ();
+        testWidthOfStyle ();
+        testListStyleOfStyle ();
+        testListStyleImageOfStyle ();
+        testListStylePositionOfStyle ();
+        testListStyleTypeOfStyle ();
+        testBottomOfStyle ();
+        testLeftOfStyle ();
+        testPositionOfStyle ();
+        testRightOfStyle ();
+        testTopOfStyle ();
+        testZIndexOfStyle ();
+        testBorderCollapseOfStyle ();
+        testBorderSpacingOfStyle ();
+        testEmptyCellsOfStyle ();
+        testTableLayoutOfStyle ();
+        testColorOfStyle ();
+        testFontOfStyle ();
+        testFontFamilyOfStyle ();
+        testFontSizeOfStyle ();
+        testFontStyleOfStyle ();
+        testFontVariantOfStyle ();
+        testFontWeightOfStyle ();
+        testLetterSpacingOfStyle ();
+        testLineHeightOfStyle ();
+        testQuotesOfStyle ();
+        testTextAlignOfStyle ();
+        testTextDecoratioin ();
+        testTextIndentOfStyle ();
+        testTextShadowOfStyle ();
+        testTextTransformOfStyle ();
+        testWhiteSpaceOfStyle ();
+        testWordSpacingOfStyle ();
+        testBackgroundOfStyle ();
+        testBackgroundColorOfStyle ();
+        testBackgourndImageOfStyle ();
+        testBackgourndAttachmentOfStyle ();
+        testBackgroundRepeatOfStyle ();
+        testBackgroundPositionOfStyle ();
+        testBackgroundPositionXOfStyle ();
+        testBackgroundPositionYOfStyle ();
+    </script>
+</body>
+</html>

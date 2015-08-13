@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <script type="text/javascript" src="../../js/main.js">
+    </script>
+    <script type="text/javascript" src="../../js/JSTestCaseLib/event_dom_test.js"></script>
+
+    <script type="text/javascript" src="../../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("../event_dom_js.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("./preventDefault_func_event_dom_js.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../event_dom_js.html", "_self", false);
+        }
+    </script>
+</head>
+<body>
+	 <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回目录</button>
+        </div>
+    </div>
+
+
+    <div class="content" onclick="testStopPropagationFuncOfEventObj( event, 'onclick', 'div.content', false );" onfocus="testStopPropagationFuncOfEventObj( event, 'onfocus', 'div.content', false );">
+    
+        <h3>此页面用于测试javascript的html dom的event对象的stopPropagation()</h3>
+
+        The following button allows the propagation of the onclick and onfocus events:<br />
+        <button onclick="testStopPropagationFuncOfEventObj(event, 'onclick','first button', false);" onfocus="testStopPropagationFuncOfEventObj( event, 'onfocus', 'first button',false);">
+            允许 propagation
+        </button>
+
+        <br></br>
+
+        The following button allows the propagation of the onclick and onfocus events:<br />
+        <button onclick="testStopPropagationFuncOfEventObj(event, 'onclick','second button', true);" onfocus="testStopPropagationFuncOfEventObj( event, 'onfocus', 'second button', true);">
+            禁止 propagation
+        </button>
+
+        <br></br>
+
+        Information about the events: <br />
+        <div id="info" style="width: 400px; height: 200px; overflow: auto; background-color: #e0a0d0;"></div>
+
+    </div>
+</body>
+</html>

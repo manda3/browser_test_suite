@@ -1,0 +1,310 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <script type="text/javascript" src="../../js/main.js">
+    </script>
+    <script type="text/javascript" src="../../js/JSTestCaseLib/input_radio_dom_test.js"></script>
+    
+    <script type="text/javascript" src="../../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("input_reset_input_dom_js.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("input_password_input_dom_js.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../input_dom_js.html", "_self", false);
+        }
+    </script>
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回目录</button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <ul class="nav nav-pills" id="tabs">
+            <li class="active"><a href="#accessKey_input_radio_dom_js" data-toggle="tab">accessKey</a></li>
+            <li><a href="#alt_input_radio_dom_js" data-toggle="tab">alt</a></li>
+            <li><a href="#checked_input_radio_dom_js" data-toggle="tab">checked</a></li>
+            <li><a href="#defaultChecked_input_radio_dom_js" data-toggle="tab">defaultChecked</a></li>
+            <li><a href="#disabled_input_radio_dom_js" data-toggle="tab">disabled</a></li>
+            <li><a href="#form_input_radio_dom_js" data-toggle="tab">form</a></li>
+            <li><a href="#id_input_radio_dom_js" data-toggle="tab">id</a></li>
+            <li><a href="#name_input_radio_dom_js" data-toggle="tab">name</a></li>
+            <li><a href="#tabIndex_input_radio_dom_js" data-toggle="tab">tabIndex</a></li>
+            <li><a href="#type_input_radio_dom_js" data-toggle="tab">type</a></li>
+            <li><a href="#value_input_radio_dom_js" data-toggle="tab">value</a></li>
+            <li><a href="#blur_func_input_radio_dom_js" data-toggle="tab">blur()</a></li>
+            <li><a href="#focus_func_input_radio_dom_js" data-toggle="tab">focus()</a></li>
+            <li><a href="#click_func_input_radio_dom_js" data-toggle="tab">click()</a></li>
+            
+        </ul>
+
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="accessKey_input_radio_dom_js">
+                <h3>此页面用于测试javascript dom中的input radio对象中的accessKey</h3>
+                <p>暂时无法保证该测试有效性，用键盘输入alt+q alt+w进行测试</p>
+                <form action="http://192.168.200.50:8888/" method="POST" id="form1"> 
+                    姓名：<input type="text" name="name" /><p></p>
+                    电邮：<input type="text" name="email" /><p></p>
+                    
+                    <input type="radio" name="radio_group_form1" id="radio1_form1" />人类<p></p>
+                    <input type="radio" name="radio_group_form1" id="radio2_form1" />外星人
+                    <p></p>
+                    <input type="submit" value="点击提交" />
+                </form>
+
+            </div>
+
+            <div class="tab-pane" id="alt_input_radio_dom_js">
+                <h3>此页面用于测试javascript dom中的input radio对象中的alt</h3>
+                <p>暂时无法保证该测试有效性，alt属性只在type=“image”的input中有意义，其他类型不建议使用</p>
+                <form action="http://192.168.200.50:8888/" method="POST" id="form2"> 
+                    姓名：<input type="text" name="name" /><p></p>
+                    电邮：<input type="text" name="email" /><p></p>
+                    
+                    <input type="radio" name="radio_group_form2" id="radio1_form2" />人类<p></p>
+                    <input type="radio" name="radio_group_form2" id="radio2_form2" />外星人
+                    <p></p>
+                    <input type="submit" value="点击提交" />
+                </form>
+            </div>
+
+            <div class="tab-pane" id="checked_input_radio_dom_js">
+                <h3>此页面用于测试javascript dom中的input radio对象中的checked</h3>
+                <form action="http://192.168.200.50:8888/" method="POST" id="form3"> 
+                    姓名：<input type="text" name="name" /><p></p>
+                    电邮：<input type="text" name="email" /><p></p>
+                    
+                    <input type="radio" name="radio_group_form3" id="radio1_form3" />人类<p></p>
+                    <input type="radio" name="radio_group_form3" id="radio2_form3" />外星人
+                    
+                    <p></p>
+                    <input type="submit" value="点击提交" />
+                </form>
+                <p></p>
+                <button onclick="testCheckedOfInput ( 'radio1_form3' )">我是人类</button>
+                <button onclick="testCheckedOfInput ( 'radio2_form3' )">我是外星人</button>
+            </div>
+
+            <div class="tab-pane" id="defaultChecked_input_radio_dom_js">
+                <h3>此页面用于测试javascript dom中的input radio对象中的defaultChecked</h3>
+                <form action="http://192.168.200.50:8888/" method="POST" id="form4"> 
+                    姓名：<input type="text" name="name" /><p></p>
+                    电邮：<input type="text" name="email" /><p></p>
+                    
+                    <input type="radio" name="radio_group_form4" id="radio1_form4" />人类<p></p>
+                    <input type="radio" name="radio_group_form4" id="radio2_form4" />外星人
+                    
+                    <p></p>
+                    <input type="submit" value="点击提交" />
+                </form>
+            </div>
+
+            <div class="tab-pane" id="disabled_input_radio_dom_js">
+                <h3>此页面用于测试javascript dom中的input radio对象中的disabled</h3>
+                <form action="http://192.168.200.50:8888/" method="POST" id="form5"> 
+                    姓名：<input type="text" name="name" /><p></p>
+                    电邮：<input type="text" name="email" /><p></p>
+                    
+                    <input type="radio" name="radio_group_form5" id="radio1_form5" />人类<p></p>
+                    <input type="radio" name="radio_group_form5" id="radio2_form5" />外星人
+                    
+                    <p></p>
+                    <input type="submit" value="点击提交" />
+                </form>
+            </div>
+
+            <div class="tab-pane" id="form_input_radio_dom_js">
+                <h3>此页面用于测试javascript dom中的input radio对象中的form</h3>
+                <form action="http://192.168.200.50:8888/" method="POST" id="form6"> 
+                    姓名：<input type="text" name="name" /><p></p>
+                    电邮：<input type="text" name="email" /><p></p>
+                    
+                    <input type="radio" name="radio_group_form6" id="radio1_form6" />人类<p></p>
+                    <input type="radio" name="radio_group_form6" id="radio2_form6" />外星人
+                    
+                    <p></p>
+                    <input type="submit" value="点击提交" />
+                </form>
+                <p></p>
+                <button onclick="testFormOfInput ( 'showbox_form6', 'radio1_form6' )">click to check the form id(form6)</button>
+                <p></p>
+                <p id="showbox_form6"></p>
+            </div>
+
+            <div class="tab-pane" id="id_input_radio_dom_js">
+                <h3>此页面用于测试javascript dom中的input radio对象中的id</h3>
+                <form action="http://192.168.200.50:8888/" method="POST" id="form7"> 
+                    姓名：<input type="text" name="name" /><p></p>
+                    电邮：<input type="text" name="email" /><p></p>
+                    
+                    <input type="radio" name="radio_group_form7" id="radio1_form7" />人类<p></p>
+                    <input type="radio" name="radio_group_form7" id="radio2_form7" />外星人
+                    
+                    <p></p>
+                    <input type="submit" value="点击提交" />
+                </form>
+                <p></p>
+                <button onclick="testIdOfInput ( 'showbox_form7', 'form7', 'radio' )">click to check the element id</button>
+                <p></p>
+                <p id="showbox_form7"></p>
+            </div>
+
+            <div class="tab-pane" id="name_input_radio_dom_js">
+                <h3>此页面用于测试javascript dom中的input radio对象中的name</h3>
+                <p>name值为radio_group_form8</p>
+                <form action="http://192.168.200.50:8888/" method="POST" id="form8"> 
+                    姓名：<input type="text" name="name" /><p></p>
+                    电邮：<input type="text" name="email" /><p></p>
+                    
+                    <input type="radio" id="radio1_form8" value="human" />人类<p></p>
+                    <input type="radio" id="radio2_form8" value="extraterrestrial" />外星人
+                    
+                    <p></p>
+                    <input type="submit" value="点击提交" />
+                </form>
+                
+            </div>
+
+            <div class="tab-pane" id="tabIndex_input_radio_dom_js">
+                <h3>此页面用于测试javascript dom中的input radio对象中的tabIndex</h3>
+                <form action="http://192.168.200.50:8888/" method="POST" id="form9"> 
+                    姓名：<input type="text" name="name" /><p></p>
+                    电邮：<input type="text" name="email" /><p></p>
+                    
+                    <input type="radio" name="radio_group_form9" id="radio1_form9" />人类<p></p>
+                    <input type="radio" name="radio_group_form9" id="radio2_form9" />外星人
+                    
+                    <p></p>
+                    <input type="submit" value="点击提交" />
+                </form>
+                <p></p>
+                <button onclick="testTabIndexOfInput ( 'radio1_form9', 2 );testTabIndexOfInput ( 'radio2_form9', 1 );">click to change the tabIndex</button>
+            </div>
+
+            <div class="tab-pane" id="type_input_radio_dom_js">
+                <h3>此页面用于测试javascript dom中的input radio对象中的type</h3>
+                <form action="http://192.168.200.50:8888/" method="POST" id="form10"> 
+                    姓名：<input type="text" name="name" /><p></p>
+                    电邮：<input type="text" name="email" /><p></p>
+                    
+                    <input type="radio" name="radio_group_form10" id="radio1_form10" />人类<p></p>
+                    <input type="radio" name="radio_group_form10" id="radio2_form10" />外星人
+                    
+                    <p></p>
+                    <input type="submit" value="点击提交" />
+                </form>
+                <p></p>
+                <button onclick="testTypeOfInput ( 'showbox_form10', 'radio1_form10' )">click to show type of element</button>
+                <p></p>
+                <p id="showbox_form10"></p>
+            </div>
+
+            <div class="tab-pane" id="value_input_radio_dom_js">
+                <h3>此页面用于测试javascript dom中的input radio对象中的value</h3>
+                <p>使用node.js观看测试效果，运行js文件夹里的server.js</p>
+                <form action="http://192.168.200.50:8888/" method="POST" id="form11"> 
+                    姓名：<input type="text" name="name" /><p></p>
+                    电邮：<input type="text" name="email" /><p></p>
+                    
+                    <input type="radio" name="radio_group_form11" id="radio1_form11" />人类<p></p>
+                    <input type="radio" name="radio_group_form11" id="radio2_form11" />外星人
+                    
+                    <p></p>
+                    <input type="submit" value="点击提交" />
+                </form>
+            </div>
+
+            <div class="tab-pane" id="blur_func_input_radio_dom_js">
+                <h3>此页面用于测试javascript dom中的input radio对象中的blur()</h3>
+                <form action="http://192.168.200.50:8888/" method="POST" id="form12"> 
+                    姓名：<input type="text" name="name" /><p></p>
+                    电邮：<input type="text" name="email" /><p></p>
+                    
+                    <input type="radio" name="radio_group_form12" id="radio1_form12" />人类<p></p>
+                    <input type="radio" name="radio_group_form12" id="radio2_form12" />外星人
+                    
+                    <p></p>
+                    <input type="submit" value="点击提交" />
+                </form>
+                <p></p>
+                <button onclick="testFocusFuncOfInput ( 'radio1_form12' )">聚焦first radio</button>
+                <button onclick="testBlurFuncOfInput ( 'radio1_form12' )">丢失first radio焦点</button>
+            </div>
+
+            <div class="tab-pane" id="focus_func_input_radio_dom_js">
+                <h3>此页面用于测试javascript dom中的input radio对象中的focus()</h3>
+                <form action="http://192.168.200.50:8888/" method="POST" id="form13"> 
+                    姓名：<input type="text" name="name" /><p></p>
+                    电邮：<input type="text" name="email" /><p></p>
+                    
+                    <input type="radio" name="radio_group_form13" id="radio1_form13" />人类<p></p>
+                    <input type="radio" name="radio_group_form13" id="radio2_form13" />外星人
+                    
+                    <p></p>
+                    <input type="submit" value="点击提交" />
+                </form>
+                <p></p>
+                <button onclick="testFocusFuncOfInput ( 'radio1_form13' )">聚焦first radio</button>
+                <button onclick="testBlurFuncOfInput ( 'radio1_form13' )">丢失first radio焦点</button>
+            </div>
+
+            <div class="tab-pane" id="click_func_input_radio_dom_js">
+                <h3>此页面用于测试javascript dom中的input radio对象中的click()</h3>
+                <form action="http://192.168.200.50:8888/" method="POST" id="form14"> 
+                    姓名：<input type="text" name="name" /><p></p>
+                    电邮：<input type="text" name="email" /><p></p>
+                    
+                    <input type="radio" name="radio_group_form14" id="radio1_form14" />人类<p></p>
+                    <input type="radio" name="radio_group_form14" id="radio2_form14" />外星人
+                    
+                    <p></p>
+                    <input type="submit" value="点击提交" />
+                </form>
+                <p></p>
+                <button onclick="testClickFuncOfInput ( 'radio1_form14' )">点击触发选中radio1</button>
+                <button onclick="testClickFuncOfInput ( 'radio2_form14' )">点击触发选中radio2</button>
+                <p></p>
+                <p id="showBox_form14"></p>
+            </div>
+            
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        testAccessKeyOfInput ( 'radio1_form1', 'q' );
+        testAccessKeyOfInput ( 'radio2_form1', 'w' );
+        testAltOfInput ( 'radio1_form2', 'human' );
+        testAltOfInput ( 'radio2_form2', 'extraterrestrial' );
+        testDefaultCheckedOfInput ( 'radio2_form4' );
+        testDisabledOfInput ( 'radio2_form5' );
+        testNameOfInput ( 'radio1_form8', 'radio_group_form8' );
+        testNameOfInput ( 'radio2_form8', 'radio_group_form8' );
+        testValueOfInputRadio ( 'radio1_form11', 'human' );
+        testValueOfInputRadio ( 'radio2_form11', 'extraterrestrial' );
+    </script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/main.js">
+    </script>
+    <script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("text_css.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("size_css.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../../index.htm", "_self", false);
+        }
+    </script>
+
+    <style type="text/css">
+        /*
+            css for table_css.html
+        */
+
+        #border_collapse_css table{
+            border-collapse:separate;
+        }
+
+        #border_collapse_css table, td, th{
+            border:1px solid black;
+        }
+
+        #border_spacing_css table{
+            border-collapse: separate;
+            border-spacing: 10px 50px;
+        }
+
+        #border_spacing_css table, td, th{
+            border: 1px solid black;
+        }
+
+        #caption_side_css caption{
+            caption-side: bottom;
+        }
+
+        #empty_cells_css table{
+            border-collapse: separate;
+            border-spacing: 10px 10px;
+            empty-cells: hide;
+        }
+
+        #empty_cells_css table, td, th{
+            border: 1px solid black;
+        }
+
+        #table_layout_css table{
+            border: 1px solid  black;
+            width: 100%;
+
+        }
+
+        #table_layout_css table#ex1{
+            table-layout: auto;
+        }
+
+        #table_layout_css table#ex2{
+            table-layout: fixed;
+        }
+    </style>
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回首页</button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <ul class="nav nav-pills" id="tabs">
+            <li class="active"><a href="#border_collapse_css" data-toggle="tab">border-collapse</a></li>
+            <li><a href="#border_spacing_css" data-toggle="tab">border-spacing</a></li>
+            <li><a href="#caption_side_css" data-toggle="tab">caption-side</a></li>
+            <li><a href="#empty_cells_css" data-toggle="tab">empty-cells</a></li>
+            <li><a href="#table_layout_css" data-toggle="tab">table-layout</a></li>
+            
+        </ul>
+
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="border_collapse_css">
+                <h3>此页面用于测试表属性中的border-collapse</h3>
+
+                <table>
+                    <tr>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                    </tr>
+                    <tr>
+                        <td>Peter</td>
+                        <td>Griffin</td>
+                    </tr>
+                    <tr>
+                        <td>Lois</td>
+                        <td>Griffin</td>
+                    </tr>
+                </table>    
+            </div>
+
+            <div class="tab-pane" id="border_spacing_css">
+                <h3>此页面用于测试表属性中的border-spacing</h3>
+
+                <table>
+                    <tr>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                    </tr>
+                    <tr>
+                        <td>Peter</td>
+                        <td>Griffin</td>
+                    </tr>
+                    <tr>
+                        <td>Lois</td>
+                        <td>Griffin</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="tab-pane" id="caption_side_css">
+                <h3>此页面用于测试表属性中的caption-side</h3>
+
+                <table>
+                    <caption>Table 1.1 本来是在上面的</caption>
+                    <tr>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                    </tr>
+                    <tr>
+                        <td>Peter</td>
+                        <td>Griffin</td>
+                    </tr>
+                    <tr>
+                        <td>Lois</td>
+                        <td>Griffin</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="tab-pane" id="empty_cells_css">
+                <h3>此页面用于测试表属性中的empty-cells</h3>
+
+                <table>
+                    <tr>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                    </tr>
+                    <tr>
+                        <td>Peter</td>
+                        <td>Griffin</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Griffin</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="tab-pane" id="table_layout_css">
+                <h3>此页面用于测试表属性中的table-layout</h3>
+
+                <table id="ex1">
+                    <tr>
+                        <td width="5%">1000000000000000000000000000</td>
+                        <td width="95%">10000000</td>
+                    </tr>
+                </table>
+
+                <table id="ex2">
+                    <tr>
+                        <td width="5%">1000000000000000000000000000</td>
+                        <td width="95%">10000000</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

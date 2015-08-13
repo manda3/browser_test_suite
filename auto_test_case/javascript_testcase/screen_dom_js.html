@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/main.js">
+    </script>
+    <script type="text/javascript" src="../js/JSTestCaseLib/screen_dom_test.js"></script>
+    <script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("history_dom_js.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("navigator_dom_js.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../../index.htm", "_self", false);
+        }
+    </script>
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回首页</button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <ul class="nav nav-pills" id="tabs">
+            <li class="active"><a href="#availHeight_dom_js" data-toggle="tab">availHeight</a></li>
+            <li><a href="#availWidth_dom_js" data-toggle="tab">availWidth</a></li>
+            <li><a href="#bufferDepth_dom_js" data-toggle="tab">bufferDepth</a></li>
+            <li><a href="#colorDepth_dom_js" data-toggle="tab">colorDepth</a></li>
+            <li><a href="#deviceXDPI_dom_js" data-toggle="tab">deviceXDPI</a></li>
+            <li><a href="#deviceYDPI_dom_js" data-toggle="tab">deviceYDPI</a></li>
+            <li><a href="#fontSmoothingEnabled_dom_js" data-toggle="tab">fontSmoothingEnalbed</a></li>
+            <li><a href="#height_dom_js" data-toggle="tab">height</a></li>
+            <li><a href="#logicalXDPI_dom_js" data-toggle="tab">logicalXDPI</a></li>
+            <li><a href="#logicalYDPI_dom_js" data-toggle="tab">logicalYDPI</a></li>
+            <li><a href="#pixelDepth_dom_js" data-toggle="tab">pixelDepth</a></li>
+            <li><a href="#updateInterval_dom_js" data-toggle="tab">updateInterval</a></li>
+            <li><a href="#width_dom_js" data-toggle="tab">width</a></li>
+            <li><a href="#resizeTo_func_dom_js" data-toggle="tab">resizeTo()</a></li>
+            
+        </ul>
+
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="availHeight_dom_js">
+                <h3>此页面用于测试javascript dom中的screen对象中的availHeight</h3>
+                
+                <p></p>
+                <button onclick="testAvailHeightOfScreen();">click to show availHeight</button>
+                <p></p>
+                <div id="showBox_screen1"></div>
+            </div>
+
+            <div class="tab-pane" id="availWidth_dom_js">
+                <h3>此页面用于测试javascript dom中的screen对象中的availWidth</h3>
+                <p></p>
+                <button onclick="testAvailWidthOfScreen();">click to show availWidth</button>
+                <p></p>
+                <div id="showBox_screen2"></div>
+            </div>
+
+            <div class="tab-pane" id="bufferDepth_dom_js">
+                <h3>此页面用于测试javascript dom中的screen对象中的bufferDepth</h3>
+                <p>该属性暂时无法测试</p>
+                <p></p>
+                <button onclick="testBufferDepthOfScreen();">click to show bufferDepth</button>
+                <p></p>
+                <div id="showBox_screen3"></div>
+            </div>
+
+            <div class="tab-pane" id="colorDepth_dom_js">
+                <h3>此页面用于测试javascript dom中的screen对象中的colorDepth</h3>
+                <p></p>
+                <button onclick="testColorDepthOfScreen();">click to show colorDepth</button>
+                <p></p>
+                <div id="showBox_screen4"></div>
+            </div>
+
+            <div class="tab-pane" id="deviceXDPI_dom_js">
+                <h3>此页面用于测试javascript dom中的screen对象中的deviceXDPI</h3>
+                <p>该属性只在IE中支持</p>
+                <button onclick="testDeviceXDPIOfScreen();">click to show deviceXDPI</button>
+                <p></p>
+                <div id="showBox_screen5"></div>
+            </div>
+
+            <div class="tab-pane" id="deviceYDPI_dom_js">
+                <h3>此页面用于测试javascript dom中的screen对象中的deviceYDPI</h3>
+                <p>该属性只在IE中支持</p>
+                <button onclick="testDeviceYDPIOfScreen();">click to show deviceYDPI</button>
+                <p></p>
+                <div id="showBox_screen6"></div>
+            </div>
+
+            <div class="tab-pane" id="fontSmoothingEnabled_dom_js">
+                <h3>此页面用于测试javascript dom中的screen对象中的fontSmoothingEnabled</h3>
+
+                <p></p>
+                <button onclick="testFontSmoothingEnabledOfScreen();">click to show fontSmoothingEnabled</button>
+                <p></p>
+                <div id="showBox_screen7"></div>
+            </div>
+
+            <div class="tab-pane" id="height_dom_js">
+                <h3>此页面用于测试javascript dom中的screen对象中的height</h3>
+                <p></p>
+                <button onclick="testHeightOfScreen();">click to show height</button>
+                <p></p>
+                <div id="showBox_screen8"></div>
+            </div>
+
+            <div class="tab-pane" id="logicalXDPI_dom_js">
+                <h3>此页面用于测试javascript dom中的screen对象中的logicalXDPI</h3>
+                <p>该属性只在IE中支持</p>
+                <button onclick="testLogicalXDPIOfScreen();">click to show logicalXDPI</button>
+                <p></p>
+                <div id="showBox_screen9"></div>
+            </div>
+
+            <div class="tab-pane" id="logicalYDPI_dom_js">
+                <h3>此页面用于测试javascript dom中的screen对象中的logicalYDPI</h3>
+                <p>该属性只在IE中支持</p>
+                <button onclick="testLogicalYDPIOfScreen();">click to show logicalYDPI</button>
+                <p></p>
+                <div id="showBox_screen10"></div>
+            </div>
+
+            <div class="tab-pane" id="pixelDepth_dom_js">
+                <h3>此页面用于测试javascript dom中的screen对象中的pixelDepth</h3>
+                <p></p>
+                <button onclick="testPixelDepthOfScreen();">click to show pixelDepth</button>
+                <p></p>
+                <div id="showBox_screen11"></div>
+            </div>
+
+            <div class="tab-pane" id="updateInterval_dom_js">
+                <h3>此页面用于测试javascript dom中的screen对象中的updateInterval</h3>
+                <p>该属性只在IE中支持</p>
+                <button onclick="testUpdateIntervalOfScreen();">click to show updateInterval</button>
+                choose to modify the updateInterval:
+                <select onchange="modifyUpdateIntervalForUI (this)">
+                    <option value="0">0</option>
+                    <option value="200">200</option>
+                    <option value="500">500</option>
+                    <option value="1000">1000</option>
+                </select>
+                <p></p>
+                <div id="showBox_screen12">Flying div</div>
+
+            </div>
+
+            <div class="tab-pane" id="width_dom_js">
+                <h3>此页面用于测试javascript dom中的screen对象中的width</h3>
+                <p></p>
+                <button onclick="testWidthOfScreen();">click to show width</button>
+                <p></p>
+                <div id="showBox_screen13"></div>
+            </div>
+
+            <div class="tab-pane" id="resizeTo_func_dom_js">
+                <h3>此页面用于测试javascript dom中的screen对象中的resizeTo()</h3>
+                <p>泰信浏览器定制</p>
+                <button onclick="testResizeToFuncOfScreen();">click to test resizeTo()</button>
+                <button onclick="restoreScreen()">click to get back</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <script type="text/javascript" src="../../js/main.js">
+    </script>
+    <script type="text/javascript" src="../../js/JSTestCaseLib/input_submit_dom_test.js"></script>
+    
+    <script type="text/javascript" src="../../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("input_text_input_dom_js.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("input_reset_input_dom_js.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../input_dom_js.html", "_self", false);
+        }
+    </script>
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回目录</button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <ul class="nav nav-pills" id="tabs">
+            <li class="active"><a href="#accessKey_input_submit_dom_js" data-toggle="tab">accessKey</a></li>
+            <li><a href="#alt_input_submit_dom_js" data-toggle="tab">alt</a></li>
+            <li><a href="#disabled_input_submit_dom_js" data-toggle="tab">disabled</a></li>
+            <li><a href="#form_input_submit_dom_js" data-toggle="tab">form</a></li>
+            <li><a href="#id_input_submit_dom_js" data-toggle="tab">id</a></li>
+            <li><a href="#name_input_submit_dom_js" data-toggle="tab">name</a></li>
+            <li><a href="#tabIndex_input_submit_dom_js" data-toggle="tab">tabIndex</a></li>
+            <li><a href="#type_input_submit_dom_js" data-toggle="tab">type</a></li>
+            <li><a href="#value_input_submit_dom_js" data-toggle="tab">value</a></li>
+            <li><a href="#blur_func_input_submit_dom_js" data-toggle="tab">blur()</a></li>
+            <li><a href="#focus_func_input_submit_dom_js" data-toggle="tab">focus()</a></li>
+            <li><a href="#click_func_input_submit_dom_js" data-toggle="tab">click()</a></li>
+            
+        </ul>
+
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="accessKey_input_submit_dom_js">
+                <h3>此页面用于测试javascript dom中的input submit对象中的accessKey</h3>
+                <p>使用node.js来观看测试结果，运行js文件夹下的server.js查看表单提交结果</p>
+                <p>暂时无法保证该测试有效性，用键盘输入alt+q进行测试</p>
+                <form action="http://192.168.200.50:8888/" method="POST" id="form1"> 
+                    姓名：<input type="text" name="name" /><p></p>
+                    电邮：<input type="text" name="email" /><p></p>
+                    
+                    <p></p>
+                    <input type="submit" value="点击提交" id="submit_form1" />
+                    
+                </form>
+            </div>
+
+            <div class="tab-pane" id="alt_input_submit_dom_js">
+                <h3>此页面用于测试javascript dom中的input submit对象中的alt</h3>
+                <p>暂时无法保证该测试有效性，alt属性只在type=“image”的input中有意义，其他类型不建议使用</p>
+                <form action="http://192.168.200.50:8888/" method="POST" id="form2"> 
+                    姓名：<input type="text" name="name" /><p></p>
+                    电邮：<input type="text" name="email" /><p></p>
+                    
+                    <p></p>
+                    <input type="submit" value="点击提交" id="submit_form2" />
+                    
+                </form>
+            </div>
+
+            <div class="tab-pane" id="disabled_input_submit_dom_js">
+                <h3>此页面用于测试javascript dom中的input submit对象中的disalbed</h3>
+                <p>提交按钮应用已经不可用</p>
+                <form action="http://192.168.200.50:8888/" method="POST" id="form3"> 
+                    姓名：<input type="text" name="name" /><p></p>
+                    电邮：<input type="text" name="email" /><p></p>
+                    
+                    <p></p>
+                    <input type="submit" value="点击提交" id="submit_form3" />
+                    
+                </form>
+            </div>
+
+            <div class="tab-pane" id="form_input_submit_dom_js">
+                <h3>此页面用于测试javascript dom中的input submit对象中的form</h3>
+                <form action="#" method="POST" id="form4"> 
+                    姓名：<input type="text" name="name" /><p></p>
+                    电邮：<input type="text" name="email" /><p></p>
+                    
+                    <p></p>
+                    <input type="submit" value="点击提交" id="submit_form4" />
+                    
+                </form>
+                <p></p>
+                <button onclick="testFormOfInputSubmit ( 'showbox_form4', 'submit_form4' );">click to check the form id(form4)</button>
+                <p></p>
+                <p id="showbox_form4"></p>
+            </div>
+
+            <div class="tab-pane" id="id_input_submit_dom_js">
+                <h3>此页面用于测试javascript dom中的input submit对象中的id</h3>
+                <form action="http://192.168.200.50:8888/" method="POST" id="form5"> 
+                    姓名：<input type="text" name="name" /><p></p>
+                    电邮：<input type="text" name="email" /><p></p>
+                    
+                    <p></p>
+                    <input type="submit" value="点击提交" id="submit_form5" />
+                    
+                </form>
+                <p></p>
+                <button onclick="testIdOfInputSubmit ( 'showbox_form5', 'form5', 'submit' )">click to check the element id</button>
+                <p></p>
+                <p id="showbox_form5"></p>
+            </div>
+
+            <div class="tab-pane" id="name_input_submit_dom_js">
+                <h3>此页面用于测试javascript dom中的input submit对象中的name</h3>
+
+                <form action="http://192.168.200.50:8888/" method="POST" id="form6"> 
+                    姓名：<input type="text" name="name" /><p></p>
+                    电邮：<input type="text" name="email" /><p></p>
+                    
+                    <p></p>
+                    <input type="submit" value="点击提交" id="submit_form6" />
+                    
+                </form>
+                <p></p>
+                <button onclick="showElemName ( 'submit_form6', 'showbox_form6' )">click to check the element name</button>
+                <p></p>
+                <p id="showbox_form6"></p>
+            </div>
+
+            <div class="tab-pane" id="tabIndex_input_submit_dom_js">
+                <h3>此页面用于测试javascript dom中的input submit对象中的tabIndex</h3>
+                <form action="http://192.168.200.50:8888/" method="POST" id="form7"> 
+                    姓名：<input type="text" name="name" /><p></p>
+                    电邮：<input type="text" name="email" /><p></p>
+                    
+                    <p></p>
+                    <input type="submit" value="点击提交1" id="submit1_form7" />
+                    <input type="submit" value="点击提交2" id="submit2_form7" />
+                </form>
+                <p></p>
+                <button onclick="testTabIndexOfInput ( 'submit1_form7', 2 );testTabIndexOfInput ( 'submit2_form7', 1 );">click to change the tabIndex</button>
+            </div>
+
+            <div class="tab-pane" id="type_input_submit_dom_js">
+                <h3>此页面用于测试javascript dom中的input submit对象中的type</h3>
+                <form action="http://192.168.200.50:8888/" method="POST" id="form8"> 
+                    姓名：<input type="text" name="name" /><p></p>
+                    电邮：<input type="text" name="email" /><p></p>
+                    
+                    <p></p>
+                    <input type="submit" value="点击提交" id="submit_form8" />
+                    
+                </form>
+                <p></p>
+                <button onclick="testTypeOfInput ( 'showbox_form8', 'submit_form8' )">click to show type of element</button>
+                <p></p>
+                <p id="showbox_form8"></p>
+            </div>
+
+            <div class="tab-pane" id="value_input_submit_dom_js">
+                <h3>此页面用于测试javascript dom中的input submit对象中的value</h3>
+                <p>看见提交按钮变英文了么</p>
+                <form action="http://192.168.200.50:8888/" method="POST" id="form9"> 
+                    姓名：<input type="text" name="name" /><p></p>
+                    电邮：<input type="text" name="email" /><p></p>
+                    
+                    <p></p>
+                    <input type="submit" value="点击提交" id="submit_form9" />
+                    
+                </form>
+
+            </div>
+
+            <div class="tab-pane" id="blur_func_input_submit_dom_js">
+                <h3>此页面用于测试javascript dom中的input submit对象中的blur()</h3>
+                <form action="http://192.168.200.50:8888/" method="POST" id="form10"> 
+                    姓名：<input type="text" name="name" /><p></p>
+                    电邮：<input type="text" name="email" /><p></p>
+                    
+                    <p></p>
+                    <input type="submit" value="点击提交" id="submit_form10" />
+                    
+                </form>
+                <p></p>
+                <button onclick="testFocusFuncOfInput ( 'submit_form10' )">聚焦submit button</button>
+                <button onclick="testBlurFuncOfInput ( 'submit_form10' )">丢失submit button焦点</button>
+            </div>
+
+            <div class="tab-pane" id="focus_func_input_submit_dom_js">
+                <h3>此页面用于测试javascript dom中的input submit对象中的focus</h3>
+                <form action="http://192.168.200.50:8888/" method="POST" id="form11"> 
+                    姓名：<input type="text" name="name" /><p></p>
+                    电邮：<input type="text" name="email" /><p></p>
+                    
+                    <p></p>
+                    <input type="submit" value="点击提交" id="submit_form11" />
+                    
+                </form>
+                <p></p>
+                <button onclick="testFocusFuncOfInput ( 'submit_form11' )">聚焦submit button</button>
+                <button onclick="testBlurFuncOfInput ( 'submit_form11' )">丢失submit button焦点</button>
+            </div>
+
+            <div class="tab-pane" id="click_func_input_submit_dom_js">
+                <h3>此页面用于测试javascript dom中的input submit对象中的click()</h3>
+                <p>使用node.js来观看测试结果，运行js文件夹下的server.js查看表单提交结果</p>
+                <form action="http://192.168.200.50:8888/" method="POST" id="form12"> 
+                    姓名：<input type="text" name="name" /><p></p>
+                    电邮：<input type="text" name="email" /><p></p>
+                    
+                    <p></p>
+                    <input type="submit" value="点击提交" id="submit_form12" />
+                    
+                </form>
+                <p></p>
+                <button onclick="testClickFuncOfInput ( 'submit_form12' )">点击触发选中提交按钮</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        testAccessKeyOfInput ( 'submit_form1', 'q' );
+        testAltOfInput ( 'submit_form2', 'submit_btn' );
+        testDisabledOfInput ( 'submit_form3');
+        testNameOfInput ( 'submit_form6', 'submit_form6' );
+        testValueOfInputBtn ( 'submit_form9' );
+    </script>
+</body>
+</html>

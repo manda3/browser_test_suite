@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/main.js">
+    </script>
+    <script type="text/javascript" src="../js/JSTestCaseLib/object_dom_test.js"></script>
+    
+    <script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("option_dom_js.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("meta_dom_js.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../../index.htm", "_self", false);
+        }
+    </script>
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回首页</button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <ul class="nav nav-pills" id="tabs">
+            <li class="active"><a href="#align_dom_js" data-toggle="tab">align</a></li>
+            <li><a href="#archive_dom_js" data-toggle="tab">archive</a></li>
+            <li><a href="#border_dom_js" data-toggle="tab">border</a></li>
+            <li><a href="#code_dom_js" data-toggle="tab">code</a></li>
+            <li><a href="#codeBase_dom_js" data-toggle="tab">codeBase</a></li>
+            <li><a href="#form_dom_js" data-toggle="tab">form</a></li>
+            <li><a href="#height_dom_js" data-toggle="tab">height</a></li>
+            <li><a href="#hspace_dom_js" data-toggle="tab">hspace</a></li>
+            <li><a href="#name_dom_js" data-toggle="tab">name</a></li>
+            <li><a href="#standby_dom_js" data-toggle="tab">standby</a></li>
+            <li><a href="#type_dom_js" data-toggle="tab">type</a></li>
+            <li><a href="#vspace_dom_js" data-toggle="tab">vspace</a></li>
+            <li><a href="#width_dom_js" data-toggle="tab">width</a></li>
+        </ul>
+
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="align_dom_js">
+                <h3>此页面用于测试javascript dom中的object对象中的align</h3>
+                <object data="../images/sky.jpg" type="image/jpeg" id="obj1" height="250px" width="400px"></object>
+                <p></p>
+                <button onclick="testAlignOfObj();">click to check align of object</button>
+                <p></p>
+                <div id="showbox_object1"></div>
+            </div>
+
+            <div class="tab-pane" id="archive_dom_js">
+                <h3>此页面用于测试javascript dom中的object对象中的archive</h3>
+                <p>该属性暂时无法测试</p>
+                <object data="../images/sky.jpg" type="image/jpeg" id="obj2" height="250px" width="400px"></object>
+                <p></p>
+                <button onclick="testArchiveOfObj();">click to check archive of object</button>
+                <p></p>
+                <div id="showbox_object2"></div>
+            </div>
+
+            <div class="tab-pane" id="border_dom_js">
+                <h3>此页面用于测试javascript dom中的object对象中的border</h3>
+                <object data="../images/sky.jpg" type="image/jpeg" id="obj3" height="250px" width="400px"></object>
+                <p></p>
+                <button onclick="testBorderOfObj();">click to check border of object</button>
+                <p></p>
+                <div id="showbox_object3"></div>
+            </div>
+
+            <div class="tab-pane" id="code_dom_js">
+                <h3>此页面用于测试javascript dom中的object对象中的code</h3>
+                <p>该属性暂时无法测试</p>
+                <object data="../images/sky.jpg" type="image/jpeg" id="obj4" height="250px" width="400px"></object>
+                <p></p>
+                <button onclick="testCodeOfObj();">click to check code of object</button>
+                <p></p>
+                <div id="showbox_object4"></div>
+            </div>
+
+            <div class="tab-pane" id="codeBase_dom_js">
+                <h3>此页面用于测试javascript dom中的object对象中的codeBase</h3>
+                <p>该属性暂时无法测试</p>
+                <object data="../images/sky.jpg" type="image/jpeg" id="obj5" height="250px" width="400px"></object>
+                <p></p>
+                <button onclick="testCodeBaseOfObj();">click to check codeBase of object</button>
+                <p></p>
+                <div id="showbox_object5"></div>
+            </div>
+
+            <div class="tab-pane" id="form_dom_js">
+                <h3>此页面用于测试javascript dom中的object对象中的form</h3>
+                
+                <form action="#" id="form_object6">
+                    <object data="../images/sky.jpg" type="image/jpeg" id="obj6" height="250px" width="400px"></object>
+                </form>
+                <p></p>
+                <button onclick="testFormOfObj();">click to check form of object</button>
+                <p></p>
+                <div id="showbox_object6"></div>
+            </div>
+
+            <div class="tab-pane" id="height_dom_js">
+                <h3>此页面用于测试javascript dom中的object对象中的height</h3>
+                <object data="../images/sky.jpg" type="image/jpeg" id="obj7" height="250px" width="400px"></object>
+                <p></p>
+                <button onclick="testHeightOfObj();">click to check height of object</button>
+                <p></p>
+                <div id="showbox_object7"></div>
+            </div>
+
+            <div class="tab-pane" id="hspace_dom_js">
+                <h3>此页面用于测试javascript dom中的object对象中的hspace</h3>
+                <div>
+                    This is some text.This is some text.This is some text.               
+                    <object data="../images/sky.jpg" type="image/jpeg" id="obj8" height="250px" width="400px"></object>
+                    This is some text.This is some text.This is some text.
+                </div>
+                <p></p>
+                <button onclick="testHspaceOfObj();">click to check hspace of object</button>
+                <p></p>
+                <div id="showbox_object8"></div>
+            </div>
+
+            <div class="tab-pane" id="name_dom_js">
+                <h3>此页面用于测试javascript dom中的object对象中的name</h3>
+                <object data="../images/sky.jpg" type="image/jpeg" id="obj9" height="250px" width="400px" name="object"></object>
+                <p></p>
+                <button onclick="testNameOfObj();">click to check name of object</button>
+                <p></p>
+                <div id="showbox_object9"></div>
+            </div>
+
+            <div class="tab-pane" id="standby_dom_js">
+                <h3>此页面用于测试javascript dom中的object对象中的standby</h3>
+                <p>该属性暂时无法测试</p>
+                <object data="../images/sky.jpg" type="image/jpeg" id="obj10" height="250px" width="400px"></object>
+                <p></p>
+                <button onclick="testStandbyOfObj();">click to check standby of object</button>
+                <p></p>
+                <div id="showbox_object10"></div>
+            </div>
+
+            <div class="tab-pane" id="type_dom_js">
+                <h3>此页面用于测试javascript dom中的object对象中的type</h3>
+                <object data="../images/sky.jpg" type="image/jpeg" id="obj11" height="250px" width="400px"></object>
+                <p></p>
+                <button onclick="testTypeOfObj();">click to check type of object</button>
+                <p></p>
+                <div id="showbox_object11"></div>
+            </div>
+
+            <div class="tab-pane" id="vspace_dom_js">
+                <h3>此页面用于测试javascript dom中的object对象中的vspace</h3>
+                <p>This is the text.This is the text.This is the text.</p>
+                <object data="../images/sky.jpg" type="image/jpeg" id="obj12" height="250px" width="400px"></object>
+                <p>This is the text.This is the text.This is the text.</p>
+                <button onclick="testVspaceOfObj();">click to check vspace of object</button>
+                <p></p>
+                <div id="showbox_object12"></div>
+            </div>
+
+            <div class="tab-pane" id="width_dom_js">
+                <h3>此页面用于测试javascript dom中的object对象中的width</h3>
+                <object data="../images/sky.jpg" type="image/jpeg" id="obj13" height="250px" width="400px"></object>
+                <p></p>
+                <button onclick="testWidthOfObj();">click to check width of object</button>
+                <p></p>
+                <div id="showbox_object13"></div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

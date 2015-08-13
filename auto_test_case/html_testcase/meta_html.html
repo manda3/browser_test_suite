@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/main.js">
+    </script>
+    <script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("noframes_html.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("marquee_html.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../../index.htm", "_self", false);
+        }
+    </script>
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回首页</button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <ul class="nav nav-pills" id="tabs">
+            <li class="active"><a href="#meta" data-toggle="tab">meta</a></li>
+            <li><a href="#charset" data-toggle="tab">charset</a></li>
+            <li><a href="#content" data-toggle="tab">content</a></li>
+            <li><a href="#http-equiv" data-toggle="tab">http-equiv</a></li>
+            <li><a href="#name" data-toggle="tab">name</a></li>
+        </ul>
+
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="meta">
+                <h3>此页面用于测试&lt;meta&gt;标签</h3>
+                <a href="./meta_attribute_html/meta_test_html.html">点击查看</a>
+            </div>
+
+            <div class="tab-pane" id="charset">
+                <h3>此页面用于测试&lt;meta&gt;标签charset</h3>
+                <p>此属性为html5中新增，旧的浏览器可能测试失败</p>
+                <a href="./meta_attribute_html/meta_charset_html.html">点击查看</a>
+            </div>
+
+            <div class="tab-pane" id="content">
+                <h3>此页面用于测试&lt;meta&gt;标签content</h3>
+                <a href="./meta_attribute_html/meta_content_html.html">点击查看</a>
+            </div>
+
+            <div class="tab-pane" id="http-equiv">
+                <h3>此页面用于测试&lt;meta&gt;标签http-equiv</h3>
+                <a href="./meta_attribute_html/meta_http-equiv_html.html">点击查看</a>
+            </div>
+
+            <div class="tab-pane" id="name">
+                <h3>此页面用于测试&lt;meta&gt;标签name</h3>
+                <p>但是用name属性时，不要同时使用http-equiv属性</p>
+                <a href="./meta_attribute_html/meta_name_html.html">点击查看</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

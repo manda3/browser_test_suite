@@ -1,0 +1,251 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/main.js">
+    </script>
+    <script type="text/javascript" src="../js/JSTestCaseLib/image_dom_test.js"></script>
+    
+    <script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("input_dom_js.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("iframe_dom_js.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../../index.htm", "_self", false);
+        }
+    </script>
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回首页</button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <ul class="nav nav-pills" id="tabs">
+            <li class="active"><a href="#align_dom_js" data-toggle="tab">align</a></li>
+            <li><a href="#alt_dom_js" data-toggle="tab">alt</a></li>
+            <li><a href="#border_dom_js" data-toggle="tab">border</a></li>
+            <li><a href="#complete_dom_js" data-toggle="tab">complete</a></li>
+            <li><a href="#height_dom_js" data-toggle="tab">height</a></li>
+            <li><a href="#hspace_dom_js" data-toggle="tab">hspace</a></li>
+            <li><a href="#id_dom_js" data-toggle="tab">id</a></li>
+            <li><a href="#isMap_dom_js" data-toggle="tab">isMap</a></li>
+            <li><a href="#longDesc_dom_js" data-toggle="tab">longDesc</a></li>
+            <li><a href="#lowsrc_dom_js" data-toggle="tab">lowsrc</a></li>
+            <li><a href="#name_dom_js" data-toggle="tab">name</a></li>
+            <li><a href="#src_dom_js" data-toggle="tab">src</a></li>
+            <li><a href="#useMap_dom_js" data-toggle="tab">useMap</a></li>
+            <li><a href="#vspace_dom_js" data-toggle="tab">vspace</a></li>
+            <li><a href="#width_dom_js" data-toggle="tab">width</a></li>
+            <li><a href="#onabort_func_dom_js" data-toggle="tab">onabort()</a></li>
+            <li><a href="#onerror_func_dom_js" data-toggle="tab">onerror()</a></li>
+            <li><a href="#onload_dom_js" data-toggle="tab">onload</a></li>
+        </ul>
+
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="align_dom_js">
+                <h3>此页面用于测试javascript dom中的image对象中的align</h3>
+                <img src="../images/Aurora.jpg" alt="aurora" width="400px" height="260px" id="img_img1" />
+                <p>This is some text.This is some text.This is some text.This is some text.</p>
+                <p></p>
+                <button onclick="testAlignOfImg();">click to check align of image</button>
+                <p></p>
+                <div id="showbox_img1"></div>
+            </div>
+            
+            <div class="tab-pane" id="alt_dom_js">
+                <h3>此页面用于测试javascript dom中的image对象中的alt</h3>
+                <img src="../images/Aurora.jpg" alt="aurora" width="400px" height="260px" id="img_img2" />
+                <p></p>
+                <button onclick="testAltOfImg();">click to check alt of image</button>
+                <p></p>
+                <div id="showbox_img2"></div>
+            </div>
+
+            <div class="tab-pane" id="border_dom_js">
+                <h3>此页面用于测试javascript dom中的image对象中的border</h3>
+                <img src="../images/Aurora.jpg" alt="aurora" width="400px" height="260px" id="img_img3" />
+                <p></p>
+                <button onclick="testBorderOfImg();">click to check border of image</button>
+                <p></p>
+                <div id="showbox_img3"></div>
+            </div>
+
+            <div class="tab-pane" id="complete_dom_js">
+                <h3>此页面用于测试javascript dom中的image对象中的complete</h3>
+                <img src="../images/Aurora.jpg" alt="aurora" width="400px" height="260px" id="img_img4" />
+                <p></p>
+                <button onclick="testCompleteOfImg();">click to check complete of image</button>
+                <p></p>
+                <div id="showbox_img4"></div>
+            </div>
+
+            <div class="tab-pane" id="height_dom_js">
+                <h3>此页面用于测试javascript dom中的image对象中的height</h3>
+                <img src="../images/Aurora.jpg" alt="aurora" width="400px" height="260px" id="img_img5" />
+                <p></p>
+                <button onclick="testHeightOfImg();">click to check height of image</button>
+                <p></p>
+                <div id="showbox_img5"></div>
+            </div>
+
+            <div class="tab-pane" id="hspace_dom_js">
+                <h3>此页面用于测试javascript dom中的image对象中的hspace</h3>
+                <div>
+                This is the text. This is the text.
+                This is the text. This is the text.<img src="../images/Aurora.jpg" alt="aurora" width="150px" height="150px" id="img_img6" />This is the text. This is the text.
+                This is the text. This is the text.
+                </div>
+                <p></p>
+                <button onclick="testHspaceOfImg();">click to check Hspace of image</button>
+                <p></p>
+                <div id="showbox_img6"></div>
+            </div>
+
+            <div class="tab-pane" id="id_dom_js">
+                <h3>此页面用于测试javascript dom中的image对象中的id</h3>
+                <img src="../images/Aurora.jpg" alt="aurora" width="400px" height="260px" id="img_img7" />
+                <p></p>
+                <button onclick="testIdOfImg();">click to check id of image</button>
+                <p></p>
+                <div id="showbox_img7"></div>
+            </div>
+
+            <div class="tab-pane" id="isMap_dom_js">
+                <h3>此页面用于测试javascript dom中的image对象中的isMap</h3>
+                <img src="../images/Aurora.jpg" alt="aurora" width="400px" height="260px" id="img_img8" usemap="#aurora" />
+                <map name="aurora">
+                    <area shape="rect" coords="0,0,100,100" href="./area_dom_js/area_test_js.html" alt="aurora">
+                    <area shape="circle" coords="200,200,50" href="./area_dom_js/area_test_js.html" alt="aurora">
+                </map>
+                <p></p>
+                <button onclick="testIsMapOfImg();">click to check isMap of image</button>
+                <p></p>
+                <div id="showbox_img8"></div>
+            </div>
+
+            <div class="tab-pane" id="longDesc_dom_js">
+                <h3>此页面用于测试javascript dom中的image对象中的longDesc</h3>
+                <img src="../images/Aurora.jpg" alt="aurora" width="400px" height="260px" id="img_img9" longdesc="Oh, aurora." />
+                <p></p>
+                <button onclick="testLongDescOfImg();">click to check longDesc of image</button>
+                <p></p>
+                <div id="showbox_img9"></div>
+            </div>
+
+            <div class="tab-pane" id="lowsrc_dom_js">
+                <h3>此页面用于测试javascript dom中的image对象中的lowsrc</h3>
+                <img src="../images/Aurora.jpg" alt="aurora" width="400px" height="260px" id="img_img10" lowsrc="../images/star.gif" />
+                <p></p>
+                <button onclick="testLowsrcOfImg();">click to check lowsrc of image</button>
+                <p></p>
+                <div id="showbox_img10"></div>
+            </div>
+
+            <div class="tab-pane" id="name_dom_js">
+                <h3>此页面用于测试javascript dom中的image对象中的name</h3>
+                <img src="../images/Aurora.jpg" alt="aurora" width="400px" height="260px" id="img_img11" name="aurora111" />
+                <p></p>
+                <button onclick="testNameOfImg();">click to check name of image</button>
+                <p></p>
+                <div id="showbox_img11"></div>
+            </div>
+
+            <div class="tab-pane" id="src_dom_js">
+                <h3>此页面用于测试javascript dom中的image对象中的src</h3>
+                <img src="../images/Aurora.jpg" alt="aurora" width="400px" height="260px" id="img_img12" />
+                <p></p>
+                <button onclick="testSrcOfImg();">click to check src of image</button>
+                <p></p>
+                <div id="showbox_img12"></div>
+            </div>
+
+            <div class="tab-pane" id="useMap_dom_js">
+                <h3>此页面用于测试javascript dom中的image对象中的useMap</h3>
+                <img src="../images/Aurora.jpg" alt="aurora" width="400px" height="260px" id="img_img13" usemap="#aurora" />
+                <map name="aurora">
+                    <area shape="rect" coords="0,0,100,100" href="./area_dom_js/area_test_js.html" alt="aurora">
+                    <area shape="circle" coords="200,200,50" href="./area_dom_js/area_test_js.html" alt="aurora">
+                </map>
+                <p></p>
+                <button onclick="testUseMapOfImg();">click to check useMap of image</button>
+                <p></p>
+                <div id="showbox_img13"></div>
+            </div>
+
+            <div class="tab-pane" id="vspace_dom_js">
+                <h3>此页面用于测试javascript dom中的image对象中的vspace</h3>
+                <p>This is some text.This is some text.This is some text.</p>
+                <img src="../images/Aurora.jpg" alt="aurora" width="400px" height="260px" id="img_img14" />
+                <p>This is some text.This is some text.This is some text.</p>
+                <button onclick="testVspaceOfImg();">click to check vspace of image</button>
+                <p></p>
+                <div id="showbox_img14"></div>
+            </div>
+
+            <div class="tab-pane" id="width_dom_js">
+                <h3>此页面用于测试javascript dom中的image对象中的width</h3>
+                <img src="../images/Aurora.jpg" alt="aurora" width="400px" height="260px" id="img_img15" />
+                <p></p>
+                <button onclick="testWidthOfImg();">click to check width of image</button>
+                <p></p>
+                <div id="showbox_img15"></div>
+            </div>
+
+            <div class="tab-pane" id="onabort_func_dom_js">
+                <h3>此页面用于测试javascript dom中的image对象中的onabort</h3>
+                <img src="../images/Aurora.jpg" alt="aurora" width="400px" height="260px" id="img_img16" />
+                <p></p>
+                <p></p>
+                <div id="showbox_img16"></div>
+            </div>
+
+            <div class="tab-pane" id="onerror_func_dom_js">
+                <h3>此页面用于测试javascript dom中的image对象中的onerror()</h3>
+                <img src="../images/Aurora1.jpg" alt="aurora" width="400px" height="260px" id="img_img17" />
+                <p></p>
+                <p></p>
+                <div id="showbox_img17"></div>
+            </div>
+
+            <div class="tab-pane" id="onload_dom_js">
+                <h3>此页面用于测试javascript dom中的image对象中的onload</h3>
+                <img src="../images/Aurora.jpg" alt="aurora" width="400px" height="260px" id="img_img18" />
+                <p></p>
+                <p></p>
+                <div id="showbox_img18"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        testOnabortFuncOfImg ();
+        testOnerrorFuncOfImg ();
+        testOnloadrOfImg ();
+    </script>
+</body>
+</html>

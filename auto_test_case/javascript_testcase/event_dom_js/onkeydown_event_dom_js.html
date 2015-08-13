@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <script type="text/javascript" src="../../js/main.js">
+    </script>
+    <script type="text/javascript" src="../../js/JSTestCaseLib/event_dom_test.js"></script>
+
+    <script type="text/javascript" src="../../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("./onkeypress_event_dom_js.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("./onfocus_event_dom_js.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../event_dom_js.html", "_self", false);
+        }
+    </script>
+    <script type="text/javascript">
+        function clearIt () {
+            var elem = document.getElementById('showBox');
+            elem.innerHTML = "结束输入";
+        }
+        
+    </script>
+</head>
+<body>
+	 <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回目录</button>
+        </div>
+    </div>
+
+
+    <div class="content">
+        <h3>此页面用于测试javascript的html dom的event对象的onkeydown</h3>
+        <p>在输入框输入会有提示</p>
+        <label for="fname" class="control-label">Enter your name: </label>
+        <p id="showBox"></p>
+        <input type="text" name="fname" id="fname" class="form-control" placeholder="请输入小写字母" onkeydown="testOnkeydownOfEventObj();" onblur="clearIt();">
+
+        <button class="btn btn-primary">click me!!!!!!!!</button>
+    </div>
+
+    
+</body>
+</html>

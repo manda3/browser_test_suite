@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/main.js">
+    </script>
+    <script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("size_css.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("margin_css.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../../index.htm", "_self", false);
+        }
+    </script>
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回首页</button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <h3>此页面用于测试内边距属性中的padding</h3>
+
+        <div id="origin_padding_css">
+            <h4>padding:0px</h4>
+            <p>This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.This is some text. This is some text. </p>
+        </div>
+
+        <div id="padding_css">
+            <h4>padding:10px</h4>
+            <p>This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.This is some text. This is some text. </p>
+        </div>
+        
+        <div id="padding-top_css">
+            <h4>padding-top:20px</h4>
+            <p>This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.This is some text. This is some text. </p>
+        </div>
+        
+        <div id="padding-bottom_css">
+            <h4>padding-bottom:20px</h4>
+            <p>This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.This is some text. This is some text. </p>
+        </div>
+        
+        <div id="padding-left_css">
+            <h4>padding-left:20px</h4>
+            <p>This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.This is some text. This is some text. </p>
+        </div>
+        
+        <div id="padding-right_css">
+            <h4>padding-right:20px</h4>
+            <p>This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.This is some text. This is some text. </p>
+        </div>
+    </div>
+</body>
+</html>

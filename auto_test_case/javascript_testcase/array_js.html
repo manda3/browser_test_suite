@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/main.js">
+    </script>
+    <script type="text/javascript" src="../js/JSTestCaseLib/array_object_test.js"></script>
+
+    <script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("boolean_js.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("date_js.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../../index.htm", "_self", false);
+        }
+    </script>
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回首页</button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <ul class="nav nav-pills" id="tabs">
+            <li class="active"><a href="#one_array" data-toggle="tab">page 1</a></li>
+            <li><a href="#two_array" data-toggle="tab">page 2</a></li>
+            <li><a href="#three_array" data-toggle="tab">page 3</a></li>
+        </ul>
+
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="one_array">
+                <h3>此页面用于测试javascript的array对象</h3>
+                <div class="content_item" id="constructor_array">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="content_item" id="length_array">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="content_item" id="prototype_array">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="content_item" id="concat_func_array">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="content_item" id="join_func_array">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="content_item" id="pop_func_array">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="content_item" id="push_func_array">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="content_item" id="reverse_func_array">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+
+            <div class="tab-pane" id="two_array">
+                <h3>此页面用于测试javascript的array对象</h3>
+                <div class="content_item" id="shift_func_array">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="content_item" id="slice_func_array">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="content_item" id="sort_func_array">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="content_item" id="splice_func_array">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="content_item" id="toSource_func_array">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="content_item" id="toString_func_array">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="content_item" id="unshift_func_array">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="content_item" id="toLocaleString_func_array">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+
+            <div class="tab-pane" id="three_array">
+                <h3>此页面用于测试javascript的array对象</h3>
+                <div class="content_item" id="valueOf_func_array">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        testArrayObject ();
+    </script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/main.js">
+    </script>
+    <script type="text/javascript" src="../js/JSTestCaseLib/textarea_dom_test.js"></script>
+    <script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("../../index.htm", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("tablerow_dom_js.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../../index.htm", "_self", false);
+        }
+    </script>
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回首页</button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <ul class="nav nav-pills" id="tabs">
+            <li class="active"><a href="#cols_dom_js" data-toggle="tab">cols</a></li>
+            <li><a href="#defaultValue_dom_js" data-toggle="tab">defaultValue</a></li>
+            <li><a href="#disabled_dom_js" data-toggle="tab">disabled</a></li>
+            <li><a href="#form_dom_js" data-toggle="tab">form</a></li>
+            <li><a href="#id_dom_js" data-toggle="tab">id</a></li>
+            <li><a href="#name_dom_js" data-toggle="tab">name</a></li>
+            <li><a href="#readOnly_dom_js" data-toggle="tab">readOnly</a></li>
+            <li><a href="#rows_dom_js" data-toggle="tab">rows</a></li>
+            <li><a href="#tabIndex_dom_js" data-toggle="tab">tabIndex</a></li>
+            <li><a href="#type_dom_js" data-toggle="tab">type</a></li>
+            <li><a href="#value_dom_js" data-toggle="tab">value</a></li>
+            <li><a href="#onchange_dom_js" data-toggle="tab">onchange</a></li>
+            <li><a href="#blur_func_dom_js" data-toggle="tab">blur()</a></li>
+            <li><a href="#focus_func_dom_js" data-toggle="tab">focus()</a></li>
+            <li><a href="#select_func_dom_js" data-toggle="tab">select()</a></li>
+        
+        </ul>
+
+        <div class="tab-content">
+            
+            <div class="tab-pane active" id="cols_dom_js">
+                <h3>此页面用于测试javascript dom中的textarea对象中的cols</h3>
+                <textarea name="" id="textarea1" cols="50" rows="4">At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.</textarea>
+                <p></p>
+                <button onclick="testColsOfTextarea();">click to check cols of textarea</button>
+                <p></p>
+                <div id="showbox_textarea1"></div>
+            </div>
+            <div class="tab-pane" id="defaultValue_dom_js">
+                <h3>此页面用于测试javascript dom中的textarea对象中的defaultValue</h3>
+                <textarea name="" id="textarea2" cols="50" rows="4">At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.</textarea>
+                <p></p>
+                <button onclick="testDefaultValueOfTextarea();">click to check defaultValue of textarea</button>
+                <p></p>
+                <div id="showbox_textarea2"></div>
+            </div>
+            <div class="tab-pane" id="disabled_dom_js">
+                <h3>此页面用于测试javascript dom中的textarea对象中的disabled</h3>
+                <textarea name="" id="textarea3" cols="50" rows="4">At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.</textarea>
+                <p></p>
+                <button onclick="testDisabledOfTextarea();">click to check disabled of textarea</button>
+                <p></p>
+                <div id="showbox_textarea3"></div>
+            </div>
+            <div class="tab-pane" id="form_dom_js">
+                <h3>此页面用于测试javascript dom中的textarea对象中的form</h3>
+                <form action="#" id="form_textarea4">
+                    <textarea name="" id="textarea4" cols="50" rows="4">At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.</textarea>
+                </form>
+                
+                <p></p>
+                <button onclick="testFormOfTextarea();">click to check form of textarea</button>
+                <p></p>
+                <div id="showbox_textarea4"></div>
+            </div>
+            <div class="tab-pane" id="id_dom_js">
+                <h3>此页面用于测试javascript dom中的textarea对象中的id</h3>
+                <textarea name="" id="textarea5" cols="50" rows="4">At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.</textarea>
+                <p></p>
+                <button onclick="testIdOfTextarea();">click to check id of textarea</button>
+                <p></p>
+                <div id="showbox_textarea5"></div>
+            </div>
+            <div class="tab-pane" id="name_dom_js">
+                <h3>此页面用于测试javascript dom中的textarea对象中的name</h3>
+                <textarea name="textarea_textarea" id="textarea6" cols="50" rows="4">At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.</textarea>
+                <p></p>
+                <button onclick="testNameOfTextarea();">click to check name of textarea</button>
+                <p></p>
+                <div id="showbox_textarea6"></div>
+            </div>
+            <div class="tab-pane" id="readOnly_dom_js">
+                <h3>此页面用于测试javascript dom中的textarea对象中的readOnly</h3>
+                <textarea name="" id="textarea7" cols="50" rows="4">At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.</textarea>
+                <p></p>
+                <button onclick="testReadOnlyOfTextarea();">click to check readOnly of textarea</button>
+                <p></p>
+                <div id="showbox_textarea7"></div>
+            </div>
+            <div class="tab-pane" id="rows_dom_js">
+                <h3>此页面用于测试javascript dom中的textarea对象中的rows</h3>
+                <textarea name="" id="textarea8" cols="50" rows="4">At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.</textarea>
+                <p></p>
+                <button onclick="testRowsOfTextarea();">click to check rows of textarea</button>
+                <p></p>
+                <div id="showbox_textarea8"></div>
+            </div>
+            <div class="tab-pane" id="tabIndex_dom_js">
+                <h3>此页面用于测试javascript dom中的textarea对象中的tabIndex</h3>
+                <textarea name="" id="ex1_textarea9" cols="30" rows="4">At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.</textarea>
+                <textarea name="" id="ex2_textarea9" cols="30" rows="4">At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.</textarea>
+                <p></p>
+                <button onclick="testTabIndexOfTextarea();">click to check tabIndex of textarea</button>
+                <p></p>
+                <div id="showbox_textarea9"></div>
+            </div>
+            <div class="tab-pane" id="type_dom_js">
+                <h3>此页面用于测试javascript dom中的textarea对象中的type</h3>
+                <textarea name="" id="textarea10" cols="50" rows="4">At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.</textarea>
+                <p></p>
+                <button onclick="testTypeOfTextarea();">click to check type of textarea</button>
+                <p></p>
+                <div id="showbox_textarea10"></div>
+            </div>
+            <div class="tab-pane" id="value_dom_js">
+                <h3>此页面用于测试javascript dom中的textarea对象中的value</h3>
+                <textarea name="" id="textarea11" cols="50" rows="4">At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.</textarea>
+                <p></p>
+                <button onclick="testValueOfTextarea();">click to check value of textarea</button>
+                <p></p>
+                <div id="showbox_textarea11"></div>
+            </div>
+            <div class="tab-pane" id="onchange_dom_js">
+                <h3>此页面用于测试javascript dom中的textarea对象中的onchange</h3>
+                <textarea name="" id="textarea12" cols="50" rows="4">At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.</textarea>
+                <p></p>
+                <button onclick="testOnchangeOfTextarea();">click to check onchange of textarea</button>
+                <p></p>
+                <div id="showbox_textarea12"></div>
+            </div>
+            <div class="tab-pane" id="blur_func_dom_js">
+                <h3>此页面用于测试javascript dom中的textarea对象中的blur()</h3>
+                <textarea name="" id="textarea13" cols="50" rows="4">At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.</textarea>
+                <p></p>
+                <button onclick="testBlurFuncOfTextarea();">click to check blur() of textarea</button>
+                <p></p>
+                <div id="showbox_textarea13"></div>
+            </div>
+            <div class="tab-pane" id="focus_func_dom_js">
+                <h3>此页面用于测试javascript dom中的textarea对象中的focus()</h3>
+                <textarea name="" id="textarea14" cols="50" rows="4">At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.</textarea>
+                <p></p>
+                <button onclick="testFocusFuncOfTextarea();">click to check focus() of textarea</button>
+                <p></p>
+                <div id="showbox_textarea14"></div>
+            </div>
+            <div class="tab-pane" id="select_func_dom_js">
+                <h3>此页面用于测试javascript dom中的textarea对象中的select()</h3>
+                <textarea name="" id="textarea15" cols="50" rows="4">At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.</textarea>
+                <p></p>
+                <button onclick="testSelectFuncOfTextarea();">click to check select() of textarea</button>
+                <p></p>
+                <div id="showbox_textarea15"></div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

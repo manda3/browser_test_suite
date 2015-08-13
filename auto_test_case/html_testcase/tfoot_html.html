@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/main.js">
+    </script>
+    <script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("th_html.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("textarea_html.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../../index.htm", "_self", false);
+        }
+    </script>
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回首页</button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <ul class="nav nav-pills" id="tabs">
+            <li class="active"><a href="#tfoot" data-toggle="tab">tfoot</a></li>
+            <li><a href="#align" data-toggle="tab">align</a></li>
+            <li><a href="#char" data-toggle="tab">char</a></li>
+            <li><a href="#charoff" data-toggle="tab">charoff</a></li>
+            <li><a href="#valign" data-toggle="tab">valign</a></li>
+        </ul>
+
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="tfoot">
+                <h3>此页面用于测试&lt;tfoot&gt;标签</h3>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Month</th>
+                            <th>Savings</th>
+                        </tr>
+                    </thead>
+
+                    <tfoot>
+                        <tr>
+                            <td>Sum(tfoot)</td>
+                            <td>$180(tfoot)</td>
+                        </tr>
+                    </tfoot>
+
+                    <tbody>
+                        <tr>
+                            <td>January</td>
+                            <td>$100</td>
+                        </tr>
+                        <tr>
+                            <td>February</td>
+                            <td>$80</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="tab-pane" id="align">
+                <h3>此页面用于测试&lt;tfoot&gt;标签align</h3>
+                <table border="1" width="100%">
+                    <thead>
+                        <tr>
+                            <th>Month</th>
+                            <th>Savings</th>
+                        </tr>
+                    </thead>
+
+                    <tfoot align="right">
+                        <tr>
+                            <td>Sum</td>
+                            <td>$180</td>
+                        </tr>
+                    </tfoot>
+
+                    <tbody>
+                        <tr>
+                            <td>January</td>
+                            <td>$100</td>
+                        </tr>
+                        <tr>
+                            <td>February</td>
+                            <td>$80</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="tab-pane" id="char">
+                <h3>此页面用于测试&lt;tfoot&gt;标签char</h3>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Month</th>
+                            <th>Savings</th>
+                        </tr>
+                    </thead>
+
+                    <tfoot align="char" char=".">
+                        <tr>
+                            <td>Sum</td>
+                            <td>$180.00</td>
+                        </tr>
+                        <tr>
+                            <td>Sum(without tax)</td>
+                            <td>$99.0</td>
+                        </tr>
+                    </tfoot>
+
+                    <tbody>
+                        <tr>
+                            <td>January</td>
+                            <td>$100.00</td>
+                        </tr>
+                        <tr>
+                            <td>February</td>
+                            <td>$80.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="tab-pane" id="charoff">
+                <h3>此页面用于测试&lt;tfoot&gt;标签charoff</h3>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Month</th>
+                            <th>Savings</th>
+                        </tr>
+                    </thead>
+
+                    <tfoot align="char" char="." charoff="2">
+                        <tr>
+                            <td>Sum</td>
+                            <td>$180.00</td>
+                        </tr>
+                        <tr>
+                            <td>Sum(without tax)</td>
+                            <td>$99.0</td>
+                        </tr>
+                    </tfoot>
+
+                    <tbody>
+                        <tr>
+                            <td>January</td>
+                            <td>$100.00</td>
+                        </tr>
+                        <tr>
+                            <td>February</td>
+                            <td>$80.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="tab-pane" id="valign">
+                <h3>此页面用于测试&lt;tfoot&gt;标签valign</h3>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Month</th>
+                            <th>Savings</th>
+                        </tr>
+                    </thead>
+
+                    <tfoot valign="bottom">
+                        <tr style="height: 100px">
+                            <td>Sum</td>
+                            <td>$180</td>
+                        </tr>
+                        <tr style="height: 100px">
+                            <td>Sum(without tax)</td>
+                            <td>$99</td>
+                        </tr>
+                    </tfoot>
+
+                    <tbody>
+                        <tr>
+                            <td>January</td>
+                            <td>$100</td>
+                        </tr>
+                        <tr>
+                            <td>February</td>
+                            <td>$80</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

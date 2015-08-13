@@ -1,0 +1,379 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/main.js">
+    </script>
+    <script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("thead_html.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("tfoot_html.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../../index.htm", "_self", false);
+        }
+    </script>
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回首页</button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <ul class="nav nav-pills" id="tabs">
+            <li class="active"><a href="#th" data-toggle="tab">th</a></li>
+            <li><a href="#abbr" data-toggle="tab">abbr</a></li>
+            <li><a href="#align" data-toggle="tab">align</a></li>
+            <li><a href="#axis" data-toggle="tab">axis</a></li>
+            <li><a href="#char" data-toggle="tab">char</a></li>
+            <li><a href="#charoff" data-toggle="tab">charoff</a></li>
+            <li><a href="#colspan" data-toggle="tab">colsapn</a></li>
+            <li><a href="#headers" data-toggle="tab">headers</a></li>
+            <li><a href="#rowspan" data-toggle="tab">rowspan</a></li>
+            <li><a href="#valign" data-toggle="tab">valign</a></li>
+            <li><a href="#nowrap" data-toggle="tab">nowrap</a></li>
+            <li><a href="#height" data-toggle="tab">height</a></li>
+            <li><a href="#width" data-toggle="tab">width</a></li>
+            <li><a href="#scope" data-toggle="tab">scope</a></li>
+            
+        </ul>
+
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="th">
+                <h3>此页面用于测试&lt;th&gt;标签</h3>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Month(th)</th>
+                            <th>Savings(th)</th>
+                        </tr>
+                    </thead>
+
+                    <tfoot>
+                        <tr>
+                            <td>Sum</td>
+                            <td>$180</td>
+                        </tr>
+                    </tfoot>
+
+                    <tbody>
+                        <tr>
+                            <td>January</td>
+                            <td>$100</td>
+                        </tr>
+                        <tr>
+                            <td>February</td>
+                            <td>$80</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="tab-pane" id="abbr">
+                <h3>此页面用于测试&lt;th&gt;标签abbr</h3>
+                <p>此属性没有视觉效果，并已在html5中废除，不建议使用</p>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th abbr="Month">Month(th)</th>
+                            <th abbr="Saving">Savings(th)</th>
+                        </tr>
+                    </thead>
+
+                    <tfoot>
+                        <tr>
+                            <td>Sum</td>
+                            <td>$180</td>
+                        </tr>
+                    </tfoot>
+
+                    <tbody>
+                        <tr>
+                            <td>January</td>
+                            <td>$100</td>
+                        </tr>
+                        <tr>
+                            <td>February</td>
+                            <td>$80</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+            <div class="tab-pane" id="align">
+                <h3>此页面用于测试&lt;th&gt;标签align</h3>
+                <p>此属性已在html5中废除，不建议使用</p>
+                <table border="1" width="100%">
+                    <thead>
+                        <tr>
+                            <th align="right">Month(th)</th>
+                            <th align="right">Savings(th)</th>
+                        </tr>
+                    </thead>
+
+                    <tfoot>
+                        <tr>
+                            <td>Sum</td>
+                            <td>$180</td>
+                        </tr>
+                    </tfoot>
+
+                    <tbody>
+                        <tr>
+                            <td>January</td>
+                            <td>$100</td>
+                        </tr>
+                        <tr>
+                            <td>February</td>
+                            <td>$80</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="tab-pane" id="axis">
+                <h3>此页面用于测试&lt;th&gt;标签axis</h3>
+                <p>此属性不被主流浏览器支持，并已在html5中废除，不建议使用</p>
+                <table border="1" width="100%">
+                    <tr>
+                        <th axis="name">Name</td>
+                        <th axis="contact">Email</td>
+                        <th axis="contact">Phone</td>
+                        <th axis="contact">Address</td>
+                    </tr>
+                    <tr>
+                        <td>John Doe</td>
+                        <td>someone@example.com</td>
+                        <td>+45342323</td>
+                        <td>Rosevn 56,4300 Sandnes,Norway</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="tab-pane" id="char">
+                <h3>此页面用于测试&lt;th&gt;标签char</h3>
+                <p>此属性不被主流浏览器支持，并已在html5中废除，不建议使用</p>
+                <table border="1">
+                    <tr>
+                        <th align="char" char="M">Month</th>
+                        <th>Savings</th>
+                    </tr>
+                    <tr>
+                        <td>January</td>
+                        <td>$100.00</td>
+                    </tr>
+                    <tr>
+                        <td>February</td>
+                        <td>$10.00</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="tab-pane" id="charoff">
+                <h3>此页面用于测试&lt;th&gt;标签charoff</h3>
+                <p>此属性不被主流浏览器支持，并已在html5中废除，不建议使用</p>
+                <table border="1">
+                    <tr>
+                        <th align="char" char="M" charoff="2">Month</th>
+                        <th>Savings</th>
+                    </tr>
+                    <tr>
+                        <td>January</td>
+                        <td>$100.00</td>
+                    </tr>
+                    <tr>
+                        <td>February</td>
+                        <td>$10.00</td>
+                    </tr>
+                </table>
+
+            </div>
+
+            <div class="tab-pane" id="colspan">
+                <h3>此页面用于测试&lt;th&gt;标签colspan</h3>
+                <table border="1">
+                    <tr>
+                        <th colspan="2">Monthly Savings</th>
+                    </tr>
+                    <tr>
+                        <td>January</td>
+                        <td>$100</td>
+                    </tr>
+                    <tr>
+                        <td>February</td>
+                        <td>$80</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="tab-pane" id="headers">
+                <h3>此页面用于测试&lt;th&gt;标签headers</h3>
+                <p>此属性没有视觉效果，并已在html5中废除，不建议使用</p>
+                <table border="1">
+                    <tr>
+                        <th id="name" colspan="2">Name</th>
+                    </tr>
+                    <tr>
+                        <th headers="name">Firsname</th>
+                        <th headers="name">Lastname</th>
+                    </tr>
+                </table>
+
+            </div>
+
+            <div class="tab-pane" id="rowspan">
+                <h3>此页面用于测试&lt;th&gt;标签rowspan</h3>
+                <table border="1">
+                    <tr>
+                        <th>Month</th>
+                        <th>Savings</th>
+                        <th rowspan="3">Savings for holiday!</th>
+                    </tr>
+                    <tr>
+                        <td>January</td>
+                        <td>$100</td>
+                    </tr>
+                    <tr>
+                        <td>February</td>
+                        <td>$80</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="tab-pane" id="valign">
+                <h3>此页面用于测试&lt;th&gt;标签valign</h3>
+                <p>此属性已在html5中废除，不建议使用</p>
+                <table border="1" style="height:200px">
+                    <tr>
+                        <th valign="middle">Month</th>
+                        <th valign="bottom">Savings</th>
+                    </tr>
+                    <tr>
+                        <td>January</td>
+                        <td>$100</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="tab-pane" id="nowrap">
+                <h3>此页面用于测试&lt;th&gt;标签nowrap</h3>
+                <p>此属性已在html5中废除，不建议使用</p>
+                <p>With a nowrap attribute:</p>
+                <table border="1">
+                    <tr>
+                        <th>Month</th>
+                        <th nowrap>My Savings for a new car</th>
+                    </tr>
+                    <tr>
+                        <td>January</td>
+                        <td>$100</td>
+                    </tr>
+                    <tr>
+                        <td>February</td>
+                        <td>$80</td>
+                    </tr>
+                </table>
+
+                <p>Without a nowrap attribute:</p>
+                <table border="1">
+                    <tr>
+                        <th>Month</th>
+                        <th>My Savings for a new car</th>
+                    </tr>
+                    <tr>
+                        <td>January</td>
+                        <td>$100</td>
+                    </tr>
+                    <tr>
+                        <td>February</td>
+                        <td>$80</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="tab-pane" id="height">
+                <h3>此页面用于测试&lt;th&gt;标签height</h3>
+                <p>此属性已在html5中废除，不建议使用</p>
+                <table border="1">
+                    <tr>
+                        <th height="100">Month</th>
+                        <th height="100">Savings</th>
+                    </tr>
+                    <tr>
+                        <td>January</td>
+                        <td>$100</td>
+                    </tr>
+                    <tr>
+                        <td>February</td>
+                        <td>$80</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="tab-pane" id="width">
+                <h3>此页面用于测试&lt;th&gt;标签width</h3>
+                <p>此属性已在html5中废除，不建议使用</p>
+                <table border="1" width="100%">
+                    <tr>
+                        <th style="width:70%">Month</th>
+                        <th style="width:30%">Savings</th>
+                    </tr>
+                    <tr>
+                        <td>January</td>
+                        <td>$100</td>
+                    </tr>
+                    <tr>
+                        <td>February</td>
+                        <td>$80</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="tab-pane" id="scope">
+                <h3>此页面用于测试&lt;th&gt;标签scope</h3>
+                <p>此属性没有视觉效果，不建议使用</p>
+                <table border="1">
+                    <tr>
+                        <th></th>
+                        <th scope="col">Month</th>
+                        <th scope="col">Savings</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>January</td>
+                        <td>$100</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>February</td>
+                        <td>$80</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

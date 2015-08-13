@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/main.js">
+    </script>
+    <script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("ol_html.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("noscript_html.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../../index.htm", "_self", false);
+        }
+
+    </script>
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回首页</button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <ul class="nav nav-pills" id="tabs">
+            <li class="active"><a href="#object" data-toggle="tab">object</a></li>
+            <li><a href="#align" data-toggle="tab">align</a></li>
+            <li><a href="#archive" data-toggle="tab">archive</a></li>
+            <li><a href="#border" data-toggle="tab">border</a></li>
+            <li><a href="#classid" data-toggle="tab">classid</a></li>
+            <li><a href="#codebase" data-toggle="tab">codebase</a></li>
+            <li><a href="#codetype" data-toggle="tab">codetype</a></li>
+            <li><a href="#data" data-toggle="tab">data</a></li>
+            <li><a href="#declare" data-toggle="tab">declare</a></li>
+            <li><a href="#height" data-toggle="tab">height</a></li>
+            <li><a href="#hspace" data-toggle="tab">hspace</a></li>
+            <li><a href="#name" data-toggle="tab">name</a></li>
+            <li><a href="#standby" data-toggle="tab">standby</a></li>
+            <li><a href="#type" data-toggle="tab">type</a></li>
+            <li><a href="#usemap" data-toggle="tab">usemap</a></li>
+            <li><a href="#vspace" data-toggle="tab">vspace</a></li>
+            <li><a href="#width" data-toggle="tab">width</a></li>
+        </ul>
+
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="object">
+                <h3>此页面用于测试&lt;object&gt;标签</h3>
+                <a href="./object_attribute_html/object_test_html.html">点击查看</a>
+                <p>This is some text.<object width="400" height="250" data="../images/sky.jpg"></object>This is some text.</p>
+                <p>This is some text. This is some text.</p>
+
+            </div>
+
+            <div class="tab-pane" id="align">
+                <h3>此页面用于测试&lt;object&gt;标签align</h3>
+                <p>该属性已在html4.01中弃用，并在html5中废除，不建议使用</p>
+                <p>This is some text.<object width="400" height="250" data="../images/sky.jpg" align="right"></object>This is some text.</p>
+                <p>This is some text. This is some text.</p>
+            </div>
+
+            <div class="tab-pane" id="archive">
+                <h3>此页面用于测试&lt;object&gt;标签archive</h3>
+                <p>在html5中废除，不建议使用</p>
+                <p>该属性在机顶盒暂时无法测试</p>
+
+            </div>
+
+            <div class="tab-pane" id="border">
+                <h3>此页面用于测试&lt;object&gt;标签border</h3>
+                <p>该属性已在html4.01中弃用，并在html5中废除，不建议使用</p>
+                <p>This is some text.<object width="400" height="250" data="../images/sky.jpg" border="20"></object>This is some text.</p>
+                <p>This is some text. This is some text.</p>
+
+            </div>
+
+            <div class="tab-pane" id="classid">
+                <h3>此页面用于测试&lt;object&gt;标签classid</h3>
+                <p>在html5中废除，不建议使用</p>
+                <p>该属性在机顶盒暂时无法测试</p>
+                
+            </div>
+
+            <div class="tab-pane" id="codebase">
+                <h3>此页面用于测试&lt;object&gt;标签codebase</h3>
+                <p>在html5中废除，不建议使用</p>
+                <p>该属性在机顶盒暂时无法测试</p>
+            </div>
+
+            <div class="tab-pane" id="codetype">
+                <h3>此页面用于测试&lt;object&gt;标签codetype</h3>
+                <p>在html5中废除，不建议使用</p>
+                <p>该属性在机顶盒暂时无法测试</p>
+            </div>
+
+            <div class="tab-pane" id="data">
+                <h3>此页面用于测试&lt;object&gt;标签data</h3>
+                <p>This is some text.<object width="400" height="250" data="../images/sky.jpg"></object>This is some text.</p>
+                <p>This is some text. This is some text.</p>
+            </div>
+
+            <div class="tab-pane" id="declare">
+                <h3>此页面用于测试&lt;object&gt;标签declare</h3>
+                <p>在html5中废除，不建议使用</p>
+                <p>This is some text.<object width="400" height="250" data="../images/sky.jpg" declare="declare"></object>This is some text.</p>
+                <p>This is some text. This is some text.</p>
+                <p>该属性在机顶盒暂时无法测试</p>
+            </div>
+
+            <div class="tab-pane" id="height">
+                <h3>此页面用于测试&lt;object&gt;标签height</h3>
+                <p>This is some text.<object width="400" height="150" data="../images/sky.jpg"></object>This is some text.</p>
+                <p>This is some text. This is some text.</p>
+            </div>
+
+            <div class="tab-pane" id="hspace">
+                <h3>此页面用于测试&lt;object&gt;标签hspace</h3>
+                <p>该属性已在html4.01中弃用，并在html5中废除，不建议使用</p>
+                <h4>Object with no vspace:</h4>
+                <p>This is some text.<object width="100" height="60" data="../images/sky.jpg"></object>This is some text.</p>
+                <p>This is some text. This is some text.</p>
+
+                <h4>Object with hspace:</h4>
+                <p>This is some text.<object width="100" height="60" data="../images/sky.jpg" hspace="100"></object>This is some text.</p>
+
+            </div>
+
+            <div class="tab-pane" id="name">
+                <h3>此页面用于测试&lt;object&gt;标签name</h3>
+                <p>webkit内核不支持</p>
+                <object data="../images/sky.jpg" usemap="#aurora" width="400" height="250"></object>
+                <map name="aurora">
+                    <area shape="rect" coords="0,0,100,100" href="./object_attribute_html/object_test_html.html" alt="aurora">
+                    <area shape="circle" coords="200,200,50" href="./object_attribute_html/object_test_html.html" alt="aurora">
+                </map>
+            </div>
+
+            <div class="tab-pane" id="standby">
+                <h3>此页面用于测试&lt;object&gt;标签standby</h3>
+                <p>在html5中废除，不建议使用</p>
+                <p>该属性在机顶盒暂时无法测试</p>
+            </div>
+
+            <div class="tab-pane" id="type">
+                <h3>此页面用于测试&lt;object&gt;标签type</h3>
+                <p>This is some text.<object width="400" height="250" data="../images/sky.jpg" type="image/jpeg"></object>This is some text.</p>
+                <p>This is some text. This is some text.</p>
+            </div>
+
+            <div class="tab-pane" id="usemap">
+                <h3>此页面用于测试&lt;object&gt;标签usemap</h3>
+                <p>webkit内核不支持</p>
+                <object data="../images/sky.jpg" usemap="#aurora" width="400" height="250"></object>
+                <map name="aurora">
+                    <area shape="rect" coords="0,0,100,100" href="./object_attribute_html/object_test_html.html" alt="aurora">
+                    <area shape="circle" coords="200,200,50" href="./object_attribute_html/object_test_html.html" alt="aurora">
+                </map>
+            </div> 
+
+            <div class="tab-pane" id="vspace">
+                <h3>此页面用于测试&lt;object&gt;标签vspace</h3>
+                <p>该属性已在html4.01中弃用，并在html5中废除，不建议使用</p>
+                <h4>Object with no vspace:</h4>
+                <p>This is some text.<object width="100" height="60" data="../images/sky.jpg"></object>This is some text.</p>
+                <p>This is some text. This is some text.</p>
+
+                <h4>Object with vspace:</h4>
+                <p>This is some text.<object width="100" height="60" data="../images/sky.jpg" vspace="40"></object>This is some text.</p>
+
+            </div>
+
+            <div class="tab-pane" id="width">
+                <h3>此页面用于测试&lt;object&gt;标签width</h3>
+                <p>This is some text.<object width="100" height="200" data="../images/sky.jpg"></object>This is some text.</p>
+                <p>This is some text. This is some text.</p>
+            </div>
+    </div>
+</body>
+</html>

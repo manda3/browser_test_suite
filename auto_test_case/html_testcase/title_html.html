@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Testing for the title tag</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/main.js">
+    </script>
+    <script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("tr_html.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("thead_html.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../../index.htm", "_self", false);
+        }
+
+        function checkTitleTag () {
+            var show = document.getElementById("show1");
+            var title = document.getElementsByTagName("title")[0];
+            var txt = title.innerHTML;
+
+            show.innerHTML = "结果： " + txt;
+        }
+    </script>
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回首页</button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <ul class="nav nav-pills" id="tabs">
+            <li class="active"><a href="#title" data-toggle="tab">title</a></li>
+            <li><a href="#dir" data-toggle="tab">dir</a></li>
+            <li><a href="#lang" data-toggle="tab">lang</a></li>
+            <li><a href="#xml_lang" data-toggle="tab">xml:lang</a></li>
+            
+        </ul>
+
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="title">
+                <h3>此页面用于测试&lt;title&gt;标签</h3>
+                <p>此标签是html基本结构，所有浏览器都支持，机顶盒上无法观看效果</p>
+                <button onclick="checkTitleTag()" class="btn btn-success">测试基本html解析</button>
+                <p></p>
+                <p id="show1"></p>
+            </div>
+
+            <div class="tab-pane" id="dir">
+                <h3>此页面用于测试&lt;title&gt;标签dir</h3>
+                <p>此标签是html基本结构，所有浏览器都支持，机顶盒上无法观看效果</p>
+            </div>
+
+            <div class="tab-pane" id="lang">
+                <h3>此页面用于测试&lt;title&gt;标签lang</h3>
+                <p>此标签是html基本结构，所有浏览器都支持，机顶盒上无法观看效果</p>
+            </div>
+
+            <div class="tab-pane" id="xml_lang">
+                <h3>此页面用于测试&lt;title&gt;标签xml:lang</h3>
+                <p>此标签是html基本结构，所有浏览器都支持，机顶盒上无法观看效果</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

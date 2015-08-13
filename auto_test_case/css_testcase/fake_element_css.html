@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/main.js">
+    </script>
+    <script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("font_css.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("fake_class_css.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../../index.htm", "_self", false);
+        }
+    </script>
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回首页</button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <ul class="nav nav-pills" id="tabs">
+            <li class="active"><a href="#first_letter_css" data-toggle="tab">:first-letter</a></li>
+            <li><a href="#first_line_css" data-toggle="tab">:first-line</a></li>
+            <li><a href="#before_css" data-toggle="tab">:before</a></li>
+            <li><a href="#after_css" data-toggle="tab">:after</a></li>
+            
+        </ul>
+
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="first_letter_css">
+                <h3>此页面用于测试伪元素中的:first-letter属性</h3>
+                <a href="./fake_element_attribute_css/fake_element_first_letter_css.html">点击查看</a>
+            </div>
+            
+            <div class="tab-pane" id="first_line_css">
+                <h3>此页面用于测试伪元素中的:first-line属性</h3>
+                <a href="./fake_element_attribute_css/fake_element_first_line_css.html">点击查看</a>
+            </div>
+
+            <div class="tab-pane" id="before_css">
+                <h3>此页面用于测试伪元素中的:before属性</h3>
+                <a href="./fake_element_attribute_css/fake_element_before_css.html">点击查看</a>
+            </div>
+
+            <div class="tab-pane" id="after_css">
+                <h3>此页面用于测试伪元素中的:after属性</h3>
+                <a href="./fake_element_attribute_css/fake_element_after_css.html">点击查看</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

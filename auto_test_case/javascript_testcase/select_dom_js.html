@@ -1,0 +1,370 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/main.js">
+    </script>
+    <script type="text/javascript" src="../js/JSTestCaseLib/select_dom_test.js"></script>
+    
+    <script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("style_dom_js.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("option_dom_js.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../../index.htm", "_self", false);
+        }
+    </script>
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回首页</button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <ul class="nav nav-pills" id="tabs">
+            <li class="active"><a href="#options_dom_js" data-toggle="tab">options</a></li>
+            <li><a href="#disabled_dom_js" data-toggle="tab">disabled</a></li>
+            <li><a href="#form_dom_js" data-toggle="tab">form</a></li>
+            <li><a href="#id_dom_js" data-toggle="tab">id</a></li>
+            <li><a href="#name_dom_js" data-toggle="tab">name</a></li>
+            <li><a href="#length_dom_js" data-toggle="tab">length</a></li>
+            <li><a href="#multiple_dom_js" data-toggle="tab">multiple</a></li>
+            <li><a href="#selectedIndex_dom_js" data-toggle="tab">selectedIndex</a></li>
+            <li><a href="#size_dom_js" data-toggle="tab">size</a></li>
+            <li><a href="#tabIndex_dom_js" data-toggle="tab">tabIndex</a></li>
+            <li><a href="#type_dom_js" data-toggle="tab">type</a></li>
+            <li><a href="#onchange_dom_js" data-toggle="tab">onchange</a></li>
+            <li><a href="#add_func_dom_js" data-toggle="tab">add()</a></li>
+            <li><a href="#blur_func_dom_js" data-toggle="tab">blur()</a></li>
+            <li><a href="#focus_func_dom_js" data-toggle="tab">focus()</a></li>
+            <li><a href="#remove_func_dom_js" data-toggle="tab">remove()</a></li>
+        </ul>
+
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="options_dom_js">
+                <h3>此页面用于测试javascript dom中的select对象中的options</h3>
+                <select name="select" id="select1">
+                    <optgroup label="best">
+                        <option value="tokyo">tokyo</option>
+                        <option value="nagoya">nagoya</option>
+                    </optgroup>
+                    <optgroup label="worst">
+                        <option value="namba">namba</option>
+                        <option value="hakata">hakata</option>
+                    </optgroup>
+                </select>
+                <p></p>
+                <button onclick="testOptionsOfSel();">click to check options of select</button>
+                <p></p>
+                <div id="showbox_select1"></div>
+            </div>
+
+            <div class="tab-pane" id="disabled_dom_js">
+                <h3>此页面用于测试javascript dom中的select对象中的disabled</h3>
+                <select name="select" id="select2">
+                    <optgroup label="best">
+                        <option value="tokyo">tokyo</option>
+                        <option value="nagoya">nagoya</option>
+                    </optgroup>
+                    <optgroup label="worst">
+                        <option value="namba">namba</option>
+                        <option value="hakata">hakata</option>
+                    </optgroup>
+                </select>
+                <p></p>
+                <button onclick="testDisabledOfSel()">click to check disabled of select</button>
+                <p></p>
+                <div id="showbox_select2"></div>
+            </div>
+
+            <div class="tab-pane" id="form_dom_js">
+                <h3>此页面用于测试javascript dom中的select对象中的form</h3>
+                <form action="#" id="form_select3">
+                    <select name="select" id="select3">
+                    <optgroup label="best">
+                        <option value="tokyo">tokyo</option>
+                        <option value="nagoya">nagoya</option>
+                    </optgroup>
+                    <optgroup label="worst">
+                        <option value="namba">namba</option>
+                        <option value="hakata">hakata</option>
+                    </optgroup>
+                </select>
+                </form>
+                
+                <p></p>
+                <button onclick="testFormOfSel()">click to check form of select</button>
+                <p></p>
+                <div id="showbox_select3"></div>
+            </div>
+
+            <div class="tab-pane" id="id_dom_js">
+                <h3>此页面用于测试javascript dom中的select对象中的id</h3>
+                <select name="select" id="select4">
+                    <optgroup label="best">
+                        <option value="tokyo">tokyo</option>
+                        <option value="nagoya">nagoya</option>
+                    </optgroup>
+                    <optgroup label="worst">
+                        <option value="namba">namba</option>
+                        <option value="hakata">hakata</option>
+                    </optgroup>
+                </select>
+                <p></p>
+                <button onclick="testIdOfSel()">click to check id of select</button>
+                <p></p>
+                <div id="showbox_select4"></div>
+            </div>
+
+            <div class="tab-pane" id="name_dom_js">
+                <h3>此页面用于测试javascript dom中的select对象中的name</h3>
+                <select name="select" id="select5">
+                    <optgroup label="best">
+                        <option value="tokyo">tokyo</option>
+                        <option value="nagoya">nagoya</option>
+                    </optgroup>
+                    <optgroup label="worst">
+                        <option value="namba">namba</option>
+                        <option value="hakata">hakata</option>
+                    </optgroup>
+                </select>
+                <p></p>
+                <button onclick="testNameOfSel()">click to check name of select</button>
+                <p></p>
+                <div id="showbox_select5"></div>
+            </div>
+
+            <div class="tab-pane" id="length_dom_js">
+                <h3>此页面用于测试javascript dom中的select对象中的length</h3>
+                <select name="select" id="select6">
+                    <optgroup label="best">
+                        <option value="tokyo">tokyo</option>
+                        <option value="nagoya">nagoya</option>
+                    </optgroup>
+                    <optgroup label="worst">
+                        <option value="namba">namba</option>
+                        <option value="hakata">hakata</option>
+                    </optgroup>
+                </select>
+                <p></p>
+                <button onclick="testLengthOfSel()">click to check length of select</button>
+                <p></p>
+                <div id="showbox_select6"></div>
+            </div>
+
+            <div class="tab-pane" id="multiple_dom_js">
+                <h3>此页面用于测试javascript dom中的select对象中的multiple</h3>
+                <select name="select" id="select7">
+                    <optgroup label="best">
+                        <option value="tokyo">tokyo</option>
+                        <option value="nagoya">nagoya</option>
+                    </optgroup>
+                    <optgroup label="worst">
+                        <option value="namba">namba</option>
+                        <option value="hakata">hakata</option>
+                    </optgroup>
+                </select>
+                <p></p>
+                <button onclick="testMultipleOfSel()">click to check multiple of select</button>
+                <p></p>
+                <div id="showbox_select7"></div>
+            </div>
+
+            <div class="tab-pane" id="selectedIndex_dom_js">
+                <h3>此页面用于测试javascript dom中的select对象中的selectedIndex</h3>
+                <select name="select" id="select8" onchange="testSelectedIndexOfSel()">
+                    <optgroup label="best">
+                        <option value="tokyo">tokyo</option>
+                        <option value="nagoya">nagoya</option>
+                    </optgroup>
+                    <optgroup label="worst">
+                        <option value="namba">namba</option>
+                        <option value="hakata">hakata</option>
+                    </optgroup>
+                </select>
+                <p></p>
+                
+                <div id="showbox_select8"></div>
+            </div>
+
+            <div class="tab-pane" id="size_dom_js">
+                <h3>此页面用于测试javascript dom中的select对象中的size</h3>
+                <select name="select" id="select9" size="4">
+                    <optgroup label="best">
+                        <option value="tokyo">tokyo</option>
+                        <option value="nagoya">nagoya</option>
+                    </optgroup>
+                    <optgroup label="worst">
+                        <option value="namba">namba</option>
+                        <option value="hakata">hakata</option>
+                    </optgroup>
+                </select>
+                <p></p>
+                <button onclick="testSizeOfSel()">click to check size of select</button>
+                <p></p>
+                <div id="showbox_select9"></div>
+            </div>
+
+            <div class="tab-pane" id="tabIndex_dom_js">
+                <h3>此页面用于测试javascript dom中的select对象中的tabIndex</h3>
+                <select name="select" id="ex1_select10">
+                    <optgroup label="best">
+                        <option value="tokyo">tokyo</option>
+                        <option value="nagoya">nagoya</option>
+                    </optgroup>
+                    <optgroup label="worst">
+                        <option value="namba">namba</option>
+                        <option value="hakata">hakata</option>
+                    </optgroup>
+                </select>
+                <select name="select" id="ex1_select10">
+                    <optgroup label="best">
+                        <option value="tokyo">tokyo</option>
+                        <option value="nagoya">nagoya</option>
+                    </optgroup>
+                    <optgroup label="worst">
+                        <option value="namba">namba</option>
+                        <option value="hakata">hakata</option>
+                    </optgroup>
+                </select>
+                <p></p>
+                <button onclick="testTabIndexOfSel()">click to check tabIndex of select</button>
+                <p></p>
+                <div id="showbox_select10"></div>
+            </div>
+
+            <div class="tab-pane" id="type_dom_js">
+                <h3>此页面用于测试javascript dom中的select对象中的type</h3>
+                <select name="select" id="select11">
+                    <optgroup label="best">
+                        <option value="tokyo">tokyo</option>
+                        <option value="nagoya">nagoya</option>
+                    </optgroup>
+                    <optgroup label="worst">
+                        <option value="namba">namba</option>
+                        <option value="hakata">hakata</option>
+                    </optgroup>
+                </select>
+                <p></p>
+                <button onclick="testTypeOfSel()">click to check type of select</button>
+                <p></p>
+                <div id="showbox_select11"></div>
+            </div>
+
+            <div class="tab-pane" id="onchange_dom_js">
+                <h3>此页面用于测试javascript dom中的select对象中的onchange</h3>
+                <select name="select" id="select12">
+                    <optgroup label="best">
+                        <option value="tokyo">tokyo</option>
+                        <option value="nagoya">nagoya</option>
+                    </optgroup>
+                    <optgroup label="worst">
+                        <option value="namba">namba</option>
+                        <option value="hakata">hakata</option>
+                    </optgroup>
+                </select>
+                <p></p>
+                <button onclick="testOnchangeOfSel()">click to check onchange of select</button>
+                <p></p>
+                <div id="showbox_select12"></div>
+            </div>
+
+            <div class="tab-pane" id="add_func_dom_js">
+                <h3>此页面用于测试javascript dom中的select对象中的add()</h3>
+                <select name="select" id="select13" size="7">
+                    <optgroup label="best">
+                        <option value="tokyo">tokyo</option>
+                        <option value="nagoya">nagoya</option>
+                    </optgroup>
+                    <optgroup label="worst">
+                        <option value="namba">namba</option>
+                        <option value="hakata">hakata</option>
+                    </optgroup>
+                </select>
+                <p></p>
+                <button onclick="testAddFuncOfSel()">click to check add() of select</button>
+                <p></p>
+                <div id="showbox_select13"></div>
+            </div>
+
+            <div class="tab-pane" id="blur_func_dom_js">
+                <h3>此页面用于测试javascript dom中的select对象中的blur()</h3>
+                <select name="select" id="select14">
+                    <optgroup label="best">
+                        <option value="tokyo">tokyo</option>
+                        <option value="nagoya">nagoya</option>
+                    </optgroup>
+                    <optgroup label="worst">
+                        <option value="namba">namba</option>
+                        <option value="hakata">hakata</option>
+                    </optgroup>
+                </select>
+                <p></p>
+                <button onclick="testBlurFuncOfSel()">click to check blur() of select</button>
+                <p></p>
+                <div id="showbox_select14"></div>
+            </div>
+
+            <div class="tab-pane" id="focus_func_dom_js">
+                <h3>此页面用于测试javascript dom中的select对象中的focus()</h3>
+                <select name="select" id="select15">
+                    <optgroup label="best">
+                        <option value="tokyo">tokyo</option>
+                        <option value="nagoya">nagoya</option>
+                    </optgroup>
+                    <optgroup label="worst">
+                        <option value="namba">namba</option>
+                        <option value="hakata">hakata</option>
+                    </optgroup>
+                </select>
+                <p></p>
+                <button onclick="testFocusFuncOfSel()">click to check focus() of select</button>
+                <p></p>
+                <div id="showbox_select15"></div>
+            </div>
+
+            <div class="tab-pane" id="remove_func_dom_js">
+                <h3>此页面用于测试javascript dom中的select对象中的remove()</h3>
+                <select name="select" id="select16">
+                    <optgroup label="best">
+                        <option value="tokyo">tokyo</option>
+                        <option value="nagoya">nagoya</option>
+                    </optgroup>
+                    <optgroup label="worst">
+                        <option value="namba">namba</option>
+                        <option value="hakata">hakata</option>
+                    </optgroup>
+                </select>
+                <p></p>
+                <button onclick="testRemoveFuncOfSel()">click to check remove() of select</button>
+                <p></p>
+                <div id="showbox_select16"></div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/main.js">
+    </script>
+    <script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("optgroup_html.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("object_html.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../../index.htm", "_self", false);
+        }
+    </script>
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回首页</button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <ul class="nav nav-pills" id="tabs">
+            <li class="active"><a href="#ol" data-toggle="tab">ol</a></li>
+            <li><a href="#type" data-toggle="tab">type</a></li>
+            <li><a href="#compact" data-toggle="tab">compact</a></li>
+            <li><a href="#start" data-toggle="tab">start</a></li>
+        </ul>
+
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="ol">
+                <h3>此页面用于测试&lt;ol&gt;标签</h3>
+                <p></p>
+                <p>有序列表ol</p>
+                <ol>
+                    <li>coffee</li>
+                    <li>tea</li>
+                    <li>milk</li>
+                </ol>
+                <p>无序列表ul</p>
+                <ul>
+                    <li>coffee</li>
+                    <li>tea</li>
+                    <li>milk</li>
+                </ul>
+
+            </div>
+            
+            <div class="tab-pane" id="type">
+                <h3>此页面用于测试&lt;ol&gt;标签type</h3>
+
+                <p>有序列表ol</p>
+                <ol type="A">
+                    <li>coffee</li>
+                    <li>tea</li>
+                    <li>milk</li>
+                </ol>
+            </div>
+
+            <div class="tab-pane" id="compact">
+                <h3>此页面用于测试&lt;ol&gt;标签compact</h3>
+                <p>此标签不被主流浏览器支持，已在html4.01中弃用，并在html5中废除，不建议使用，使用css代替</p>
+                <p>有序列表ol(with compact)</p>
+                <ol compact="compact">
+                    <li>coffee</li>
+                    <li>tea</li>
+                    <li>milk</li>
+                </ol>
+                <p></p>
+                <p>有序列表ol(without compact)</p>
+                <ol compact="compact">
+                    <li>coffee</li>
+                    <li>tea</li>
+                    <li>milk</li>
+                </ol>
+            </div>
+
+            <div class="tab-pane" id="start">
+                <h3>此页面用于测试&lt;ol&gt;标签start</h3>
+
+                <p>有序列表ol</p>
+                <ol start="10">
+                    <li>coffee</li>
+                    <li>tea</li>
+                    <li>milk</li>
+                </ol>
+            </div>
+
+        </div>    
+        
+    </div>
+</body>
+</html>

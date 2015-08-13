@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/main.js">
+    </script>
+    <script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("table_css.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("padding_css.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../../index.htm", "_self", false);
+        }
+    </script>
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回首页</button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <ul class="nav nav-pills" id="tabs">
+            <li class="active"><a href="#height_css" data-toggle="tab">height</a></li>
+            <li><a href="#max_height_css" data-toggle="tab">max-height</a></li>
+            <li><a href="#min_height_css" data-toggle="tab">min-height</a></li>
+            <li><a href="#width_css" data-toggle="tab">width</a></li>
+            <li><a href="#max_width_css" data-toggle="tab">max-width</a></li>
+            <li><a href="#min_width_css" data-toggle="tab">min-width</a></li>
+        </ul>
+
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="height_css">
+                <h3>此页面用于测试尺寸属性中的height</h3>
+                <img id="normal" src="../images/star.gif" width="95" height="84" />
+                <img id="big" src="../images/star.gif" width="95" height="84" />
+                <p id="ex">The height and width of this paragraph is 100px.</p>
+                <p>This is some text in a paragraph. This is some text in a paragraph.
+                This is some text in a paragraph. This is some text in a paragraph.
+                This is some text in a paragraph. This is some text in a paragraph.</p> 
+            </div>
+            
+            <div class="tab-pane" id="max_height_css">
+                <h3>此页面用于测试尺寸属性中的max-height</h3>
+                <p>The maximum height of this paragraph is set to 50px. The maximum height of this paragraph is set to 50px. The maximum height of this paragraph is set to 50px. The maximum height of this paragraph is set to 50px. The maximum height of this paragraph is set to 50px. The maximum height of this paragraph is set to 50px. The maximum height of this paragraph is set to 50px. The maximum height of this paragraph is set to 50px. The maximum height of this paragraph is set to 50px. The maximum height of this paragraph is set to 50px.</p>
+            </div>
+
+            <div class="tab-pane" id="min_height_css">
+                <h3>此页面用于测试尺寸属性中的min-height</h3>
+                <p>The minimum height of this paragraph is set to 100px.</p>
+            </div>
+
+            <div class="tab-pane" id="width_css">
+                <h3>此页面用于测试尺寸属性中的max-height</h3>
+                <img id="normal" src="../images/star.gif" width="95" height="84" />
+                <img id="big" src="../images/star.gif" width="95" height="84" />
+                <p id="ex">The height and width of this paragraph is 100px.</p>
+                <p>This is some text in a paragraph. This is some text in a paragraph.
+                This is some text in a paragraph. This is some text in a paragraph.
+                This is some text in a paragraph. This is some text in a paragraph.</p>
+            </div>
+
+            <div class="tab-pane" id="max_width_css">
+                <h3>此页面用于测试尺寸属性中的max-height</h3>
+                <p>The maximum width of this paragraph is set to 100px.</p>
+            </div>
+
+            <div class="tab-pane" id="min_width_css">
+                <h3>此页面用于测试尺寸属性中的max-height</h3>
+                <p>The minimum width of this paragraph is set to 150px.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/main.js">
+    </script>
+    <script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("ins_html.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("img_html.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../../index.htm", "_self", false);
+        }
+    </script>
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回首页</button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <ul class="nav nav-pills" id="tabs">
+            <li class="active"><a href="#input" data-toggle="tab">input</a></li>
+            <li><a href="#accept" data-toggle="tab">accept</a></li>
+            <li><a href="#align" data-toggle="tab">align</a></li>
+            <li><a href="#alt" data-toggle="tab">alt</a></li>
+            <li><a href="#checked" data-toggle="tab">checked</a></li>
+            <li><a href="#disabled" data-toggle="tab">disabled</a></li>
+            <li><a href="#maxlength" data-toggle="tab">maxlength</a></li>
+            <li><a href="#name" data-toggle="tab">name</a></li>
+            <li><a href="#readonly" data-toggle="tab">readonly</a></li>
+            <li><a href="#size" data-toggle="tab">size</a></li>
+            <li><a href="#src" data-toggle="tab">src</a></li>
+            <li><a href="#type" data-toggle="tab">type</a></li>
+            <li><a href="#value" data-toggle="tab">value</a></li>
+            
+        </ul>
+
+         <div class="tab-content">
+
+            <div class="tab-pane active" id="input">
+                <h3>此页面用于测试&lt;input&gt;标签</h3>
+                <p></p>
+                <form action="#" id="form1"> 
+                    姓名：<input type="text" name="name" /><p></p>
+                    住址：<input type="text" name="email" /><p></p>
+                    <input type="submit" value="点击提交" />
+
+                </form>
+            </div>
+
+            <div class="tab-pane" id="accept">
+                <h3>此页面用于测试&lt;input&gt;标签accept</h3>
+                <p>此属性无法测试</p>
+                <form action="#" id="form2"> 
+                    姓名：<input type="text" name="name" /><p></p>
+                    住址：<input type="text" name="email" /><p></p>
+                    <input type="file" name="upload" id="upload" accept="image/*" />
+                    <input type="submit" value="点击提交" />
+
+                </form>
+
+            </div>
+
+            <div class="tab-pane" id="align">
+                <h3>此页面用于测试&lt;input&gt;标签align</h3>
+                <p>看到图片（input:image）右移了么</p>
+                <form action="#" id="form3"> 
+                    姓名：<input type="text" name="name" /><p></p>
+                    住址：<input type="text" name="email" /><p></p>
+                    <input type="image" src="../images/Aurora.jpg" alt="submit" width="100px"
+                    height="100px" align="right" />
+
+                </form>
+            </div>
+
+            <div class="tab-pane" id="alt">
+                <h3>此页面用于测试&lt;input&gt;标签alt</h3>
+                <p>看到submit字样了么</p>
+                <form action="#" id="form4"> 
+                    姓名：<input type="text" name="name" /><p></p>
+                    住址：<input type="text" name="email" /><p></p>
+                    <input type="submit" value="点击提交" />
+                    <input type="image" src="../images/ora" alt="submit" width="100px"
+                    height="100px" align="right" />
+
+                </form>
+
+            </div>
+
+            <div class="tab-pane" id="checked">
+                <h3>此页面用于测试&lt;input&gt;标签checked</h3>
+                <p></p>
+                <form action="#" id="form5"> 
+                    姓名：<input type="text" name="name" /><p></p>
+                    住址：<input type="text" name="email" /><p></p>
+                    <input type="checkbox" name="chkbox1" id="chkbox1" />男<br />
+                    <input type="checkbox" name="chkbox2" id="chkbox2" checked="yes" />女<br />
+                    <input type="submit" value="点击提交" />
+
+                </form>
+            </div>
+
+            <div class="tab-pane" id="disabled">
+                <h3>此页面用于测试&lt;input&gt;标签disabled</h3>
+                <p></p>
+                <form action="#" id="form6"> 
+                    姓名：<input type="text" name="name" /><p></p>
+                    住址：<input type="text" name="email" disabled="disabled" /><p></p>
+                    <input type="submit" value="点击提交" />
+
+                </form>
+            </div>
+
+            <div class="tab-pane" id="maxlength">
+                <h3>此页面用于测试&lt;input&gt;标签maxlength</h3>
+                <p></p>
+                <form action="#" id="form7"> 
+                    姓名：<input type="text" name="name" maxlength="10" />(不超过10个字符)<p></p>
+                    住址：<input type="text" name="email" /><p></p>
+                    <input type="submit" value="点击提交" />
+
+                </form>
+            </div>
+
+            <div class="tab-pane" id="name">
+                <h3>此页面用于测试&lt;input&gt;标签name</h3>
+                <p>用node.js打开根目录js文件夹下的server.js查看</p>
+                <form action="http://192.168.200.50:8888/" method="POST" id="form8"> 
+                    姓名：<input type="text" name="name" /><p></p>
+                    住址：<input type="text" name="email" /><p></p>
+                    <input type="submit" value="点击提交" />
+
+                </form>
+            </div>
+
+            <div class="tab-pane" id="readonly">
+                <h3>此页面用于测试&lt;input&gt;标签readonly</h3>
+                <p></p>
+                <form action="#" id="form9"> 
+                    姓名：<input type="text" name="name" /><p></p>
+                    住址：<input type="text" name="email" value="131541235@qq.com（只读）" readonly="readonly" /><p></p>
+                    <input type="submit" value="点击提交" />
+
+                </form>
+            </div>
+
+            <div class="tab-pane" id="size">
+                <h3>此页面用于测试&lt;input&gt;标签size</h3>
+                <p></p>
+                <form action="#" id="form10"> 
+                    姓名：<input type="text" name="name" size="50" /><p></p>
+                    住址：<input type="text" name="email" /><p></p>
+                    <input type="submit" value="点击提交" />
+
+                </form>
+            </div>
+
+            <div class="tab-pane" id="src">
+                <h3>此页面用于测试&lt;input&gt;标签src</h3>
+                <p> 看到图片了么</p>
+                <form action="#" id="form11"> 
+                    姓名：<input type="text" name="name" /><p></p>
+                    住址：<input type="text" name="email" /><p></p>
+                    <input type="image" src="../images/Aurora.jpg" alt="submit" width="100px"
+                    height="100px" align="right" />
+
+                </form>
+            </div>
+
+            <div class="tab-pane" id="type">
+                <h3>此页面用于测试&lt;input&gt;标签type</h3>
+                <p></p>
+                <form action="#" id="form12"> 
+                    <p>type: input:text</p>
+                    姓名：<input type="text" name="name" /><p></p>
+                    住址：<input type="text" name="email" /><p></p>
+                    <p>type: input:image</p>
+                    <input type="image" src="../images/Aurora.jpg" alt="pic" width="100px" height="100px" />
+                    <p>type: input:submit</p>
+                    <input type="submit" value="点击提交" />
+
+                </form>
+            </div>
+
+            <div class="tab-pane" id="value">
+                <h3>此页面用于测试&lt;input&gt;标签value</h3>
+                <p></p>
+                <form action="#" id="form13"> 
+                    
+                    姓名：<input type="text" name="name" value="看到文字了么" /><p></p>
+                    住址：<input type="text" name="email" value="看到文字了么" /><p></p>
+                    
+                    <input type="submit" value="点击提交" />
+
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

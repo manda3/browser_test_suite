@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../../../css/style.css">
+	<script type="text/javascript" src="../../../js/main.js"></script>
+	<script type="text/javascript">
+		function closeWindow () {
+			window.close();
+		}
+	</script>
+	<script type="text/javascript">
+		function goBack () {
+            window.open("../closed_window_dom_js.html", "_self", false);
+        }
+	</script>
+</head>
+<body>
+	<p>myWindow</p>
+	<button onclick="closeWindow();">click to close the window</button>
+	<button type="button" onclick="goBack()">返回</button>
+</body>
+</html>

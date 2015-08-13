@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/main.js">
+    </script>
+    <script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("form_dom_js.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("button_dom_js.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../../index.htm", "_self", false);
+        }
+    </script>
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回首页</button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <h3>此页面用于测试javascript的html dom的event对象</h3>
+        <table class="table table-striped">
+            <tr>
+                <td><a href="./event_dom_js/onabort_event_dom_js.html">onabort</a></td>
+                <td><a href="./event_dom_js/onblur_event_dom_js.html">onblur</a></td>
+                <td><a href="./event_dom_js/onchange_event_dom_js.html">onchange</a></td>
+                <td><a href="./event_dom_js/onclick_event_dom_js.html">onclick</a></td>
+                <td><a href="./event_dom_js/ondbclick_event_dom_js.html">ondbclick</a></td>
+                <td><a href="./event_dom_js/onerror_event_dom_js.html">onerror</a></td>
+                <td><a href="./event_dom_js/onfocus_event_dom_js.html">onfocus</a></td>
+                <td><a href="./event_dom_js/onkeydown_event_dom_js.html">onkeydown</a></td>
+            </tr>
+            <tr>
+                <td><a href="./event_dom_js/onkeypress_event_dom_js.html">onkeypress</a></td>
+                <td><a href="./event_dom_js/onkeyup_event_dom_js.html">onkeyup</a></td>
+                <td><a href="./event_dom_js/onload_event_dom_js.html">onload</a></td>
+                <td><a href="./event_dom_js/onmousedown_event_dom_js.html">onmousedown</a></td>
+                <td><a href="./event_dom_js/onmousemove_event_dom_js.html">onmousemove</a></td>
+                <td><a href="./event_dom_js/onmouseout_event_dom_js.html">onmouseout</a></td>
+                <td><a href="./event_dom_js/onmouseover_event_dom_js.html">onmouseover</a></td>
+                <td><a href="./event_dom_js/onmouseup_event_dom_js.html">onmouseup</a></td>
+            </tr>
+            <tr>
+                <td><a href="./event_dom_js/onreset_event_dom_js.html">onreset</a></td>
+                <td><a href="./event_dom_js/onresize_event_dom_js.html">onresize</a></td>
+                <td><a href="./event_dom_js/onselect_event_dom_js.html">onselect</a></td>
+                <td><a href="./event_dom_js/onsubmit_event_dom_js.html">onsubmit</a></td>
+                <td><a href="./event_dom_js/onunload_event_dom_js.html">onunload</a></td>
+                <td><a href="./event_dom_js/bubbles_event_dom_js.html">bubbles</a></td>
+                <td><a href="./event_dom_js/cancelable_event_dom_js.html">cancelable</a></td>
+                <td><a href="./event_dom_js/currentTarget_event_dom_js.html">currentTarget</a></td>
+            </tr>
+            <tr>
+                <td><a href="./event_dom_js/eventPhase_event_dom_js.html">eventPhase</a></td>
+                <td><a href="./event_dom_js/target_event_dom_js.html">target</a></td>
+                <td><a href="./event_dom_js/timeStamp_event_dom_js.html">timeStamp</a></td>
+                <td><a href="./event_dom_js/type_event_dom_js.html">type</a></td>
+                <td><a href="./event_dom_js/initEvent_func_event_dom_js.html">initEvent()</a></td>
+                <td><a href="./event_dom_js/preventDefault_func_event_dom_js.html">preventDefault()</a></td>
+                <td><a href="./event_dom_js/stopPropagation_func_event_dom_js.html">stopPropagation()</a></td>
+                <td><a href="#"></a></td>
+            </tr>
+            
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/main.js">
+    </script>
+    <script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("../../index.htm", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("table_css.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../../index.htm", "_self", false);
+        }
+    </script>
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回首页</button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <ul class="nav nav-pills" id="tabs">
+            <li class="active"><a href="#color_css" data-toggle="tab">color</a></li>
+            <li><a href="#direction_css" data-toggle="tab">direction</a></li>
+            <li><a href="#letter_spacing_css" data-toggle="tab">letter-spacing</a></li>
+            <li><a href="#line_height_css" data-toggle="tab">line-height</a></li>
+            <li><a href="#text_align_css" data-toggle="tab">text-align</a></li>
+            <li><a href="#text_decoration_css" data-toggle="tab">text-decoration</a></li>
+            <li><a href="#text_indent_css" data-toggle="tab">text-indent</a></li>
+            <li><a href="#text_shadow_css" data-toggle="tab">text-shadow</a></li>
+            <li><a href="#text_transform_css" data-toggle="tab">text-transform</a></li>
+            <li><a href="#unicode_bidi_css" data-toggle="tab">unicode-bidi</a></li>
+            <li><a href="#white_space_css" data-toggle="tab">white-space</a></li>
+            <li><a href="#word_spacing_css" data-toggle="tab">word-spacing</a></li>
+        </ul>
+
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="color_css">
+                <h3>此页面用于测试文本属性中的color</h3>
+                
+                <h1>This is the heading1.</h1>
+                <p>This is the paragraph. This is the paragraph.</p>
+            </div>
+
+            <div class="tab-pane" id="direction_css">
+                <h3>此页面用于测试文本属性中的direction</h3>
+
+                <div>Some text. Default writing direction.</div>
+                <div id="ex1">Some text. Right-to-left direction.</div>
+            </div>
+
+            <div class="tab-pane" id="letter_spacing_css">
+                <h3>此页面用于测试文本属性中的letter-spacing</h3>
+                <h1>This is heading 1</h1>
+                <h2>This is heading 2</h2>
+                <h3>This is heading 3(normal)</h3>
+            </div>
+
+            <div class="tab-pane" id="line_height_css">
+                <h3>此页面用于测试文本属性中的line-height</h3>
+
+                <p>
+                This is a paragraph with a standard line-height.<br>
+                This is a paragraph with a standard line-height.<br>
+                The default line height in most browsers is about 110% to 120%.<br>
+                </p>
+
+                <p id="small">
+                This is a paragraph with a smaller line-height.<br>
+                This is a paragraph with a smaller line-height.<br>
+                This is a paragraph with a smaller line-height.<br>
+                This is a paragraph with a smaller line-height.<br>
+                </p>
+
+                <p id="big">
+                This is a paragraph with a bigger line-height.<br>
+                This is a paragraph with a bigger line-height.<br>
+                This is a paragraph with a bigger line-height.<br>
+                This is a paragraph with a bigger line-height.<br>
+                </p>
+            </div>
+
+            <div class="tab-pane" id="text_align_css">
+                <h3>此页面用于测试文本属性中的text-align</h3>
+
+                <h1>This is heading 1</h1>
+                <h2>This is heading 2</h2>
+                <h4>This is heading 3</h4>
+            </div>
+
+            <div class="tab-pane" id="text_decoration_css">
+                <h3>此页面用于测试文本属性中的text-decoration</h3>
+
+                <h1>This is heading 1</h1>
+                <h2>This is heading 2</h2>
+                <h4>This is heading 3</h4>
+            </div>
+
+            <div class="tab-pane" id="text_indent_css">
+                <h3>此页面用于测试文本属性中的text-indent</h3>
+
+                <p>In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since. 'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this world haven't had the advantages that you've had.'</p>
+
+                <h4>看见首行递进了么</h4>
+
+            </div>
+
+            <div class="tab-pane" id="text_shadow_css">
+                <h3>此页面用于测试文本属性中的text-shadow</h3>
+
+                <p>此属性是css3属性，旧浏览器可能不支持</p>
+                <h1>Text-shadow effect</h1>
+            </div>
+
+            <div class="tab-pane" id="text_transform_css">
+                <h3>此页面用于测试文本属性中的text-transform</h3>
+
+                <p id="uppercase">This is some text.</p>
+                <p id="lowercase">This is some text.</p>
+                <p id="capitalize">This is some text.</p>
+            </div>
+
+            <div class="tab-pane" id="unicode_bidi_css">
+                <h3>此页面用于测试文本属性中的unicode-bidi</h3>
+
+                <div>Some text. Default writing direction.</div>
+                <div id="ex1">Some text. Right-to-left direction.</div>
+            </div>
+
+            <div class="tab-pane" id="white_space_css">
+                <h3>此页面用于测试文本属性中的white-space</h3>
+
+                <p>
+                This is some text. This is some text. This is some text.
+                This is some text. This is some text. This is some text.
+                This is some text. This is some text. This is some text.
+                This is some text. This is some text. This is some text.
+                </p>
+
+                <p></p>
+
+                <p>看见段落变成一行了么</p>
+            </div>
+
+            <div class="tab-pane" id="word_spacing_css">
+                <h3>此页面用于测试文本属性中的word-spacing</h3>
+
+                <p>
+                This is some text. This is some text.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

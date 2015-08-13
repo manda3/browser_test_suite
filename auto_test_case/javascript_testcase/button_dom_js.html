@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/main.js">
+    </script>
+    <script type="text/javascript" src="../js/JSTestCaseLib/button_dom_test.js"></script>
+    <script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("event_dom_js.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("body_dom_js.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../../index.htm", "_self", false);
+        }
+    </script>
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回首页</button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <ul class="nav nav-pills" id="tabs">
+            <li class="active"><a href="#accessKey_dom_js" data-toggle="tab">accessKey</a></li>
+            <li><a href="#disabled_dom_js" data-toggle="tab">disabled</a></li>
+            <li><a href="#form_dom_js" data-toggle="tab">form</a></li>
+            <li><a href="#id_dom_js" data-toggle="tab">id</a></li>
+            <li><a href="#name_dom_js" data-toggle="tab">name</a></li>
+            <li><a href="#tabIndex_dom_js" data-toggle="tab">tabIndex</a></li>
+            <li><a href="#type_dom_js" data-toggle="tab">type</a></li>
+            <li><a href="#value_dom_js" data-toggle="tab">value</a></li>
+        </ul>
+
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="accessKey_dom_js">
+                <h3>此页面用于测试javascript dom中的button对象中的accessKey</h3>
+                <p>使用键盘的alt+q进行测试</p>
+                <button onclick="showForElem('showbox_button1', 'no,you clicked.');" id="btn_button1">click to check show info</button>
+                <p></p>
+                <div id="showbox_button1"></div>
+            </div>
+
+            <div class="tab-pane" id="disabled_dom_js">
+                <h3>此页面用于测试javascript dom中的button对象中的disabled</h3>
+                <p></p>
+                <button onclick="testDisabledOfBtn();" id="btn_button2">click to disable the button</button>
+                <p></p>
+                <div id="showbox_button2"></div>
+            </div>
+
+            <div class="tab-pane" id="form_dom_js">
+                <h3>此页面用于测试javascript dom中的button对象中的form</h3>
+                <p></p>
+                <form action="#" id="form_button3">
+                    <button id="btn1_button3">button for the form</button>
+                </form>
+                <p></p>
+                <button onclick="testFormOfBtn();" id="btn2_button3">click to check the button of form</button>
+                <p></p>
+                <div id="showbox_button3"></div>
+            
+            </div>
+
+            <div class="tab-pane" id="id_dom_js">
+                <h3>此页面用于测试javascript dom中的button对象中的id</h3>
+                <p></p>
+                <button onclick="testIdOfBtn();" id="btn_button4">click to check the button id</button>
+                <p></p>
+                <div id="showbox_button4"></div>
+            
+            </div>
+
+            <div class="tab-pane" id="name_dom_js">
+                <h3>此页面用于测试javascript dom中的button对象中的name</h3>
+                <p></p>
+                <button onclick="testNameOfBtn();" id="btn_button5" name="btn_button5">click to check name of the button</button>
+                <p></p>
+                <div id="showbox_button5"></div>
+            
+            </div>
+
+            <div class="tab-pane" id="tabIndex_dom_js">
+                <h3>此页面用于测试javascript dom中的button对象中的tabIndex</h3>
+                <p></p>
+                <button id="btn1_button6">button1</button>
+                <button id="btn2_button6">button2</button>
+                <p></p>
+                <button onclick="testTabIndexOfBtn();" id="btn3_button6">click to change tabIdex of the button</button>
+                <p></p>
+                <div id="showbox_button6"></div>
+            
+            </div>
+
+            <div class="tab-pane" id="type_dom_js">
+                <h3>此页面用于测试javascript dom中的button对象中的type</h3>
+                <p></p>
+                <button onclick="testTypeOfBtn();" id="btn_button7">click to check type of button</button>
+                <p></p>
+                <div id="showbox_button7"></div>
+
+            </div>
+
+            <div class="tab-pane" id="value_dom_js">
+                <h3>此页面用于测试javascript dom中的button对象中的value</h3>
+                <p></p>
+                <button onclick="testValueOfBtn();" id="btn_button8" value="BUTTON">click to change value of the button</button>
+                <p></p>
+                <div id="showbox_button8"></div>
+            
+            </div>
+
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        testAccessKeyOfBtn ();
+    </script>
+</body>
+</html>

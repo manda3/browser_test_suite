@@ -1,0 +1,960 @@
+/*
+ css for the body of whole page
+*/
+body{
+	background-color: #FFF;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+/*
+ css for the content of the first level div
+*/
+.content{
+	margin-top: 10px;
+}
+/*
+ css for the tab content of first tab-framework
+*/
+.tab-content{
+	margin-top: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+/*
+ css for the content of the first level div for the sub page of the test
+*/
+#content{
+	margin-top: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+/*
+ css for testing the html <link> tag
+*/
+#link_html_link_h1{
+	color: green;
+	border: '1pt solid black';
+	background-color: blue;
+}
+
+#link_html_link_p{
+	color: red;
+	background-color: green;
+}
+
+
+/*
+	css for background_css.html
+*/
+
+#background_css div{
+	height: 100px;
+	width: 200px;
+	background: red;
+}
+
+#background-attachment_css div{
+	height: 400px;
+	width: 600px;
+	background-image: url("../images/Aurora.jpg");
+	background-attachment: fixed;
+}
+
+#background-color_css div{
+	height:200px;
+	width: 300px;
+	background-color: blue;
+}
+
+#background-image_css div{
+	height: 400px;
+	width: 600px;
+	background-image: url("../images/Aurora.jpg");
+}
+
+#background-repeat_css div{
+	height: 60px;
+	width: 200px;
+}
+
+#background-repeat_css div#no-repeat_background-repeat_css{
+	background-image: url("../images/star.gif");
+	background-repeat: no-repeat;
+}
+
+#background-repeat_css div#repeat_background-repeat_css{
+	background-image: url("../images/star.gif");
+	background-repeat: repeat;
+}
+
+#background-repeat_css div#repeat-x_background-repeat_css{
+	background-image: url("../images/star.gif");
+	background-repeat: repeat-x;
+}
+
+#background-repeat_css div#repeat-y_background-repeat_css{
+	background-image: url("../images/star.gif");
+	background-repeat: repeat-y;
+}
+
+#background-position_css div{
+	background-color: #FFFFCC;
+	height: 60px;
+	width: 220px;
+	background-repeat: no-repeat;
+}
+
+#background-position_css div#center_background-position_css {
+	background-image:url(../images/star.gif);
+	background-position: center;
+}
+
+#background-position_css div#bottom_background-position_css {
+	background-image:url(../images/star.gif);
+	background-position: bottom;
+}
+
+#background-position_css div#top_background-position_css {
+	background-image:url(../images/star.gif);
+	background-position: top;
+}
+
+#background-position_css div#left_background-position_css {
+	background-image:url(../images/star.gif);
+	background-position: left;
+}
+
+#background-position_css div#right_background-position_css {
+background-image:url(../images/star.gif);
+background-position: right;
+}
+
+#background-position_css div#percentage_background-position_css {
+background-image:url(../images/star.gif);
+background-position: 25% 75%;
+}
+
+
+/*
+	css for border_css.html
+*/
+
+#border_css div{
+	height: 200px;
+	width: 400px;
+	border: solid blue 10px;
+}
+
+#border-color_css div{
+	height: 100px;
+	width: 100px;
+	float: left;
+	margin: 10px;
+	background-color: yellow;
+}
+
+#border-color_css div#border-color-origin_css{
+	border-style: solid;
+	border-color: red;
+	border-width: 10px;
+}
+
+#border-color_css div#border-top-color_border-color_css{
+	border-top-style: solid;
+	border-top-width: 10px;
+	border-top-color: green;
+}
+
+#border-color_css div#border-bottom-color_border-color_css{
+	border-bottom-style: solid;
+	border-bottom-width: 10px;
+	border-bottom-color: blue;
+}
+
+#border-color_css div#border-left-color_border-color_css{
+	border-left-style: solid;
+	border-left-width: 10px;
+	border-left-color: black;
+}
+
+#border-color_css div#border-right-color_border-color_css{
+	border-right-style: solid;
+	border-right-width: 10px;
+	border-right-color: pink;
+}
+
+#border-color_css div#outline-color_border-color_css{
+	outline-style: solid;
+	outline-width: 10px;
+	outline-color: gray;
+}
+
+#border-style_css div{
+	height: 120px;
+	width: 120px;
+	float: left;
+	margin: 10px;
+	background-color: yellow;
+}
+
+#border-style_css div#border-style-origin_css{
+	border-style: dotted;
+	border-color: green;
+	border-width: 10px;
+}
+
+#border-style_css div#border-top-style_border-style_css{
+	border-top-style: dashed;
+	border-top-width: 10px;
+	border-top-color: green;
+}
+
+#border-style_css div#border-bottom-style_border-style_css{
+	border-bottom-style: solid;
+	border-bottom-width: 10px;
+	border-bottom-color: green;
+}
+
+#border-style_css div#border-left-style_border-style_css{
+	border-left-style: double;
+	border-left-width: 10px;
+	border-left-color: green;
+}
+
+#border-style_css div#border-right-style_border-style_css{
+	border-right-style: groove;
+	border-right-width: 10px;
+	border-right-color: green;
+}
+
+#border-style_css div#outline-style_border-style_css{
+	outline-style: ridge;
+	outline-width: 10px;
+	outline-color: green;
+}
+
+#border-width_css div{
+	height: 130px;
+	width: 130px;
+	float: left;
+	margin: 10px;
+	background-color: yellow;
+}
+
+#border-width_css div#border-width-origin_css{
+	border-style: solid;
+	border-color: red;
+	border-width: 25px;
+}
+
+#border-width_css div#border-top-width_border-width_css{
+	border-top-style: solid;
+	border-top-color: red;
+	border-top-width: 20px;
+}
+
+#border-width_css div#border-bottom-width_border-width_css{
+	border-bottom-style: solid;
+	border-bottom-color: red;
+	border-bottom-width: 5px;
+}
+
+#border-width_css div#border-left-width_border-width_css{
+	border-left-style: solid;
+	border-left-color: red;
+	border-left-width: 10px;
+}
+
+#border-width_css div#border-right-width_border-width_css{
+	border-right-style: solid;
+	border-right-color: red;
+	border-right-width: 15px;
+}
+
+#border-width_css div#outline-width_border-width_css{
+	outline-style: solid;
+	outline-color: red;
+	outline-width: 5px;
+}
+
+
+/*
+	css for content_css.html
+*/
+
+#content div#content_css a:after{
+	content: " (" attr(href) ")";
+}
+
+#content div#counter_increment_css{
+	counter-reset: section;
+}
+
+#content div#counter_increment_css h1 {
+	counter-reset:subsection;
+}
+
+#content div#counter_increment_css h1:before{
+	counter-increment:section;
+	content:"Section " counter(section) ". ";
+}
+
+#content div#counter_increment_css h2:before {
+	counter-increment:subsection;
+	content:counter(section) "." counter(subsection) " ";
+}
+
+#content div#counter_reset_css{
+	counter-reset: section;
+}
+
+#content div#counter_reset_css h1 {
+	counter-reset:subsection;
+}
+
+#content div#counter_reset_css h1:before{
+	counter-increment:section;
+	content:"Section " counter(section) ". ";
+}
+
+#content div#counter_reset_css h2:before {
+	counter-increment:subsection;
+	content:counter(section) "." counter(subsection) " ";
+}
+
+#content div#quotes_css q{
+	quotes: "«" "»" "‹" "›";
+}
+
+
+/*
+	css for fake_class_css.html
+*/
+
+#active_css a:active{
+	background-color: yellow;
+}
+
+#focus_css input:focus{
+	background-color: yellow;
+}
+
+#hover_css a:hover{
+	background-color: yellow;
+}
+
+#link_css a:link{
+	background-color: yellow;
+}
+
+#visited_css a:visited{
+	background-color: yellow;
+}
+
+#first-child_css p:first-child{
+	background-color: yellow;
+}
+
+#lang_css p:lang(it){
+	background: yellow;
+}
+
+
+/*
+	css for fake_element_css.html
+*/
+
+#content div#first_letter_css p:first-letter{
+	font-size: 200%;
+	color: #8A2BE2;
+}
+
+#content div#first_line_css p:first-line{
+	background-color: yellow;
+}
+
+#content div#before_css p:before{
+	content: "Read this - ";
+}
+
+#content div#after_css p:after{
+	content: " - Remember this"
+}
+
+
+/*
+	css for font_css.html
+*/
+
+#font_css p#ex1{
+	font: 15px arial,sans-serif;
+}
+
+#font_css p#ex2{
+	font: italic bold 12px/30px Georgia,serif;
+}
+
+#font-family_css p#serif{
+	font-family: "Times New Roman", Times, serif;
+}
+
+#font-family_css p#sansserif{
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#font-size_css h1#bigger{
+	font-size: 400%;
+}
+
+#font-size_css p#bigger{
+	font-size: 200%;
+}
+
+#font-size-adjust_css p#ex1{
+	font-family: Verdana, "DejaVu Sans", sans-serif;
+}
+
+#font-size-adjust_css p#ex2{
+	font-family: Verdana, "DejaVu Sans", sans-serif;
+	font-size-adjust: 0.58;
+}
+
+#font-stretch_css div#div1{
+	font-stretch: condensed;
+}
+
+#font-stretch_css div#div2{
+	font-stretch: expanded;
+}
+
+#font-style_css p#normal{
+	font-style: normal;
+}
+
+#font-style_css p#italic{
+	font-style: italic;
+}
+
+#font-style_css p#oblique{
+	font-style: oblique;
+}
+
+#font-variant_css p#normal{
+	font-variant: normal;
+}
+
+#font-variant_css p#small{
+	font-variant: small-caps;
+}
+
+#font-weight_css p#normal{
+	font-weight: normal;
+}
+
+#font-weight_css p#light{
+	font-weight:  lighter;
+}
+
+#font-weight_css p#thick{
+	font-weight: bold;
+}
+
+#font-weight_css p#thicker{
+	font-weight: 900;
+}
+
+
+/*
+	css for list_css.html
+*/
+
+#list-style_css ul{
+	float: left;
+	margin: 10px;
+	width: 150px;
+}
+
+#list-style_css ul#one{
+	list-style: circle outside;
+
+}
+
+#list-style_css ul#two{
+	list-style: url("../images/star.gif") inside;
+
+}
+
+#list-style_css ul#three{
+	list-style: url("../images/star.gif") outside;
+
+}
+
+#list-style-image_css ul{
+	list-style-image: url("../images/star.gif");
+}
+
+#list-style-position_css ul{
+	float: left;
+	margin: 10px;
+	width: 150px;
+}
+
+#list-style-position_css ul#inside{
+	list-style-image: url("../images/star.gif");
+	list-style-position: inside;
+}
+
+#list-style-position_css ul#outside{
+	list-style-image: url("../images/star.gif");
+	list-style-position: outside;
+}
+
+#list-style-type_css ul#circle{
+	list-style-type: circle;
+}
+
+#list-style-type_css ul#square{
+	list-style-type: square;
+}
+
+
+/*
+	css for location_css.html
+*/
+
+#bottom_css #star1{
+	position: relative;
+	bottom: -200px;
+}
+
+#bottom_css #star2{
+	position: relative;
+	bottom: -150px;
+}
+
+#clear_css img{
+	float: left;
+}
+
+#clear_css p#clear{
+	clear: both;
+}
+
+#clip_css img{
+	position: absolute;
+
+	clip: rect(0px, 60px, 200px, 0px );
+}
+
+#cursor_css span#cross{
+	cursor: crosshair;
+}
+
+#cursor_css span#progress{
+	cursor: progress;
+}
+
+#cursor_css span#help{
+	cursor: help;
+}
+
+#cursor_css span#pointer{
+	cursor: pointer;
+}
+
+#display_css p.p_display_css{
+	display: inline;
+}
+
+#float_css img#pic1{
+	float: right;
+}
+
+#float_css img#pic2{
+	float: left;
+}
+
+#left_css img#star1{
+	position: relative;
+	left: 100px;
+}
+
+#left_css img#star2{
+	position: relative;
+	left: 150px;
+}
+
+#overflow_css div#scroll{
+	background-color:#00FFFF;
+	width:100px;
+	height:100px;
+	overflow:scroll;
+}
+
+#overflow_css div#hidden{
+	background-color:#00FF00;
+	width:100px;
+	height:100px;
+	overflow:hidden;
+}
+
+#position_css h2{
+	position: absolute;
+	left: 100px;
+	top: 150px;
+}
+
+#right_css img#star1{
+	position: absolute;
+	right: 100px;
+}
+
+#right_css img#star2{
+	position: absolute;
+	right: 200px;
+}
+
+#top_css img#star1{
+	position: relative;
+	top: 200px;
+}
+
+#top_css img#star2{
+	position: relative;
+	top: 250px;
+}
+
+#vertical-align_css img#top{
+	vertical-align: text-top;
+}
+
+#vertical-align_css img#bottom{
+	vertical-align: text-bottom;
+}
+
+#visibility_css h1#visible{
+	visibility: visible;
+}
+
+#visibility_css h1#hidden{
+	visibility: hidden;
+}
+
+#z-index_css img{
+	position: absolute;
+	
+	z-index: -1;
+}
+
+
+/*
+	css for margin_css.html
+*/
+
+div.outter_margin_css{
+	height: 200px;
+	width: 200px;
+	border-color: red;
+	border-width: 3px;
+	border-style: solid;
+	float: left;
+	margin: 3px;
+}
+
+#origin_margin_css{
+	width: 100px;
+	height: 100px;
+	float: left;
+	background-color: yellow;
+}
+
+#margin_css{
+	width: 100px;
+	height: 100px;
+	float: left;
+	background-color: yellow;
+	margin: 20px;
+
+}
+
+#margin-top_css{
+	width: 100px;
+	height: 100px;
+	float: left;
+	background-color: yellow;
+	margin-top: 20px;
+}
+
+#margin-bottom_css{
+	width: 100px;
+	height: 100px;
+	float: left;
+	background-color: yellow;
+	margin-bottom: 20px
+}
+
+#margin-left_css{
+	width: 100px;
+	height: 100px;
+	float: left;
+	background-color: yellow;
+	margin-left: 20px;
+}
+
+#margin-right_css{
+	width: 100px;
+	height: 100px;
+	float: left;
+	background-color: yellow;
+	margin-right: 20px;
+}
+
+
+/*
+	css for padding_css.html
+*/
+
+#origin_padding_css{
+	height: 200px;
+	width: 200px;
+	border-color: red;
+	border-width: 3px;
+	border-style: solid;
+	float: left;
+	margin: 3px;
+	background-color: yellow;
+}
+
+#padding_css {
+	height: 200px;
+	width: 200px;
+	border-color: red;
+	border-width: 3px;
+	border-style: solid;
+	float: left;
+	margin: 3px;
+	background-color: yellow;
+
+	padding: 10px;
+}
+
+#padding-top_css {
+	height: 200px;
+	width: 200px;
+	border-color: red;
+	border-width: 3px;
+	border-style: solid;
+	float: left;
+	margin: 3px;
+	background-color: yellow;
+
+	padding-top: 20px;
+}
+
+#padding-bottom_css {
+	height: 200px;
+	width: 200px;
+	border-color: red;
+	border-width: 3px;
+	border-style: solid;
+	float: left;
+	margin: 3px;
+	background-color: yellow;
+
+	padding-bottom: 20px;
+}
+
+#padding-left_css {
+	height: 200px;
+	width: 200px;
+	border-color: red;
+	border-width: 3px;
+	border-style: solid;
+	float: left;
+	margin: 3px;
+	background-color: yellow;
+
+	padding-left: 20px;
+}
+
+#padding-right_css {
+	height: 200px;
+	width: 200px;
+	border-color: red;
+	border-width: 3px;
+	border-style: solid;
+	float: left;
+	margin: 3px;
+	background-color: yellow;
+
+	padding-right: 20px;
+}
+
+
+/*
+	css for size_css.html
+*/
+
+ 
+
+#height_css img#normal{
+	height:auto;
+}
+
+#height_css img#big{
+	height:120px;
+}
+
+#height_css p#ex{
+	height:100px;
+	width:100px;
+}
+
+#max_height_css p{
+	max-height:50px;
+	background-color:yellow;
+	overflow:auto;	
+}
+
+#min_height_css p{
+	min-height:100px;
+	background-color:yellow;
+}
+
+#width_css img#normal{
+	width:auto;
+}
+
+#width_css img#big{
+	width:120px;
+}
+
+#width_css p#ex{
+	height:100px;
+	width:100px;
+}
+
+#max_width_css p{
+	max-width:100px;
+	background-color:yellow;
+}
+
+#min_width_css p{
+	min-width:150px;
+	background-color:yellow;
+}
+
+
+
+/*
+	css for text_css.html
+*/
+
+#color_css h1{
+	color: green;
+}
+
+#color_css p{
+	color: red;
+}
+
+#direction_css div#ex1{
+	direction: rtl;
+}
+
+#letter_spacing_css h1{
+	letter-spacing: 2px;
+}
+
+#letter_spacing_css h2{
+	letter-spacing: -3px;
+}
+
+#line_height_css p#small{
+	line-height: 70%;
+}
+
+#line_height_css p#big{
+	line-height: 200%;
+}
+
+#text_align_css h1{
+	text-align: center;
+}
+
+#text_align_css h2{
+	text-align: left;
+}
+
+#text_align_css h4{
+	text-align: right;
+}
+
+#text_decoration_css h1{
+	text-decoration: overline;
+}
+
+#text_decoration_css h2{
+	text-decoration: line-through;
+}
+
+#text_decoration_css h4{
+	text-decoration: underline;
+}
+
+#text_indent_css p{
+	text-indent: 50px;
+}
+
+#text_shadow_css h1{
+	text-shadow: 2px 2px #FF0000;
+}
+
+#text_transform_css p#uppercase{
+	text-transform: uppercase;
+}
+
+#text_transform_css p#lowercase{
+	text-transform: lowercase;
+}
+
+#text_transform_css p#capitalize{
+	text-transform: capitalize;
+}
+
+#unicode_bidi_css div#ex1{
+	direction: rtl;
+	unicode-bidi: bidi-override;
+}
+
+#white_space_css p{
+	white-space: nowrap;
+}
+
+#word_spacing_css p{
+	word-spacing: 30px;
+}
+
+
+
+/*
+	The following css is for javascript test page	
+*/
+
+/*
+	css for string_js.html
+*/
+
+.content div.content_item{
+	width: 148px;
+	height: 170px;
+	float: left;
+	margin: 3px;
+
+	color: white;
+}
+
+.content div.content_item div{
+	border-top: 2px solid black;
+}

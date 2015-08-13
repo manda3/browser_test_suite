@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    <script type="text/javascript" src="../js/main.js">
+    </script>
+    <script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("map_html.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("li_html.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../../index.htm", "_self", false);
+        }
+    </script>
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回首页</button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <ul class="nav nav-pills" id="tabs">
+            <li class="active"><a href="#link" data-toggle="tab">link</a></li>
+            <li><a href="#charset" data-toggle="tab">charset</a></li>
+            <li><a href="#href" data-toggle="tab">href</a></li>
+            <li><a href="#hreflang" data-toggle="tab">hreflang</a></li>
+            <li><a href="#rel" data-toggle="tab">rel</a></li>
+            <li><a href="#rev" data-toggle="tab">rev</a></li>
+            <li><a href="#target" data-toggle="tab">target</a></li>
+            <li><a href="#type" data-toggle="tab">type</a></li>
+            
+        </ul>
+
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="link">
+                <h3>此页面用于测试&lt;link&gt;标签</h3>
+
+                <h1 id="link_html_link_h1">我是使用外部链入的css来改变样式的。</h1>
+
+                <p id="link_html_link_p">我也是用外部链入的css来改变样式的。</p>
+                
+            </div>
+
+            <div class="tab-pane" id="charset">
+                <h3>此页面用于测试&lt;link&gt;标签charset</h3>
+                <p>此属性已在html5中废除，并且不被主流浏览器支持，不建议使用。</p>
+
+                <a href="./link_attribute_html/link_charset_html.html">点击查看</a>
+
+            </div>
+
+            <div class="tab-pane" id="href">
+                <h3>此页面用于测试&lt;link&gt;标签href</h3>
+                <p>看到效果就是链上了</p>
+                <h1 id="link_html_link_h1">我是使用外部链入的css来改变样式的。</h1>
+
+                <p id="link_html_link_p">我也是用外部链入的css来改变样式的。</p>
+            </div>
+
+            <div class="tab-pane" id="hreflang">
+                <h3>此页面用于测试&lt;link&gt;标签hreflang</h3>
+                <p>此元素没有视觉效果，只供搜索引擎使用，没有特殊需要没必要使用。</p>
+                <a href="./link_attribute_html/link_hreflang_html.html">点击查看</a>
+            </div>
+
+            <div class="tab-pane" id="rel">
+                <h3>此页面用于测试&lt;link&gt;标签rel</h3>
+                <p>指定与连接文件的关系，没有没有视觉效果</p>
+
+                <h1 id="link_html_link_h1">我是使用外部链入的css来改变样式的。</h1>
+
+                <p id="link_html_link_p">我也是用外部链入的css来改变样式的。</p>
+
+                <a href="./link_attribute_html/link_rel_html.html">点击查看不指定rel的结果</a>
+
+            </div>
+            <div class="tab-pane" id="rev">
+                <h3>此页面用于测试&lt;link&gt;标签rev</h3>
+                <p>该属性不被主流浏览器支持，并在html5中废除，不建议使用</p>
+                <a href="./link_attribute_html/link_rev_html.html">点击查看</a>
+            </div>
+
+            <div class="tab-pane" id="target">
+                <h3>此页面用于测试&lt;link&gt;标签target</h3>
+                <p>该标签不被主流浏览器支持并且已在html5中废除不建议使用</p>
+                <a href="./link_attribute_html/link_target_html.html">点击查看</a>
+            </div>
+
+            <div class="tab-pane" id="type">
+                <h3>此页面用于测试&lt;link&gt;标签type</h3>
+                <p></p>
+                <a href="./link_attribute_html/link_type_html.html">点击查看</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

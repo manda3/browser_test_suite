@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/main.js">
+    </script>
+    <script type="text/javascript" src="../js/JSTestCaseLib/navigator_dom_test.js"></script>
+    <script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("screen_dom_js.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("window_dom_js.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../../index.htm", "_self", false);
+        }
+    </script>
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回首页</button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <ul class="nav nav-pills" id="tabs">
+            <li class="active"><a href="#plugins_dom_js" data-toggle="tab">plugins[]</a></li>
+            <li><a href="#appCodeName_dom_js" data-toggle="tab">appCodeName</a></li>
+            <li><a href="#appMinorVersion_dom_js" data-toggle="tab">appMinorVersion</a></li>
+            <li><a href="#appName_dom_js" data-toggle="tab">appName</a></li>
+            <li><a href="#appVersion_dom_js" data-toggle="tab">appVersion</a></li>
+            <li><a href="#browserLanguage_dom_js" data-toggle="tab">browserLanguage</a></li>
+            <li><a href="#cookieEnabled_dom_js" data-toggle="tab">cookieEnabled</a></li>
+            <li><a href="#cpuClass_dom_js" data-toggle="tab">cpuClass</a></li>
+            <li><a href="#onLine_dom_js" data-toggle="tab">onLine</a></li>
+            <li><a href="#platform_dom_js" data-toggle="tab">platform</a></li>
+            <li><a href="#systemLanguage_dom_js" data-toggle="tab">systemLanguage</a></li>
+            <li><a href="#userAgent_dom_js" data-toggle="tab">userAgent</a></li>
+            <li><a href="#taintEnabled_func_dom_js" data-toggle="tab">taintEnalbed()</a></li>
+            <li><a href="#javaEnabled_func_dom_js" data-toggle="tab">javaEnalbed()</a></li>
+        </ul>
+
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="plugins_dom_js">
+                <h3>此页面用于测试javascript dom中的navigator对象中的plugins[]</h3>
+                <p></p>
+                <button onclick="testPluginsOfNav();">click to show plugins</button>
+                <p></p>
+                <div id="showBox_nav1"></div>
+            </div>
+
+            <div class="tab-pane" id="appCodeName_dom_js">
+                <h3>此页面用于测试javascript dom中的navigator对象中的appCodeName</h3>
+                <p></p>
+                <button onclick="testAppCodeNameOfNav();">click to show appCodeName</button>
+                <p></p>
+                <div id="showBox_nav2"></div>
+            </div>
+
+            <div class="tab-pane" id="appMinorVersion_dom_js">
+                <h3>此页面用于测试javascript dom中的navigator对象中的appMinorVersion</h3>
+                <p></p>
+                <button onclick="testAppMinorVersionOfNav();">click to show appMinorVersion</button>
+                <p></p>
+                <div id="showBox_nav3"></div>
+            </div>
+
+            <div class="tab-pane" id="appName_dom_js">
+                <h3>此页面用于测试javascript dom中的navigator对象中的appName</h3>
+                <p></p>
+                <button onclick="testAppNameOfNav();">click to show appName</button>
+                <p></p>
+                <div id="showBox_nav4"></div>
+            </div>
+
+            <div class="tab-pane" id="appVersion_dom_js">
+                <h3>此页面用于测试javascript dom中的navigator对象中的appVersion</h3>
+                <p></p>
+                <button onclick="testAppVersionOfNav();">click to show appVersion</button>
+                <p></p>
+                <div id="showBox_nav5"></div>
+            </div>
+
+            <div class="tab-pane" id="browserLanguage_dom_js">
+                <h3>此页面用于测试javascript dom中的navigator对象中的browserLanguage</h3>
+                <p></p>
+                <button onclick="testBrowserLanguageOfNav();">click to show browserLanguage</button>
+                <p></p>
+                <div id="showBox_nav6"></div>
+            </div>
+
+            <div class="tab-pane" id="cookieEnabled_dom_js">
+                <h3>此页面用于测试javascript dom中的navigator对象中的cookieEnalbed</h3>
+                <p></p>
+                <button onclick="testCookieEnabledOfNav();">click to show cookieEnabled</button>
+                <p></p>
+                <div id="showBox_nav7"></div>
+            </div>
+
+            <div class="tab-pane" id="cpuClass_dom_js">
+                <h3>此页面用于测试javascript dom中的navigator对象中的cpuClass</h3>
+                <p></p>
+                <button onclick="testCpuClassOfNav();">click to show cpuClass</button>
+                <p></p>
+                <div id="showBox_nav8"></div>
+            </div>
+
+            <div class="tab-pane" id="onLine_dom_js">
+                <h3>此页面用于测试javascript dom中的navigator对象中的onLine</h3>
+                <p></p>
+                <button onclick="testOnLineOfNav();">click to show onLine</button>
+                <p></p>
+                <div id="showBox_nav9"></div>
+            </div>
+
+            <div class="tab-pane" id="platform_dom_js">
+                <h3>此页面用于测试javascript dom中的navigator对象中的platform</h3>
+                <p></p>
+                <button onclick="testPlatformOfNav();">click to show platform</button>
+                <p></p>
+                <div id="showBox_nav10"></div>
+            </div>
+
+            <div class="tab-pane" id="systemLanguage_dom_js">
+                <h3>此页面用于测试javascript dom中的navigator对象中的systemLanguage</h3>
+                <p></p>
+                <button onclick="testSystemLanguageOfNav();">click to show systemLanguage</button>
+                <p></p>
+                <div id="showBox_nav11"></div>
+            </div>
+
+            <div class="tab-pane" id="userAgent_dom_js">
+                <h3>此页面用于测试javascript dom中的navigator对象中的userAgent</h3>
+                <p></p>
+                <button onclick="testUserAgentOfNav();">click to show userAgent</button>
+                <p></p>
+                <div id="showBox_nav12"></div>
+            </div>
+
+            <div class="tab-pane" id="userLanguage_dom_js">
+                <h3>此页面用于测试javascript dom中的navigator对象中的userLanguage</h3>
+                <p></p>
+                <button onclick="testUserLanguageOfNav();">click to show userLanguage</button>
+                <p></p>
+                <div id="showBox_nav13"></div>
+            </div>
+
+            <div class="tab-pane" id="taintEnabled_func_dom_js">
+                <h3>此页面用于测试javascript dom中的navigator对象中的taintEnabled()</h3>
+                <p>只在IE和opera中提供支持</p>
+                <button onclick="testTaintEnabledFuncOfNav();">click to show taintEnabled()</button>
+                <p></p>
+                <div id="showBox_nav14"></div>
+            </div>
+
+            <div class="tab-pane" id="javaEnabled_func_dom_js">
+                <h3>此页面用于测试javascript dom中的navigator对象中的javaEnabled()</h3>
+                <p></p>
+                <button onclick="testJavaEnabledFuncOfNav();">click to show javaEnabled()</button>
+                <p></p>
+                <div id="showBox_nav15"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

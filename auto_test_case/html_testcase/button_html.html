@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/main.js">
+    </script>
+    <script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("caption_html.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("br_html.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../../index.htm", "_self", false);
+        }
+
+        function checkNameOfBtn () {
+            var btn = document.forms[0].elements['button1'];
+            btn.disabled = "disabled";
+        }
+
+        function showInfo () {
+            var val = document.forms[2].elements['getVal'].value;
+            var showBox = document.getElementById('showBox');
+
+            showBox.innerHTML = "按钮值为：" + val + "。";
+        }
+    </script>
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回首页</button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <ul class="nav nav-pills" id="tabs">
+            <li class="active"><a href="#button" data-toggle="tab">button</a></li>
+            <li><a href="#disabled" data-toggle="tab">disabled</a></li>
+            <li><a href="#name" data-toggle="tab">name</a></li>
+            <li><a href="#type" data-toggle="tab">type</a></li>
+            <li><a href="#value" data-toggle="tab">value</a></li>
+        </ul>
+
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="button">
+                <button class="btn btn-success">快点我</button>
+            </div>
+
+            <div class="tab-pane" id="disabled">
+                <button disabled="disabled" class="btn btn-success">你点得了我么</button>
+            </div>
+
+            <div class="tab-pane" id="name">
+                <form action="#">
+                    <button name="button1" onclick="checkNameOfBtn()" class="btn btn-success">点击我，关掉我</button>
+                </form>
+            </div>
+
+            <div class="tab-pane" id="type">
+                <h3>看看几种按钮</h3>
+                <form action="#">
+                    <label for="input1">姓名：</label>
+                    <input type="text" name="input1" id="input1" />
+                    <p></p>
+                    <label for="input2">住址：</label>
+                    <input type="text" name="input2" id="input2" />
+                    <p></p>
+                    <h3>按下重置会清空输入框内容</h3>
+                    <button type="reset" class="btn btn-primary">reset（重置按钮）</button>
+                    <h3>按下提交会提交表单信息并刷新</h3>
+                    <button type="submit" class="btn btn-success">submit（提交按钮）</button>
+                    <h3>按下普通按钮此处没有动作</h3>
+                    <button type="button" class="btn btn-danger">button（普通按钮）</button>
+                </form>
+            </div>
+
+            <div class="tab-pane" id="value">
+                <h3>测试有效性暂时保留</h3>
+                <form action="#">
+                    <button name="getVal" value="Hellow World" onclick="showInfo()" class="btn btn-success">点击获取信息</button>
+                </form>
+                <div id="showBox" height="200px" width="200px"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

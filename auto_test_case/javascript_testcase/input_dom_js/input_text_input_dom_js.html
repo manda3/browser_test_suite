@@ -1,0 +1,294 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <script type="text/javascript" src="../../js/main.js">
+    </script>
+    <script type="text/javascript" src="../../js/JSTestCaseLib/input_text_dom_test.js"></script>
+    
+    <script type="text/javascript" src="../../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("../input_dom_js.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("input_submit_input_dom_js.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../input_dom_js.html", "_self", false);
+        }
+    </script>
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回目录</button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <ul class="nav nav-pills" id="tabs">
+            <li class="active"><a href="#accessKey_input_text_dom_js" data-toggle="tab">accessKey</a></li>
+            <li><a href="#alt_input_text_dom_js" data-toggle="tab">alt</a></li>
+            <li><a href="#defaultValue_input_text_dom_js" data-toggle="tab">defaultValue</a></li>
+            <li><a href="#disabled_input_text_dom_js" data-toggle="tab">disabled</a></li>
+            <li><a href="#form_input_text_dom_js" data-toggle="tab">form</a></li>
+            <li><a href="#id_input_text_dom_js" data-toggle="tab">id</a></li>
+            <li><a href="#maxLength_input_text_dom_js" data-toggle="tab">maxLength</a></li>
+            <li><a href="#name_input_text_dom_js" data-toggle="tab">name</a></li>
+            <li><a href="#readOnly_input_text_dom_js" data-toggle="tab">readOnly</a></li>
+            <li><a href="#size_input_text_dom_js" data-toggle="tab">size</a></li>
+            <li><a href="#tabIndex_input_text_dom_js" data-toggle="tab">tabIndex</a></li>
+            <li><a href="#type_input_text_dom_js" data-toggle="tab">type</a></li>
+            <li><a href="#value_input_text_dom_js" data-toggle="tab">value</a></li>
+            <li><a href="#blur_func_input_text_dom_js" data-toggle="tab">blur()</a></li>
+            <li><a href="#focus_func_input_text_dom_js" data-toggle="tab">focus()</a></li>
+            <li><a href="#select_func_input_text_dom_js" data-toggle="tab">select()</a></li>
+            
+        </ul>
+
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="accessKey_input_text_dom_js">
+                <h3>此页面用于测试javascript dom中的input text对象中的accessKey</h3>
+                <p>暂时无法保证该测试有效性，用键盘输入alt+q alt+w进行测试</p>
+                <form action="http://192.168.200.50:8888/" method="POST" id="form1"> 
+                    姓名：<input type="text" name="name" id="txt1_form1" /><p></p>
+                    电邮：<input type="text" name="email" id="txt2_form1" /><p></p>
+                    
+                    <p></p>
+                    <input type="submit" value="点击提交" />
+                </form>
+            </div>
+
+            <div class="tab-pane" id="alt_input_text_dom_js">
+                <h3>此页面用于测试javascript dom中的input text对象中的alt</h3>
+                <p>暂时无法保证该测试有效性，alt属性只在type=“image”的input中有意义，其他类型不建议使用</p>
+                <form action="http://192.168.200.50:8888/" method="POST" id="form2"> 
+                    姓名：<input type="text" name="name" id="txt1_form2" /><p></p>
+                    电邮：<input type="text" name="email" id="txt2_form2" /><p></p>
+                    
+                    <p></p>
+                    <input type="submit" value="点击提交" />
+                </form>
+            </div>
+
+            <div class="tab-pane" id="defaultValue_input_text_dom_js">
+                <h3>此页面用于测试javascript dom中的input text对象中的defaultValue</h3>
+                <form action="http://192.168.200.50:8888/" method="POST" id="form3"> 
+                    姓名：<input type="text" name="name" id="txt1_form3" /><p></p>
+                    电邮：<input type="text" name="email" id="txt2_form3" /><p></p>
+                    
+                    <p></p>
+                    <input type="submit" value="点击提交" />
+                </form>
+            </div>
+
+            <div class="tab-pane" id="disabled_input_text_dom_js">
+                <h3>此页面用于测试javascript dom中的input text对象中的disalbed</h3>
+                <p>输入框应该已不能使用</p>
+                <form action="http://192.168.200.50:8888/" method="POST" id="form4"> 
+                    姓名：<input type="text" name="name" id="txt1_form4" /><p></p>
+                    电邮：<input type="text" name="email" id="txt2_form4" /><p></p>
+                    
+                    <p></p>
+                    <input type="submit" value="点击提交" />
+                </form>
+            </div>
+
+            <div class="tab-pane" id="form_input_text_dom_js">
+                <h3>此页面用于测试javascript dom中的input text对象中的form</h3>
+                <form action="http://192.168.200.50:8888/" method="POST" id="form5"> 
+                    姓名：<input type="text" name="name" id="txt1_form5" /><p></p>
+                    电邮：<input type="text" name="email" id="txt2_form5" /><p></p>
+                    
+                    <p></p>
+                    <input type="submit" value="点击提交" />
+                </form>
+                <p></p>
+                <button onclick="testFormOfInput ( 'showbox_form5', 'txt1_form5' )">click to check the form id(form5)</button>
+                <p></p>
+                <p id="showbox_form5"></p>
+            </div>
+
+            <div class="tab-pane" id="id_input_text_dom_js">
+                <h3>此页面用于测试javascript dom中的input text对象中的id</h3>
+                <form action="http://192.168.200.50:8888/" method="POST" id="form6"> 
+                    姓名：<input type="text" name="name" id="txt1_form6" /><p></p>
+                    电邮：<input type="text" name="email" id="txt2_form6" /><p></p>
+                    
+                    <p></p>
+                    <input type="submit" value="点击提交" />
+                </form>
+                <p></p>
+                <button onclick="testIdOfInput ( 'showbox_form6', 'form6', 'text' )">click to check the element id</button>
+                <p></p>
+                <p id="showbox_form6"></p>
+            </div>
+
+            <div class="tab-pane" id="maxLength_input_text_dom_js">
+                <h3>此页面用于测试javascript dom中的input text对象中的name</h3>
+                <p>输入的字符不能超过8位</p>
+                <form action="http://192.168.200.50:8888/" method="POST" id="form7"> 
+                    姓名：<input type="text" name="name" id="txt1_form7" /><p></p>
+                    电邮：<input type="text" name="email" id="txt2_form7" /><p></p>
+                    
+                    <p></p>
+                    <input type="submit" value="点击提交" />
+                </form>
+            </div>
+
+            <div class="tab-pane" id="name_input_text_dom_js">
+                <h3>此页面用于测试javascript dom中的input text对象中的name</h3>
+                <p>点击提交按钮,使用node.js观看测试效果，运行js文件夹里的server.js</p>
+                <form action="http://192.168.200.50:8888/" method="POST" id="form8"> 
+                    姓名(name)：<input type="text" name="name" id="txt1_form8" /><p></p>
+                    电邮(email)：<input type="text" name="email" id="txt2_form8" /><p></p>
+                    
+                    <p></p>
+                    <input type="submit" value="点击提交" />
+                </form>
+            </div>
+
+            <div class="tab-pane" id="readOnly_input_text_dom_js">
+                <h3>此页面用于测试javascript dom中的input text对象中的readOnly</h3>
+                <p>第一个输入框应该变为只读</p>
+                <form action="http://192.168.200.50:8888/" method="POST" id="form9"> 
+                    姓名：<input type="text" name="name" id="txt1_form9" /><p></p>
+                    电邮：<input type="text" name="email" id="txt2_form9" /><p></p>
+                    
+                    <p></p>
+                    <input type="submit" value="点击提交" />
+                </form>
+            </div>
+
+            <div class="tab-pane" id="size_input_text_dom_js">
+                <h3>此页面用于测试javascript dom中的input text对象中的size</h3>
+                <p>第一个输入框长度由默认改为40</p>
+                <form action="http://192.168.200.50:8888/" method="POST" id="form10"> 
+                    姓名：<input type="text" name="name" id="txt1_form10" /><p></p>
+                    电邮：<input type="text" name="email" id="txt2_form10" /><p></p>
+                    
+                    <p></p>
+                    <input type="submit" value="点击提交" />
+                </form>
+            </div>
+
+            <div class="tab-pane" id="tabIndex_input_text_dom_js">
+                <h3>此页面用于测试javascript dom中的input text对象中的tabIndex</h3>
+                <form action="http://192.168.200.50:8888/" method="POST" id="form11"> 
+                    姓名：<input type="text" name="name" id="txt1_form11" /><p></p>
+                    电邮：<input type="text" name="email" id="txt2_form11" /><p></p>
+                    
+                    <p></p>
+                    <input type="submit" value="点击提交" />
+                </form>
+                <p></p>
+                <button onclick="testTabIndexOfInput ( 'txt1_form11', 2 );testTabIndexOfInput ( 'txt2_form11', 1 );">click to change the tabIndex</button>
+            </div>
+
+            <div class="tab-pane" id="type_input_text_dom_js">
+                <h3>此页面用于测试javascript dom中的input text对象中的type</h3>
+                <form action="http://192.168.200.50:8888/" method="POST" id="form12"> 
+                    姓名：<input type="text" name="name" id="txt1_form12" /><p></p>
+                    电邮：<input type="text" name="email" id="txt2_form12" /><p></p>
+                    
+                    <p></p>
+                    <input type="submit" value="点击提交" />
+                </form>
+                <p></p>
+                <button onclick="testTypeOfInput ( 'showbox_form12', 'txt1_form12' )">click to show type of element</button>
+                <p></p>
+                <p id="showbox_form12"></p>
+            </div>
+
+            <div class="tab-pane" id="value_input_text_dom_js">
+                <h3>此页面用于测试javascript dom中的input text对象中的value</h3>
+                <p>看见please enter了么</p>
+                <form action="http://192.168.200.50:8888/" method="POST" id="form13"> 
+                    姓名：<input type="text" name="name" id="txt1_form13" /><p></p>
+                    电邮：<input type="text" name="email" id="txt2_form13" /><p></p>
+                    
+                    <p></p>
+                    <input type="submit" value="点击提交" />
+                </form>
+            </div>
+
+            <div class="tab-pane" id="blur_func_input_text_dom_js">
+                <h3>此页面用于测试javascript dom中的input text对象中的blur()</h3>
+                <form action="http://192.168.200.50:8888/" method="POST" id="form14"> 
+                    姓名：<input type="text" name="name" id="txt1_form14" /><p></p>
+                    电邮：<input type="text" name="email" id="txt2_form14" /><p></p>
+                    
+                    <p></p>
+                    <input type="submit" value="点击提交" />
+                </form>
+                <p></p>
+                <button onclick="testFocusFuncOfInput ( 'txt1_form14' )">聚焦第一个输入框</button>
+                <button onclick="testBlurFuncOfInput ( 'txt1_form14' )">丢失第一个输入框焦点</button>
+            </div>
+
+            <div class="tab-pane" id="focus_func_input_text_dom_js">
+                <h3>此页面用于测试javascript dom中的input text对象中的focus()</h3>
+                <form action="http://192.168.200.50:8888/" method="POST" id="form15"> 
+                    姓名：<input type="text" name="name" id="txt1_form15" /><p></p>
+                    电邮：<input type="text" name="email" id="txt2_form15" /><p></p>
+                    
+                    <p></p>
+                    <input type="submit" value="点击提交" />
+                </form>
+                <p></p>
+                <button onclick="testFocusFuncOfInput ( 'txt1_form15' )">聚焦第一个输入框</button>
+                <button onclick="testBlurFuncOfInput ( 'txt1_form15' )">丢失第一个输入框焦点</button>
+            </div>
+
+            <div class="tab-pane" id="select_func_input_text_dom_js">
+                <h3>此页面用于测试javascript dom中的input text对象中的select()</h3>
+                <form action="http://192.168.200.50:8888/" method="POST" id="form16"> 
+                    姓名：<input type="text" name="name" id="txt1_form16" /><p></p>
+                    电邮：<input type="text" name="email" id="txt2_form16" /><p></p>
+                    
+                    <p></p>
+                    <input type="submit" value="点击提交" />
+                </form>
+                <p></p>
+                <button onclick="testSelectOfInput ( 'txt1_form16' )">选中第一个输入框的内容</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        testAccessKeyOfInput ("txt1_form1", "q");
+        testAccessKeyOfInput ("txt2_form1", "w");
+        testAltOfInput ( "txt1_form2", "txt_name" );
+        testAltOfInput ( "txt2_form2", "txt_email" );
+        testDefaultValueOfInput ( "txt1_form3" );
+        testDisabledOfInputCheckbox ( "txt1_form4" );
+        testDisabledOfInputCheckbox ( "txt2_form4" );
+        testMaxLengthOfInput ( "txt1_form7", 8 );
+        testMaxLengthOfInput ( "txt2_form7", 8 );
+        testNameOfInput ( 'txt1_form8', 'txt1_form8' );
+        testNameOfInput ( 'txt2_form8', 'txt2_form8' );
+        testReadOnlyOfInput ( 'txt1_form9' );
+        testSizeOfInput ( 'txt1_form10', 40 );
+        testValueOfInput ( 'txt1_form13' );
+        testValueOfInput ( 'txt2_form13' );
+    </script>
+</body>
+</html>

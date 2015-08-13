@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <script type="text/javascript" src="../../js/main.js">
+    </script>
+    <script type="text/javascript">
+        var myWindow;
+        function openWindow () {
+            myWindow = open("./temply_use_html/for_moveBy_func_window_js.html","_blank","width=200,height=200");
+        }
+    </script>
+    <script type="text/javascript" src="../../js/JSTestCaseLib/window_dom_test.js"></script>
+
+    <script type="text/javascript" src="../../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("./scrollBy_func_window_dom_js.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("./resizeBy_func_window_dom_js.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../window_dom_js.html", "_self", false);
+        }
+    </script>
+</head>
+<body>
+	 <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回目录</button>
+        </div>
+    </div>
+    <div class="content">
+        <h3>此页面用于测试javascript的html dom的window的resizeTo函数</h3>
+        <p></p>
+        <button onclick="openWindow()">click to create the window</button>
+        <button onclick="testResizeToFuncOfWindowObj()">click to resize the window to (400,400)</button>
+    </div>
+</body>
+</html>

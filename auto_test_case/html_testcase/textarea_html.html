@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/main.js">
+    </script>
+    <script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("tfoot_html.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("td_html.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../../index.htm", "_self", false);
+        }
+    </script>
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回首页</button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <ul class="nav nav-pills" id="tabs">
+            <li class="active"><a href="#textarea" data-toggle="tab">textarea</a></li>
+            <li><a href="#cols" data-toggle="tab">cols</a></li>
+            <li><a href="#disabled" data-toggle="tab">disabled</a></li>
+            <li><a href="#name" data-toggle="tab">name</a></li>
+            <li><a href="#readonly" data-toggle="tab">readonly</a></li>
+            <li><a href="#rows" data-toggle="tab">rows</a></li>
+            
+        </ul>
+
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="textarea">
+                <h3>此页面用于测试&lt;textarea&gt;标签</h3>
+                <textarea rows="4" cols="50">
+                At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.
+                </textarea>
+            </div>
+
+            <div class="tab-pane" id="cols">
+                <h3>此页面用于测试&lt;textarea&gt;标签cols</h3>
+                <h4>cols=50:</h4>
+                <textarea rows="4" cols="50">
+                At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.
+                </textarea>
+                <h4>cols=35:</h4>
+                <textarea rows="4" cols="35">
+                At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.
+                </textarea>
+            </div>
+
+            <div class="tab-pane" id="disabled">
+                <h3>此页面用于测试&lt;textarea&gt;标签disalbed</h3>
+                <p>不能输入和聚焦了</p>
+                <textarea rows="4" cols="50" disabled="disabled">
+                At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.
+                </textarea>
+            </div>
+
+            <div class="tab-pane" id="name">
+                <h3>此页面用于测试&lt;textarea&gt;标签name</h3>
+                <p>使用node.js启动js文件夹下的server.js进行测试</p>
+                <p></p>
+                <form action="http://192.168.200.50:8888/" method="POST" id="form">
+                    <textarea rows="4" cols="50" name="comment">Enter text here...</textarea>
+                    <p></p>
+                    <input type="submit" value="提交" />
+                </form>
+            </div>
+
+            <div class="tab-pane" id="readonly">
+                <h3>此页面用于测试&lt;textarea&gt;标签readonly</h3>
+                <textarea rows="4" cols="50" readonly="readonly">
+                At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.
+                </textarea>
+            </div>
+
+            <div class="tab-pane" id="rows">
+                <h3>此页面用于测试&lt;textarea&gt;标签rows</h3>
+                <h4>rows=3:</h4>
+                <textarea rows="3" cols="50">
+                At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.
+                </textarea>
+                <h4>rows=4:</h4>
+                <textarea rows="4" cols="50">
+                At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.
+                </textarea>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

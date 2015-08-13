@@ -1,0 +1,472 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/main.js">
+    </script>
+    <script type="text/javascript" src="../js/JSTestCaseLib/table_dom_test.js"></script>
+    <script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("tablecell_dom_js.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("style_dom_js.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../../index.htm", "_self", false);
+        }
+    </script>
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回首页</button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <ul class="nav nav-pills" id="tabs">
+            <li class="active"><a href="#cells_dom_js" data-toggle="tab">cells</a></li>
+            <li><a href="#rows_dom_js" data-toggle="tab">rows</a></li>
+            <li><a href="#border_dom_js" data-toggle="tab">border</a></li>
+            <li><a href="#caption_dom_js" data-toggle="tab">caption</a></li>
+            <li><a href="#cellPadding_dom_js" data-toggle="tab">cellPadding</a></li>
+            <li><a href="#cellSpacing_dom_js" data-toggle="tab">cellSpacing</a></li>
+            <li><a href="#frame_dom_js" data-toggle="tab">frame</a></li>
+            <li><a href="#id_dom_js" data-toggle="tab">id</a></li>
+            <li><a href="#rules_dom_js" data-toggle="tab">rules</a></li>
+            <li><a href="#summary_dom_js" data-toggle="tab">summary</a></li>
+            <li><a href="#tFoot_dom_js" data-toggle="tab">tFoot</a></li>
+            <li><a href="#tHead_dom_js" data-toggle="tab">tHead</a></li>
+            <li><a href="#width_dom_js" data-toggle="tab">width</a></li>
+            <li><a href="#createCaption_func_dom_js" data-toggle="tab">createCaption()</a></li>
+            <li><a href="#createTFoot_func_dom_js" data-toggle="tab">createTFoot()</a></li>
+            <li><a href="#createTHead_func_dom_js" data-toggle="tab">createTHead()</a></li>
+            <li><a href="#deleteCaption_func_dom_js" data-toggle="tab">deleteCaption()</a></li>
+            <li><a href="#deleteRow_func_dom_js" data-toggle="tab">deleteRow()</a></li>
+            <li><a href="#deleteTFoot_func_dom_js" data-toggle="tab">deleteTFoot()</a></li>
+            <li><a href="#deleteTHead_func_dom_js" data-toggle="tab">deleteTHead()</a></li>
+            <li><a href="#insertRow_func_dom_js" data-toggle="tab">insertRow()</a></li>
+        </ul>
+
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="cells_dom_js">
+                <h3>此页面用于测试javascript dom中的table对象中的cells</h3>
+                <table id="table1" border="1">
+                    <tr>
+                        <td>cell 1</td>
+                        <td>cell 2</td>
+                    </tr>
+                    <tr>
+                        <td>cell 3</td>
+                        <td>cell 4</td>
+                    </tr>
+                </table>
+                <p></p>
+                <button onclick="testCellsOfTable();">click to check cells of table</button>
+                <p></p>
+                <div id="showbox_table1"></div>
+            </div>
+
+            <div class="tab-pane" id="rows_dom_js">
+                <h3>此页面用于测试javascript dom中的table对象中的rows</h3>
+                 <table id="table2" border="1">
+                    <tr>
+                        <td>cell 1</td>
+                        <td>cell 2</td>
+                    </tr>
+                    <tr>
+                        <td>cell 3</td>
+                        <td>cell 4</td>
+                    </tr>
+                </table>
+                <p></p>
+                <button onclick="testRowsOfTable();">click to check rows of table</button>
+                <p></p>
+                <div id="showbox_table2"></div>
+            </div>
+
+            <div class="tab-pane" id="border_dom_js">
+                <h3>此页面用于测试javascript dom中的table对象中的border</h3>
+                 <table id="table3" border="1">
+                    <tr>
+                        <td>cell 1</td>
+                        <td>cell 2</td>
+                    </tr>
+                    <tr>
+                        <td>cell 3</td>
+                        <td>cell 4</td>
+                    </tr>
+                </table>
+                <p></p>
+                <button onclick="testBorderOfTable();">click to check border of table</button>
+                <p></p>
+                <div id="showbox_table3"></div>
+            </div>
+
+            <div class="tab-pane" id="caption_dom_js">
+                <h3>此页面用于测试javascript dom中的table对象中的caption</h3>
+                 <table id="table4" border="1">
+                    <caption></caption>
+                    <tr>
+                        <td>cell 1</td>
+                        <td>cell 2</td>
+                    </tr>
+                    <tr>
+                        <td>cell 3</td>
+                        <td>cell 4</td>
+                    </tr>
+                </table>
+                <p></p>
+                <button onclick="testCaptionOfTable();">click to check caption of table</button>
+                <p></p>
+                <div id="showbox_table4"></div>
+            </div>
+
+            <div class="tab-pane" id="cellPadding_dom_js">
+                <h3>此页面用于测试javascript dom中的table对象中的cellPadding</h3>
+                 <table id="table5" border="1">
+                    <tr>
+                        <td>cell 1</td>
+                        <td>cell 2</td>
+                    </tr>
+                    <tr>
+                        <td>cell 3</td>
+                        <td>cell 4</td>
+                    </tr>
+                </table>
+                <p></p>
+                <button onclick="testCellPaddingOfTable();">click to check cellPadding of table</button>
+                <p></p>
+                <div id="showbox_table5"></div>
+            </div>
+
+            <div class="tab-pane" id="cellSpacing_dom_js">
+                <h3>此页面用于测试javascript dom中的table对象中的cellSpacing</h3>
+                 <table id="table6" border="1">
+                    <tr>
+                        <td>cell 1</td>
+                        <td>cell 2</td>
+                    </tr>
+                    <tr>
+                        <td>cell 3</td>
+                        <td>cell 4</td>
+                    </tr>
+                </table>
+                <p></p>
+                <button onclick="testCellSpacingOfTable();">click to check cellSpacing of table</button>
+                <p></p>
+                <div id="showbox_table6"></div>
+            </div>
+
+            <div class="tab-pane" id="frame_dom_js">
+                <h3>此页面用于测试javascript dom中的table对象中的frame</h3>
+                 <table id="table7" border="1">
+                    <tr>
+                        <td>cell 1</td>
+                        <td>cell 2</td>
+                    </tr>
+                    <tr>
+                        <td>cell 3</td>
+                        <td>cell 4</td>
+                    </tr>
+                </table>
+                <p></p>
+                <button onclick="testFrameOfTable();">click to check frame of table</button>
+                <p></p>
+                <div id="showbox_table7"></div>
+            </div>
+
+            <div class="tab-pane" id="id_dom_js">
+                <h3>此页面用于测试javascript dom中的table对象中的id</h3>
+                 <table id="table8" border="1">
+                    <tr>
+                        <td>cell 1</td>
+                        <td>cell 2</td>
+                    </tr>
+                    <tr>
+                        <td>cell 3</td>
+                        <td>cell 4</td>
+                    </tr>
+                </table>
+                <p></p>
+                <button onclick="testIdOfTable();">click to check id of table</button>
+                <p></p>
+                <div id="showbox_table8"></div>
+            </div>
+
+            <div class="tab-pane" id="rules_dom_js">
+                <h3>此页面用于测试javascript dom中的table对象中的rules</h3>
+                 <table id="table9" border="1">
+                    <tr>
+                        <td>cell 1</td>
+                        <td>cell 2</td>
+                    </tr>
+                    <tr>
+                        <td>cell 3</td>
+                        <td>cell 4</td>
+                    </tr>
+                </table>
+                <p></p>
+                <button onclick="testRulesOfTable();">click to check rules of table</button>
+                <p></p>
+                <div id="showbox_table9"></div>
+            </div>
+
+            <div class="tab-pane" id="summary_dom_js">
+                <h3>此页面用于测试javascript dom中的table对象中的summary</h3>
+                 <table id="table10" border="1" summary="Oh, no">
+                    <tr>
+                        <td>cell 1</td>
+                        <td>cell 2</td>
+                    </tr>
+                    <tr>
+                        <td>cell 3</td>
+                        <td>cell 4</td>
+                    </tr>
+                </table>
+                <p></p>
+                <button onclick="testSummaryOfTable();">click to check summary of table</button>
+                <p></p>
+                <div id="showbox_table10"></div>
+            </div>
+
+            <div class="tab-pane" id="tFoot_dom_js">
+                <h3>此页面用于测试javascript dom中的table对象中的tFoot</h3>
+                 <table id="table11" border="1">
+                    <thead>
+                        <tr>
+                            <td>cell 1</td>
+                            <td>cell 2</td>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <td>cell 3</td>
+                            <td>cell 4</td>
+                        </tr>
+                    </tfoot>
+                    
+                </table>
+                <p></p>
+                <button onclick="testTFootOfTable();">click to check tFoot of table</button>
+                <p></p>
+                <div id="showbox_table11"></div>
+            </div>
+
+            <div class="tab-pane" id="tHead_dom_js">
+                <h3>此页面用于测试javascript dom中的table对象中的tHead</h3>
+                 <table id="table12" border="1">
+                    <thead>
+                        <tr>
+                            <td>cell 1</td>
+                            <td>cell 2</td>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <td>cell 3</td>
+                            <td>cell 4</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <p></p>
+                <button onclick="testTHeadOfTable();">click to check tHead of table</button>
+                <p></p>
+                <div id="showbox_table12"></div>
+            </div>
+
+            <div class="tab-pane" id="width_dom_js">
+                <h3>此页面用于测试javascript dom中的table对象中的width</h3>
+                 <table id="table13" border="1">
+                    <tr>
+                        <td>cell 1</td>
+                        <td>cell 2</td>
+                    </tr>
+                    <tr>
+                        <td>cell 3</td>
+                        <td>cell 4</td>
+                    </tr>
+                </table>
+                <p></p>
+                <button onclick="testWidthOfTable();">click to check width of table</button>
+                <p></p>
+                <div id="showbox_table13"></div>
+            </div>
+
+            <div class="tab-pane" id="createCaption_func_dom_js">
+                <h3>此页面用于测试javascript dom中的table对象中的createCaption()</h3>
+                 <table id="table14" border="1">
+                    <tr>
+                        <td>cell 1</td>
+                        <td>cell 2</td>
+                    </tr>
+                    <tr>
+                        <td>cell 3</td>
+                        <td>cell 4</td>
+                    </tr>
+                </table>
+                <p></p>
+                <button onclick="testCreateCaptionFuncOfTable();">click to check createCaption() of table</button>
+                <p></p>
+                <div id="showbox_table14"></div>
+            </div>
+
+            <div class="tab-pane" id="createTFoot_func_dom_js">
+                <h3>此页面用于测试javascript dom中的table对象中的createTFoot()</h3>
+                 <table id="table15" border="1">
+                    <tr>
+                        <td>cell 1</td>
+                        <td>cell 2</td>
+                    </tr>
+                    <tr>
+                        <td>cell 3</td>
+                        <td>cell 4</td>
+                    </tr>
+                </table>
+                <p></p>
+                <button onclick="testCreateTFootFuncOfTable();">click to check createTFoot() of table</button>
+                <p></p>
+                <div id="showbox_table15"></div>
+            </div>
+
+            <div class="tab-pane" id="createTHead_func_dom_js">
+                <h3>此页面用于测试javascript dom中的table对象中的createTHead()</h3>
+                 <table id="table16" border="1">
+                    <tr>
+                        <td>cell 1</td>
+                        <td>cell 2</td>
+                    </tr>
+                    <tr>
+                        <td>cell 3</td>
+                        <td>cell 4</td>
+                    </tr>
+                </table>
+                <p></p>
+                <button onclick="testCreateTHeadFuncOfTable();">click to check createTHead() of table</button>
+                <p></p>
+                <div id="showbox_table16"></div>
+
+            </div>
+
+            <div class="tab-pane" id="deleteCaption_func_dom_js">
+                <h3>此页面用于测试javascript dom中的table对象中的deleteCaption()</h3>
+                 <table id="table17" border="1">
+                    <caption>caption ready to be deleted</caption>
+                    <tr>
+                        <td>cell 1</td>
+                        <td>cell 2</td>
+                    </tr>
+                    <tr>
+                        <td>cell 3</td>
+                        <td>cell 4</td>
+                    </tr>
+                </table>
+                <p></p>
+                <button onclick="testDeleteCaptionFuncOfTable();">click to check deleteCaption() of table</button>
+                <p></p>
+                <div id="showbox_table17"></div>
+            </div>
+
+            <div class="tab-pane" id="deleteRow_func_dom_js">
+                <h3>此页面用于测试javascript dom中的table对象中的deleteRow()</h3>
+                <table id="table18" border="1">
+                    <tr>
+                        <td>cell 1</td>
+                        <td>cell 2</td>
+                    </tr>
+                    <tr>
+                        <td>cell 3</td>
+                        <td>cell 4</td>
+                    </tr>
+                </table>
+                <p></p>
+                <button onclick="testDeleteRowFuncOfTable();">click to check deleteRow() of table</button>
+                <p></p>
+                <div id="showbox_table18"></div> 
+            </div>
+
+            <div class="tab-pane" id="deleteTFoot_func_dom_js">
+                <h3>此页面用于测试javascript dom中的table对象中的deleteTFoot()</h3>
+                 <table id="table19" border="1">
+                    <thead>
+                        <tr>
+                            <td>cell 1</td>
+                            <td>cell 2</td>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <td>cell 3</td>
+                            <td>cell 4</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <p></p>
+                <button onclick="testDeleteTFootFuncOfTable();">click to check deleteTFoot() of table</button>
+                <p></p>
+                <div id="showbox_table19"></div>
+            </div>
+
+            <div class="tab-pane" id="deleteTHead_func_dom_js">
+                <h3>此页面用于测试javascript dom中的table对象中的deleteTHead()</h3>
+                 <table id="table20" border="1">
+                    <thead>
+                        <tr>
+                            <td>cell 1</td>
+                            <td>cell 2</td>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <td>cell 3</td>
+                            <td>cell 4</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <p></p>
+                <button onclick="testDeleteTHeadFuncOfTable();">click to check deleteTHead() of table</button>
+                <p></p>
+                <div id="showbox_table20"></div>
+            </div>
+
+            <div class="tab-pane" id="insertRow_func_dom_js">
+                <h3>此页面用于测试javascript dom中的table对象中的insertRow()</h3>
+                 <table id="table21" border="1">
+                    <tr>
+                        <td>cell 1</td>
+                        <td>cell 2</td>
+                    </tr>
+                    <tr>
+                        <td>cell 3</td>
+                        <td>cell 4</td>
+                    </tr>
+                </table>
+                <p></p>
+                <button onclick="testInsertRowFuncOfTable();">click to check insertRow() of table</button>
+                <p></p>
+                <div id="showbox_table21"></div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

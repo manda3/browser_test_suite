@@ -1,0 +1,479 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/main.js">
+    </script>
+    <script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("tbody_html.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("sup_html.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../../index.htm", "_self", false);
+        }
+    </script>
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回首页</button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <ul class="nav nav-pills" id="tabs">
+            <li class="active"><a href="#table" data-toggle="tab">table</a></li>
+            <li><a href="#border" data-toggle="tab">border</a></li>
+            <li><a href="#cellpadding" data-toggle="tab">cellpadding</a></li>
+            <li><a href="#cellspacing" data-toggle="tab">cellspacing</a></li>
+            <li><a href="#frame" data-toggle="tab">frame</a></li>
+            <li><a href="#rules" data-toggle="tab">rules</a></li>
+            <li><a href="#width" data-toggle="tab">width</a></li>
+            <li><a href="#summary" data-toggle="tab">summary</a></li>
+        </ul>
+
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="table">
+                <h3>此页面用于测试&lt;table&gt;标签</h3>
+                <table border="1">
+                    <tr>
+                        <th>种类</th>
+                        <th>单价</th>
+                        <th>数量</th>
+                        <th>总价</th>
+                    </tr>
+                    <tr>
+                        <td>苹果</td>
+                        <td>10.0</td>
+                        <td>5.0</td>
+                        <td>50.0</td>
+                    </tr>
+                    <tr>
+                        <td>橘子</td>
+                        <td>8.0</td>
+                        <td>6.0</td>
+                        <td>48.0</td>
+                    </tr>
+                    <tr>
+                        <td>氢弹</td>
+                        <td>2.0</td>
+                        <td>100.0</td>
+                        <td>200.0</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="tab-pane" id="border">
+                <h3>此页面用于测试&lt;table&gt;标签border</h3>
+                <p>有边框：</p>
+                <table border="1">
+                    <tr>
+                        <th>种类</th>
+                        <th>单价</th>
+                        <th>数量</th>
+                        <th>总价</th>
+                    </tr>
+                    <tr>
+                        <td>苹果</td>
+                        <td>10.0</td>
+                        <td>5.0</td>
+                        <td>50.0</td>
+                    </tr>
+                    <tr>
+                        <td>橘子</td>
+                        <td>8.0</td>
+                        <td>6.0</td>
+                        <td>48.0</td>
+                    </tr>
+                    <tr>
+                        <td>氢弹</td>
+                        <td>2.0</td>
+                        <td>100.0</td>
+                        <td>200.0</td>
+                    </tr>
+                </table>
+                <p></p>
+                <p>无边框：</p>
+                <table>
+                    <tr>
+                        <th>种类</th>
+                        <th>单价</th>
+                        <th>数量</th>
+                        <th>总价</th>
+                    </tr>
+                    <tr>
+                        <td>苹果</td>
+                        <td>10.0</td>
+                        <td>5.0</td>
+                        <td>50.0</td>
+                    </tr>
+                    <tr>
+                        <td>橘子</td>
+                        <td>8.0</td>
+                        <td>6.0</td>
+                        <td>48.0</td>
+                    </tr>
+                    <tr>
+                        <td>氢弹</td>
+                        <td>2.0</td>
+                        <td>100.0</td>
+                        <td>200.0</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="tab-pane" id="cellpadding">
+                <h3>此页面用于测试&lt;table&gt;标签cellpadding</h3>
+                <p>此属性在html5中废除，不建议使用，使用css代替</p>
+                <table border="1">
+                    <tr>
+                        <th>种类</th>
+                        <th>单价</th>
+                        <th>数量</th>
+                        <th>总价</th>
+                    </tr>
+                    <tr>
+                        <td>苹果</td>
+                        <td>10.0</td>
+                        <td>5.0</td>
+                        <td>50.0</td>
+                    </tr>
+                    <tr>
+                        <td>橘子</td>
+                        <td>8.0</td>
+                        <td>6.0</td>
+                        <td>48.0</td>
+                    </tr>
+                    <tr>
+                        <td>氢弹</td>
+                        <td>2.0</td>
+                        <td>100.0</td>
+                        <td>200.0</td>
+                    </tr>
+                </table>
+                <p></p>
+                <table border="1" cellpadding="15">
+                    <tr>
+                        <th>种类</th>
+                        <th>单价</th>
+                        <th>数量</th>
+                        <th>总价</th>
+                    </tr>
+                    <tr>
+                        <td>苹果</td>
+                        <td>10.0</td>
+                        <td>5.0</td>
+                        <td>50.0</td>
+                    </tr>
+                    <tr>
+                        <td>橘子</td>
+                        <td>8.0</td>
+                        <td>6.0</td>
+                        <td>48.0</td>
+                    </tr>
+                    <tr>
+                        <td>氢弹</td>
+                        <td>2.0</td>
+                        <td>100.0</td>
+                        <td>200.0</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="tab-pane" id="cellspacing">
+                <h3>此页面用于测试&lt;table&gt;标签cellspacing</h3>
+                <p>此属性在html5中废除，不建议使用，使用css代替</p>
+                
+                <a href="./table_attribute_html/table_cellspacing_html.html">点击查看</a>
+                
+            </div>
+
+            <div class="tab-pane" id="frame">
+                <h3>此页面用于测试&lt;table&gt;标签frame</h3>
+                <p>此属性在html5中废除，不建议使用，使用css代替</p>
+                <table border="1" frame="box">
+                    <tr>
+                        <th>种类</th>
+                        <th>单价</th>
+                        <th>数量</th>
+                        <th>总价</th>
+                    </tr>
+                    <tr>
+                        <td>苹果</td>
+                        <td>10.0</td>
+                        <td>5.0</td>
+                        <td>50.0</td>
+                    </tr>
+                    <tr>
+                        <td>橘子</td>
+                        <td>8.0</td>
+                        <td>6.0</td>
+                        <td>48.0</td>
+                    </tr>
+                    
+                </table>
+                <p></p>
+                <p></p>
+                <table border="1" frame="above">
+                    <tr>
+                        <th>种类</th>
+                        <th>单价</th>
+                        <th>数量</th>
+                        <th>总价</th>
+                    </tr>
+                    <tr>
+                        <td>苹果</td>
+                        <td>10.0</td>
+                        <td>5.0</td>
+                        <td>50.0</td>
+                    </tr>
+                    <tr>
+                        <td>橘子</td>
+                        <td>8.0</td>
+                        <td>6.0</td>
+                        <td>48.0</td>
+                    </tr>
+                    
+                </table>
+                <p></p>
+                <p></p>
+                <table border="1" frame="below">
+                    <tr>
+                        <th>种类</th>
+                        <th>单价</th>
+                        <th>数量</th>
+                        <th>总价</th>
+                    </tr>
+                    <tr>
+                        <td>苹果</td>
+                        <td>10.0</td>
+                        <td>5.0</td>
+                        <td>50.0</td>
+                    </tr>
+                    <tr>
+                        <td>橘子</td>
+                        <td>8.0</td>
+                        <td>6.0</td>
+                        <td>48.0</td>
+                    </tr>
+                    
+                </table>
+                <p></p>
+                <p></p>
+                <table border="1" frame="hsides">
+                    <tr>
+                        <th>种类</th>
+                        <th>单价</th>
+                        <th>数量</th>
+                        <th>总价</th>
+                    </tr>
+                    <tr>
+                        <td>苹果</td>
+                        <td>10.0</td>
+                        <td>5.0</td>
+                        <td>50.0</td>
+                    </tr>
+                    <tr>
+                        <td>橘子</td>
+                        <td>8.0</td>
+                        <td>6.0</td>
+                        <td>48.0</td>
+                    </tr>
+                    
+                </table>
+                <p></p>
+                <p></p>
+                <table border="1" frame="vsides">
+                    <tr>
+                        <th>种类</th>
+                        <th>单价</th>
+                        <th>数量</th>
+                        <th>总价</th>
+                    </tr>
+                    <tr>
+                        <td>苹果</td>
+                        <td>10.0</td>
+                        <td>5.0</td>
+                        <td>50.0</td>
+                    </tr>
+                    <tr>
+                        <td>橘子</td>
+                        <td>8.0</td>
+                        <td>6.0</td>
+                        <td>48.0</td>
+                    </tr>
+                    
+                </table>
+            </div>
+
+            <div class="tab-pane" id="rules">
+                <h3>此页面用于测试&lt;table&gt;标签rules</h3>
+                <p>此属性在html5中废除，不建议使用，使用css代替</p>
+                <table rules="rows">
+                    <tr>
+                        <th>种类</th>
+                        <th>单价</th>
+                        <th>数量</th>
+                        <th>总价</th>
+                    </tr>
+                    <tr>
+                        <td>苹果</td>
+                        <td>10.0</td>
+                        <td>5.0</td>
+                        <td>50.0</td>
+                    </tr>
+                    <tr>
+                        <td>橘子</td>
+                        <td>8.0</td>
+                        <td>6.0</td>
+                        <td>48.0</td>
+                    </tr>
+                    <tr>
+                        <td>氢弹</td>
+                        <td>2.0</td>
+                        <td>100.0</td>
+                        <td>200.0</td>
+                    </tr>
+                </table>
+                <p></p>
+                <table rules="cols">
+                    <tr>
+                        <th>种类</th>
+                        <th>单价</th>
+                        <th>数量</th>
+                        <th>总价</th>
+                    </tr>
+                    <tr>
+                        <td>苹果</td>
+                        <td>10.0</td>
+                        <td>5.0</td>
+                        <td>50.0</td>
+                    </tr>
+                    <tr>
+                        <td>橘子</td>
+                        <td>8.0</td>
+                        <td>6.0</td>
+                        <td>48.0</td>
+                    </tr>
+                    <tr>
+                        <td>氢弹</td>
+                        <td>2.0</td>
+                        <td>100.0</td>
+                        <td>200.0</td>
+                    </tr>
+                </table>
+                <p></p>
+                <table rules="all">
+                    <tr>
+                        <th>种类</th>
+                        <th>单价</th>
+                        <th>数量</th>
+                        <th>总价</th>
+                    </tr>
+                    <tr>
+                        <td>苹果</td>
+                        <td>10.0</td>
+                        <td>5.0</td>
+                        <td>50.0</td>
+                    </tr>
+                    <tr>
+                        <td>橘子</td>
+                        <td>8.0</td>
+                        <td>6.0</td>
+                        <td>48.0</td>
+                    </tr>
+                    <tr>
+                        <td>氢弹</td>
+                        <td>2.0</td>
+                        <td>100.0</td>
+                        <td>200.0</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="tab-pane" id="width">
+                <h3>此页面用于测试&lt;table&gt;标签width</h3>
+                <p>此属性在html5中废除，不建议使用，使用css代替</p>
+                <table width="400" border="1">
+                    <tr>
+                        <th>种类</th>
+                        <th>单价</th>
+                        <th>数量</th>
+                        <th>总价</th>
+                    </tr>
+                    <tr>
+                        <td>苹果</td>
+                        <td>10.0</td>
+                        <td>5.0</td>
+                        <td>50.0</td>
+                    </tr>
+                    <tr>
+                        <td>橘子</td>
+                        <td>8.0</td>
+                        <td>6.0</td>
+                        <td>48.0</td>
+                    </tr>
+                    <tr>
+                        <td>氢弹</td>
+                        <td>2.0</td>
+                        <td>100.0</td>
+                        <td>200.0</td>
+                    </tr>
+                </table>
+
+            </div>
+
+            <div class="tab-pane" id="summary">
+                <h3>此页面用于测试&lt;table&gt;标签summary</h3>
+                <p>此属性没有视觉效果，并在html5中废除，不建议使用，使用css代替</p>
+                <table border="1" summary="oh, no, fruits!">
+                    <tr>
+                        <th>种类</th>
+                        <th>单价</th>
+                        <th>数量</th>
+                        <th>总价</th>
+                    </tr>
+                    <tr>
+                        <td>苹果</td>
+                        <td>10.0</td>
+                        <td>5.0</td>
+                        <td>50.0</td>
+                    </tr>
+                    <tr>
+                        <td>橘子</td>
+                        <td>8.0</td>
+                        <td>6.0</td>
+                        <td>48.0</td>
+                    </tr>
+                    <tr>
+                        <td>氢弹</td>
+                        <td>2.0</td>
+                        <td>100.0</td>
+                        <td>200.0</td>
+                    </tr>
+                </table>
+            </div>
+    </div>
+</body>
+</html>

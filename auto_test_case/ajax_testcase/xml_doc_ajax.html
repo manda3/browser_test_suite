@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/main.js">
+    </script>
+    <script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/ajax_test.js"></script>
+
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("xml_node_ajax.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("xml_http_request_ajax.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../../index.htm", "_self", false);
+        }
+		
+			</script>
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回首页</button>
+        </div>
+    </div>
+    
+    <h2>save()</h2>
+    <div id="result-save"></div>
+	<script type="text/javascript">
+	
+	
+    </script>
+    
+    <h2>load()</h2>
+    <div id="result-load"></div>
+	<script type="text/javascript">
+	
+	
+    </script>
+    
+    <h2>getElementsByTagName()</h2>
+	<div>
+	<input name="myInput" type="text" size="20" /><br />
+	<input name="myInput" type="text" size="20" /><br />
+	<input name="myInput" type="text" size="20" /><br />
+	<br />
+	<input type="button" onclick="getElements()" value="How many input elements?" />	
+	</div>
+    
+    <h2>createElement()</h2>
+	<script type="text/javascript">
+	xmlDoc=loadXMLDoc("books.xml");
+	
+	newel=xmlDoc.createElement("edition");
+	newtext=xmlDoc.createTextNode("first");
+	newel.appendChild(newtext);
+	
+	x=xmlDoc.getElementsByTagName("book")[0];
+	x.appendChild(newel);
+	
+	//Output title and edition
+	document.write(x.getElementsByTagName("title")[0].childNodes[0].nodeValue);
+	document.write(" - Edition: ");
+	document.write(x.getElementsByTagName("edition")[0].childNodes[0].nodeValue);
+    </script>
+    
+    <h2>createTextNode()</h2>
+	<script type="text/javascript">
+	xmlDoc=loadXMLDoc("books.xml");
+
+	newel=xmlDoc.createElement("edition");
+	newtext=xmlDoc.createTextNode("first");
+	newel.appendChild(newtext);
+	
+	x=xmlDoc.getElementsByTagName("book")[0];
+	x.appendChild(newel);
+	
+	//Output title and edition
+	document.write(x.getElementsByTagName("title")[0].childNodes[0].nodeValue);
+	document.write(" - Edition: ");
+	document.write(x.getElementsByTagName("edition")[0].childNodes[0].nodeValue);
+	
+    </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/main.js">
+    </script>
+    <script type="text/javascript" src="../js/JSTestCaseLib/math_object_test.js"></script>
+
+    <script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("number_js.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("boolean_js.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../../index.htm", "_self", false);
+        }
+    </script>
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回首页</button>
+        </div>
+    </div>
+    
+    <div class="content">
+         <ul class="nav nav-pills" id="tabs">
+            <li class="active"><a href="#one_math" data-toggle="tab">page 1</a></li>
+            <li><a href="#two_math" data-toggle="tab">page 2</a></li>
+            <li><a href="#three_math" data-toggle="tab">page 3</a></li>
+            <li><a href="#four_math" data-toggle="tab">page 4</a></li>
+
+        </ul>
+        
+        <div class="tab-content">
+        <div class="tab-pane active" id="one_math">
+            <h3>此页面用于测试javascript的math对象</h3>
+            <div class="content_item" id="E_math">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="content_item" id="LN2_math">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="content_item" id="LN10_math">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="content_item" id="LOG2E_math">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="content_item" id="LOG10E_math">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="content_item" id="PI_math">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="content_item" id="SQRT1_2_math">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="content_item" id="SQRT2_math">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+        <div class="tab-pane" id="two_math">
+            <h3>此页面用于测试javascript的math对象</h3>
+            <div class="content_item" id="abs_func_math">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="content_item" id="acos_func_math">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="content_item" id="asin_func_math">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="content_item" id="atan_func_math">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="content_item" id="atan2_func_math">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="content_item" id="ceil_func_math">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="content_item" id="cos_func_math">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="content_item" id="exp_func_math">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+        <div class="tab-pane" id="three_math">
+            <h3>此页面用于测试javascript的math对象</h3>
+            <div class="content_item" id="floor_func_math">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="content_item" id="log_func_math">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="content_item" id="max_func_math">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="content_item" id="min_func_math">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="content_item" id="pow_func_math">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="content_item" id="random_func_math">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="content_item" id="round_func_math">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="content_item" id="sin_func_math">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+        <div class="tab-pane" id="four_math">
+            <h3>此页面用于测试javascript的math对象</h3>
+            <div class="content_item" id="sqrt_func_math">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="content_item" id="tan_func_math">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="content_item" id="toSource_func_math">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="content_item" id="valueOf_func_math">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            
+        </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        testMathObject ();
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../../css/style.css">
+	<link rel="stylesheet" href="../../css/bootstrap.min.css">
+
+	<script type="text/javascript">
+		function goBack () {
+            window.open("../area_html.html", "_self", false);
+        }
+	</script>
+</head>
+<body>
+	<div id="content">
+		<button type="button" class="btn btn-primary" onclick="goBack()">返回</button>
+		<br></br>
+        <h4>此页面用于测试&lt;area&gt;标签的target属性</h4>
+        
+		<img src="../../images/Aurora.gif" alt="Aurora" usemap="#aurora" height="300px" width="400px">
+        <map name="aurora">
+        	<area shape="rect" coords="0,0,100,100" href="../area_attribute_html/area_test_html.html" alt="aurora" target="showBox">
+        </map>
+
+        <iframe name="showBox" src="" frameborder="0" height="200px" width="200px"></iframe>
+		<br></br>
+        <button type="button" class="btn btn-primary" onclick="goBack()">返回</button>
+	</div>
+</body>
+</html>

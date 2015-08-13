@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/main.js">
+    </script>
+    <script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("content_css.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("background_css.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../../index.htm", "_self", false);
+        }
+    </script>
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回首页</button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <ul class="nav nav-pills" id="tabs">
+            <li class="active"><a href="#border_css" data-toggle="tab">border</a></li>
+            <li><a href="#border-color_css" data-toggle="tab">border-color</a></li>
+            <li><a href="#border-style_css" data-toggle="tab">border-style</a></li>
+            <li><a href="#border-width_css" data-toggle="tab">border-width</a></li>
+        </ul>
+
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="border_css">
+                <h3>此页面用于测试边框属性中的border</h3>
+                <div></div>
+
+            </div>
+
+            <div class="tab-pane" id="border-color_css">
+                <h3>此页面用于测试边框属性中的border-color</h3>
+                
+                <div id="border-color-origin_css">border-color</div>
+                <div id="border-top-color_border-color_css">border-top-color</div>
+                <div id="border-bottom-color_border-color_css">border-bottom-color</div>
+                <div id="border-left-color_border-color_css">border-left-color</div>
+                <div id="border-right-color_border-color_css">border-right-color</div>
+                <div id="outline-color_border-color_css">outline-color</div>
+
+            </div>
+
+            <div class="tab-pane" id="border-style_css">
+                <h3>此页面用于测试边框属性中的border-style</h3>
+
+                <div id="border-style-origin_css">border-style</div>
+                <div id="border-top-style_border-style_css">border-top-style</div>
+                <div id="border-bottom-style_border-style_css">border-bottom-style</div>
+                <div id="border-left-style_border-style_css">border-left-style</div>
+                <div id="border-right-style_border-style_css">border-right-style</div>
+                <div id="outline-style_border-style_css">outline-style</div>
+            
+            </div>
+
+            <div class="tab-pane" id="border-width_css">
+                <h3>此页面用于测试边框属性中的border-width</h3>
+
+                <div id="border-width-origin_css">border-width(25px)</div>
+                <div id="border-top-width_border-width_css">border-top-width(20px)</div>
+                <div id="border-bottom-width_border-width_css">border-bottom-width(5px)</div>
+                <div id="border-left-width_border-width_css">border-left-width(10px)</div>
+                <div id="border-right-width_border-width_css">border-right-width(15px)</div>
+                <div id="outline-width_border-width_css">outline-width(5px)</div>
+             
+            </div>
+        </div>
+    </div>
+</body>
+</html>

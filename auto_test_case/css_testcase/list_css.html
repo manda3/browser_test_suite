@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/main.js">
+    </script>
+    <script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("location_css.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("font_css.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../../index.htm", "_self", false);
+        }
+    </script>
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回首页</button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <ul class="nav nav-pills" id="tabs">
+            <li class="active"><a href="#list-style_css" data-toggle="tab">list-style</a></li>
+            <li><a href="#list-style-image_css" data-toggle="tab">list-style-image</a></li>
+            <li><a href="#list-style-position_css" data-toggle="tab">list-style-position</a></li>
+            <li><a href="#list-style-type_css" data-toggle="tab">list-style-type</a></li>
+        </ul>
+
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="list-style_css">
+                <h3>此页面用于测试列表属性中的list-style</h3>
+                <ul id="one">
+                    List
+                    <li>List Item 1</li>
+                    <li>List Item 2</li>
+                    <li>List Item 3</li>
+                    <li>List Item 4</li>
+                </ul>
+                <ul id="two">
+                    List2
+                    <li>List Item 1</li>
+                    <li>List Item 2</li>
+                    <li>List Item 3</li>
+                    <li>List Item 4</li>
+                </ul>
+                <ul id="three">
+                    List3
+                    <li>List Item 1</li>
+                    <li>List Item 2</li>
+                    <li>List Item 3</li>
+                    <li>List Item 4</li>
+                </ul>
+            </div>
+
+            <div class="tab-pane" id="list-style-image_css">
+                <h3>此页面用于测试列表属性中的list-style-image</h3>
+                <ul>
+                    List
+                    <li>List Item 1</li>
+                    <li>List Item 2</li>
+                    <li>List Item 3</li>
+                    <li>List Item 4</li>
+                </ul>
+            </div>
+
+            <div class="tab-pane" id="list-style-position_css">
+                <h3>此页面用于测试列表属性中的list-style-position</h3>
+                <ul id="inside">
+                    inside:
+                    <li>List Item 1</li>
+                    <li>List Item 2</li>
+                    <li>List Item 3</li>
+                    <li>List Item 4</li>
+                </ul>
+                <ul id="outside">
+                    outside:
+                    <li>List Item 1</li>
+                    <li>List Item 2</li>
+                    <li>List Item 3</li>
+                    <li>List Item 4</li>
+                </ul>
+            </div>
+
+            <div class="tab-pane" id="list-style-type_css">
+                <h3>此页面用于测试列表属性中的list-style-type</h3>
+                <ul id="circle">
+                    circle:
+                    <li>List Item 1</li>
+                    <li>List Item 2</li>
+                    <li>List Item 3</li>
+                    <li>List Item 4</li>
+                </ul>
+                <ul id="square">
+                    square:
+                    <li>List Item 1</li>
+                    <li>List Item 2</li>
+                    <li>List Item 3</li>
+                    <li>List Item 4</li>
+                </ul>
+            </div>
+    </div>
+</body>
+</html>

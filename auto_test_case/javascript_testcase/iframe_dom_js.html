@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/main.js">
+    </script>
+    <script type="text/javascript" src="../js/JSTestCaseLib/iframe_dom_test.js"></script>
+    <script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("image_dom_js.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("frameset_dom_js.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../../index.htm", "_self", false);
+        }
+    </script>
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回首页</button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <ul class="nav nav-pills" id="tabs">
+            <li class="active"><a href="#align_dom_js" data-toggle="tab">align</a></li>
+            <li><a href="#contentDocument_dom_js" data-toggle="tab">contentDocument</a></li>
+            <li><a href="#frameBorder_dom_js" data-toggle="tab">frameBorder</a></li>
+            <li><a href="#height_dom_js" data-toggle="tab">height</a></li>
+            <li><a href="#id_dom_js" data-toggle="tab">id</a></li>
+            <li><a href="#longDesc_dom_js" data-toggle="tab">longDesc</a></li>
+            <li><a href="#marginHeight_dom_js" data-toggle="tab">marginHeight</a></li>
+            <li><a href="#marginWidth_dom_js" data-toggle="tab">marginWidth</a></li>
+            <li><a href="#scrolling_dom_js" data-toggle="tab">scrolling</a></li>
+            <li><a href="#name_dom_js" data-toggle="tab">name</a></li>
+            <li><a href="#src_dom_js" data-toggle="tab">src</a></li>
+            <li><a href="#width_dom_js" data-toggle="tab">width</a></li>
+        </ul>
+
+         <div class="tab-content">
+
+            <div class="tab-pane active" id="align_dom_js">
+                <h3>此页面用于测试javascript dom中的iframe对象中的align</h3>
+                <button onclick="testAlignOfIfm();">click to check align of iframe</button>
+                <p></p>
+                <iframe src="./iframe_dom_js/iframe_test_js.html" height="200px" width="200px" id="ex1_ifm1"></iframe>
+                <iframe src="./iframe_dom_js/iframe_test_js.html" height="300px" width="200px" id="ex2_ifm1"></iframe>
+                <p></p>
+                
+                <div id="showbox_ifm1"></div>
+            </div>
+            
+            <div class="tab-pane" id="contentDocument_dom_js">
+                <h3>此页面用于测试javascript dom中的iframe对象中的contentDocument</h3>
+                <button onclick="testContentDocumentOfIfm();">click to check contentDocument of iframe</button>
+                <p></p>
+                <iframe src="./iframe_dom_js/iframe_test_js.html" height="200px" width="200px" id="ex1_ifm2"></iframe>
+                <iframe src="./iframe_dom_js/iframe_test_js.html" height="300px" width="200px" id="ex2_ifm2"></iframe>
+                <p></p>
+                
+                <div id="showbox_ifm2"></div>
+            </div>
+
+            <div class="tab-pane" id="frameBorder_dom_js">
+                <h3>此页面用于测试javascript dom中的iframe对象中的frameBorder</h3>
+                <button onclick="testFrameBorderOfIfm();">click to turn off frameBorder of iframe2</button>
+                <p></p>
+                <iframe src="./iframe_dom_js/iframe_test_js.html" height="200px" width="200px" id="ex1_ifm3"></iframe>
+                <iframe src="./iframe_dom_js/iframe_test_js.html" height="300px" width="200px" id="ex2_ifm3"></iframe>
+                <p></p>
+                
+                <div id="showbox_ifm3"></div>
+            </div>
+
+            <div class="tab-pane" id="height_dom_js">
+                <h3>此页面用于测试javascript dom中的iframe对象中的height</h3>
+                <button onclick="testHeightOfIfm();">click to check height of iframe</button>
+                <p></p>
+                <iframe src="./iframe_dom_js/iframe_test_js.html" height="200px" width="200px" id="ex1_ifm4"></iframe>
+                <iframe src="./iframe_dom_js/iframe_test_js.html" height="300px" width="200px" id="ex2_ifm4"></iframe>
+                <p></p>
+                
+                <div id="showbox_ifm4"></div>
+            </div>
+
+            <div class="tab-pane" id="id_dom_js">
+                <h3>此页面用于测试javascript dom中的iframe对象中的id</h3>
+                <button onclick="testIdOfIfm();">click to check id of iframe</button>
+                <p></p>
+                <iframe src="./iframe_dom_js/iframe_test_js.html" height="200px" width="200px" id="ex1_ifm5"></iframe>
+                <iframe src="./iframe_dom_js/iframe_test_js.html" height="300px" width="200px" id="ex2_ifm5"></iframe>
+                <p></p>
+                
+                <div id="showbox_ifm5"></div>
+            </div>
+
+            <div class="tab-pane" id="longDesc_dom_js">
+                <h3>此页面用于测试javascript dom中的iframe对象中的longDesc</h3>
+                <button onclick="testLongDescOfIfm();">click to check longDesc of iframe</button>
+                <p></p>
+                <iframe src="./iframe_dom_js/iframe_test_js.html" height="200px" width="200px" id="ex1_ifm6" longdesc="w3s.txt"></iframe>
+                <iframe src="./iframe_dom_js/iframe_test_js.html" height="300px" width="200px" id="ex2_ifm6" longdesc="w3c.txt"></iframe>
+                <p></p>
+                
+                <div id="showbox_ifm6"></div>
+            </div>
+
+            <div class="tab-pane" id="marginHeight_dom_js">
+                <h3>此页面用于测试javascript dom中的iframe对象中的marginHeight</h3>
+                <button onclick="testMarginHeightOfIfm();">click to change marginHeight of iframe</button>
+                <p></p>
+                <iframe src="./iframe_dom_js/iframe_test_js.html" width="200px" id="ex1_ifm7"></iframe>
+                <iframe src="./iframe_dom_js/iframe_test_js.html" width="200px" id="ex2_ifm7"></iframe>
+                <p></p>
+                
+                <div id="showbox_ifm7"></div>
+            </div>
+
+            <div class="tab-pane" id="marginWidth_dom_js">
+                <h3>此页面用于测试javascript dom中的iframe对象中的marginWidth</h3>
+                <button onclick="testMarginWidthOfIfm();">click to change marginWidth of iframe</button>
+                <p></p>
+                <iframe src="./iframe_dom_js/iframe_test_js.html" height="200px" id="ex1_ifm8"></iframe>
+                <iframe src="./iframe_dom_js/iframe_test_js.html" height="200px" id="ex2_ifm8"></iframe>
+                <p></p>
+                
+                <div id="showbox_ifm8"></div>
+            </div>
+
+            <div class="tab-pane" id="scrolling_dom_js">
+                <h3>此页面用于测试javascript dom中的iframe对象中的scrolling</h3>
+                <button onclick="testScrollingOfIfm();">click to change scrolling of iframe</button>
+                <p></p>
+                <iframe src="./iframe_dom_js/iframe_test_js.html" height="200px" id="ex1_ifm9"></iframe>
+                <iframe src="./iframe_dom_js/iframe_test_js.html" height="200px" id="ex2_ifm9"></iframe>
+                <p></p>
+                
+                <div id="showbox_ifm9"></div>
+            </div>
+
+            <div class="tab-pane" id="name_dom_js">
+                <h3>此页面用于测试javascript dom中的iframe对象中的name</h3>
+                <button onclick="testNameOfIfm();">click to check name of iframe</button>
+                <p></p>
+                <iframe src="./iframe_dom_js/iframe_test_js.html" height="200px" id="ex1_ifm10" name="ifm1"></iframe>
+                <iframe src="./iframe_dom_js/iframe_test_js.html" height="200px" id="ex2_ifm10" name="ifm2"></iframe>
+                <p></p>
+                
+                <div id="showbox_ifm10"></div>
+            </div>
+
+            <div class="tab-pane" id="src_dom_js">
+                <h3>此页面用于测试javascript dom中的iframe对象中的src</h3>
+                <button onclick="testSrcOfIfm();">click to change src of iframe</button>
+                <p></p>
+                <iframe src="./iframe_dom_js/iframe_test_js.html" height="200px" id="ex1_ifm11"></iframe>
+                <iframe src="./iframe_dom_js/iframe_test_js.html" height="200px" id="ex2_ifm11"></iframe>
+                <p></p>
+                
+                <div id="showbox_ifm11"></div>
+            </div>
+
+            <div class="tab-pane" id="width_dom_js">
+                <h3>此页面用于测试javascript dom中的iframe对象中的width</h3>
+                <button onclick="testWidthOfIfm();">click to change width of iframe</button>
+                <p></p>
+                <iframe src="./iframe_dom_js/iframe_test_js.html" height="200px" id="ex1_ifm12"></iframe>
+                <iframe src="./iframe_dom_js/iframe_test_js.html" height="200px" id="ex2_ifm12"></iframe>
+                <p></p>
+                
+                <div id="showbox_ifm12"></div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

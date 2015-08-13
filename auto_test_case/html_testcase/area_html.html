@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/main.js">
+    </script>
+    <script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("b_html.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("address_html.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../../index.htm", "_self", false);
+        }
+    </script>
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回首页</button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <ul class="nav nav-pills" id="tabs">
+            <li class="active"><a href="#area" data-toggle="tab">area</a></li>
+            <li><a href="#alt" data-toggle="tab">alt</a></li>
+            <li><a href="#coords" data-toggle="tab">coords</a></li>
+            <li><a href="#href" data-toggle="tab">href</a></li>
+            <li><a href="#nohref" data-toggle="tab">nohref</a></li>
+            <li><a href="#shape" data-toggle="tab">shape</a></li>
+            <li><a href="#target" data-toggle="tab">target</a></li>
+        </ul>
+        
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="area">
+                <img src="../images/Aurora.gif" alt="Aurora" usemap="#aurora">
+                <map name="aurora">
+                	<area shape="rect" coords="0,0,100,100" href="./area_attribute_html/area_test_html.html" alt="aurora">
+                    <area shape="circle" coords="200,200,50" href="./area_attribute_html/area_test_html.html" alt="aurora">
+                </map>
+            </div>
+
+            <div class="tab-pane" id="alt">
+                <a href="./area_attribute_html/area_alt_html.html">点击查看</a>
+            </div>
+            
+            <div class="tab-pane" id="coords">
+            	<a href="./area_attribute_html/area_coords_html.html">点击查看</a>
+            </div>
+            
+            <div class="tab-pane" id="href">
+            	<a href="./area_attribute_html/area_href_html.html">点击查看</a>
+            </div>
+            
+            <div class="tab-pane" id="nohref">
+            	<a href="./area_attribute_html/area_nohref_html.html">点击查看</a>
+
+                <p>此属性不被所有主流浏览器支持，并已在html5中废除，如无特殊且变态的需要，则不建议使用。</p>
+            </div>
+            
+            <div class="tab-pane" id="shape">
+            	<a href="./area_attribute_html/area_shape_html.html">点击查看</a>
+            </div>
+            
+            <div class="tab-pane" id="target">
+            	<a href="./area_attribute_html/area_target_html.html">点击查看</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

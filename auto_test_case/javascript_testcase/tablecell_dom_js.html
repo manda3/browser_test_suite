@@ -1,0 +1,245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/main.js">
+    </script>
+    <script type="text/javascript" src="../js/JSTestCaseLib/tablecell_dom_test.js"></script>
+    
+    <script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("tablerow_dom_js.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("table_dom_js.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../../index.htm", "_self", false);
+        }
+    </script>
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回首页</button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <ul class="nav nav-pills" id="tabs">
+            <li class="active"><a href="#abbr_dom_js" data-toggle="tab">abbr</a></li>
+            <li><a href="#align_dom_js" data-toggle="tab">align</a></li>
+            <li><a href="#axis_dom_js" data-toggle="tab">axis</a></li>
+            <li><a href="#cellIndex_dom_js" data-toggle="tab">cellIndex</a></li>
+            <li><a href="#colSpan_dom_js" data-toggle="tab">colSpan</a></li>
+            <li><a href="#id_dom_js" data-toggle="tab">id</a></li>
+            <li><a href="#innerHTML_dom_js" data-toggle="tab">innerHTML</a></li>
+            <li><a href="#rowSpan_dom_js" data-toggle="tab">rowSpan</a></li>
+            <li><a href="#vAlign_dom_js" data-toggle="tab">vAlign</a></li>
+            <li><a href="#width_dom_js" data-toggle="tab">width</a></li>
+        
+        </ul>
+
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="abbr_dom_js">
+                <h3>此页面用于测试javascript dom中的tableCell对象(td)中的abbr</h3>
+                <table id="table1" border="1">
+                    <tr>
+                        <td abbr="just for test" id="tableCell1">cell 1</td>
+                        <td>cell 2</td>
+                    </tr>
+                    <tr>
+                        <td>cell 3</td>
+                        <td>cell 4</td>
+                    </tr>
+                </table>
+                <p></p>
+                <button onclick="testAbbrOfTableCell();">click to check abbr of tableCell</button>
+                <p></p>
+                <div id="showbox_tableCell1"></div>
+            </div>
+            
+            <div class="tab-pane" id="align_dom_js">
+                <h3>此页面用于测试javascript dom中的tableCell对象(td)中的align</h3>
+                <table id="table2" border="1" width="100%">
+                    <tr>
+                        <td id="tableCell2">cell 1</td>
+                        <td>cell 2</td>
+                    </tr>
+                    <tr>
+                        <td>cell 3</td>
+                        <td>cell 4</td>
+                    </tr>
+                </table>
+                <p></p>
+                <button onclick="testAlignOfTableCell();">click to check align of tableCell</button>
+                <p></p>
+                <div id="showbox_tableCell2"></div>
+            </div>
+
+            <div class="tab-pane" id="axis_dom_js">
+                <h3>此页面用于测试javascript dom中的tableCell对象(td)中的axis</h3>
+                <table id="table3" border="1">
+                    <tr>
+                        <td id="tableCell3" axis="cell">cell 1</td>
+                        <td>cell 2</td>
+                    </tr>
+                    <tr>
+                        <td>cell 3</td>
+                        <td>cell 4</td>
+                    </tr>
+                </table>
+                <p></p>
+                <button onclick="testAxisOfTableCell();">click to check axis of tableCell</button>
+                <p></p>
+                <div id="showbox_tableCell3"></div>
+            </div>
+
+            <div class="tab-pane" id="cellIndex_dom_js">
+                <h3>此页面用于测试javascript dom中的tableCell对象(td)中的cellIndex</h3>
+                <table id="table4" border="1">
+                    <tr>
+                        <td id="tableCell4">cell 1</td>
+                        <td>cell 2</td>
+                    </tr>
+                    <tr>
+                        <td>cell 3</td>
+                        <td>cell 4</td>
+                    </tr>
+                </table>
+                <p></p>
+                <button onclick="testCellIndexOfTableCell();">click to check cellIndex of tableCell</button>
+                <p></p>
+                <div id="showbox_tableCell4"></div>
+            </div>
+
+            <div class="tab-pane" id="colSpan_dom_js">
+                <h3>此页面用于测试javascript dom中的tableCell对象(td)中的colSpan</h3>
+                <table id="table5" border="1">
+                    <tr>
+                        <td id="tableCell5">cell 1</td>
+                        <td>cell 2</td>
+                    </tr>
+                    <tr>
+                        <td>cell 3</td>
+                        <td>cell 4</td>
+                    </tr>
+                </table>
+                <p></p>
+                <button onclick="testColSpanOfTableCell();">click to check colSpan of tableCell</button>
+                <p></p>
+                <div id="showbox_tableCell5"></div>
+            </div>
+
+            <div class="tab-pane" id="id_dom_js">
+                <h3>此页面用于测试javascript dom中的tableCell对象(td)中的id</h3>
+                <table id="table6" border="1">
+                    <tr>
+                        <td id="tableCell6">cell 1</td>
+                        <td>cell 2</td>
+                    </tr>
+                    <tr>
+                        <td>cell 3</td>
+                        <td>cell 4</td>
+                    </tr>
+                </table>
+                <p></p>
+                <button onclick="testIdOfTableCell();">click to check id of tableCell</button>
+                <p></p>
+                <div id="showbox_tableCell6"></div>
+            </div>
+
+            <div class="tab-pane" id="innerHTML_dom_js">
+                <h3>此页面用于测试javascript dom中的tableCell对象(td)中的innerHTML</h3>
+                <table id="table7" border="1">
+                    <tr>
+                        <td id="tableCell7">cell 1</td>
+                        <td>cell 2</td>
+                    </tr>
+                    <tr>
+                        <td>cell 3</td>
+                        <td>cell 4</td>
+                    </tr>
+                </table>
+                <p></p>
+                <button onclick="testInnerHTMLOfTableCell();">click to check innerHTML of tableCell</button>
+                <p></p>
+                <div id="showbox_tableCell7"></div>
+            </div>
+
+            <div class="tab-pane" id="rowSpan_dom_js">
+                <h3>此页面用于测试javascript dom中的tableCell对象(td)中的rowSpan</h3>
+                <table id="table8" border="1">
+                    <tr>
+                        <td id="tableCell8">cell 1</td>
+                        <td>cell 2</td>
+                    </tr>
+                    <tr>
+                        <td>cell 3</td>
+                        <td>cell 4</td>
+                    </tr>
+                </table>
+                <p></p>
+                <button onclick="testRowSpanOfTableCell();">click to check rowSpan of tableCell</button>
+                <p></p>
+                <div id="showbox_tableCell8"></div>
+            </div>
+
+            <div class="tab-pane" id="vAlign_dom_js">
+                <h3>此页面用于测试javascript dom中的tableCell对象(td)中的vAlign</h3>
+                <table id="table9" border="1" width="100%" style="height:200px">
+                    <tr>
+                        <td id="tableCell9">cell 1</td>
+                        <td>cell 2</td>
+                    </tr>
+                    <tr>
+                        <td>cell 3</td>
+                        <td>cell 4</td>
+                    </tr>
+                </table>
+                <p></p>
+                <button onclick="testVAlignOfTableCell();">click to check vAlign of tableCell</button>
+                <p></p>
+                <div id="showbox_tableCell9"></div>
+            </div>
+
+            <div class="tab-pane" id="width_dom_js">
+                <h3>此页面用于测试javascript dom中的tableCell对象(td)中的width</h3>
+                <table id="table10" border="1" width="100%">
+                    <tr>
+                        <td id="tableCell10">cell 1</td>
+                        <td>cell 2</td>
+                    </tr>
+                    <tr>
+                        <td>cell 3</td>
+                        <td>cell 4</td>
+                    </tr>
+                </table>
+                <p></p>
+                <button onclick="testWidthOfTableCell();">click to check width of tableCell</button>
+                <p></p>
+                <div id="showbox_tableCell10"></div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

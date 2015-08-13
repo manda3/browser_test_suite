@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css" id="main_css" charset="UTF-8" media="screen" rev="index" hreflang="en" name="css" type="text/css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/main.js">
+    </script>
+    <script type="text/javascript" src="../js/JSTestCaseLib/link_dom_test.js"></script>
+    <script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function goToNext () {
+            window.open("meta_dom_js.html", "_self", false);
+        }
+
+        function goToPrevious () {
+            window.open("input_dom_js.html", "_self", false);
+        }
+
+        function goToTop () {
+            window.open("../../index.htm", "_self", false);
+        }
+    </script>
+</head>
+<body>
+    <div id="header" class="row">
+        <div class="col-xs-2">
+            <button type="button" 
+            class="btn btn-primary" onclick="goToPrevious()">上一页</button>   
+        </div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToNext()">下一页</button>
+        </div>
+        <div class="col-xs-6"></div>
+        <div class="col-xs-2">
+            <button type="button"
+            class="btn btn-primary" onclick="goToTop()">返回首页</button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <ul class="nav nav-pills" id="tabs">
+            <li class="active"><a href="#charset_dom_js" data-toggle="tab">charset</a></li>
+            <li><a href="#disabled_dom_js" data-toggle="tab">disabled</a></li>
+            <li><a href="#href_dom_js" data-toggle="tab">href</a></li>
+            <li><a href="#hreflang_dom_js" data-toggle="tab">hreflang</a></li>
+            <li><a href="#id_dom_js" data-toggle="tab">id</a></li>
+            <li><a href="#media_dom_js" data-toggle="tab">media</a></li>
+            <li><a href="#name_dom_js" data-toggle="tab">name</a></li>
+            <li><a href="#rel_dom_js" data-toggle="tab">rel</a></li>
+            <li><a href="#rev_dom_js" data-toggle="tab">rev</a></li>
+            <li><a href="#type_dom_js" data-toggle="tab">type</a></li>
+            
+        </ul>
+
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="charset_dom_js">
+                <h3>此页面用于测试javascript dom中的link对象中的charset</h3>
+                <p></p>
+                <button onclick="testCharsetOfLink();">click to check charset of link</button>
+                <p></p>
+                <div id="showbox_link1"></div>
+            </div>
+
+            <div class="tab-pane" id="disabled_dom_js">
+                <h3>此页面用于测试javascript dom中的link对象中的disabled</h3>
+                <p></p>
+                <button onclick="testDisabledOfLink();">click to check disabled of link</button>
+                <p></p>
+                <div id="showbox_link2"></div>
+            </div>
+
+            <div class="tab-pane" id="href_dom_js">
+                <h3>此页面用于测试javascript dom中的link对象中的href</h3>
+                <p></p>
+                <button onclick="testHrefOfLink();">click to check href of link</button>
+                <p></p>
+                <div id="showbox_link3"></div>
+            </div>
+
+            <div class="tab-pane" id="hreflang_dom_js">
+                <h3>此页面用于测试javascript dom中的link对象中的hreflang</h3>
+                <p></p>
+                <button onclick="testHreflangOfLink();">click to check hreflang of link</button>
+                <p></p>
+                <div id="showbox_link4"></div>
+
+            </div>
+
+            <div class="tab-pane" id="id_dom_js">
+                <h3>此页面用于测试javascript dom中的link对象中的id</h3>
+                <p></p>
+                <button onclick="testIdOfLink();">click to check id of link</button>
+                <p></p>
+                <div id="showbox_link5"></div>
+
+            </div>
+
+            <div class="tab-pane" id="media_dom_js">
+                <h3>此页面用于测试javascript dom中的link对象中的media</h3>
+                <p></p>
+                <button onclick="testMediaOfLink();">click to check media of link</button>
+                <p></p>
+                <div id="showbox_link6"></div>
+            </div>
+
+            <div class="tab-pane" id="name_dom_js">
+                <h3>此页面用于测试javascript dom中的link对象中的name</h3>
+                <p>应该是没有这个属性 </p>
+                <button onclick="testNameOfLink();">click to check name of link</button>
+                <p></p>
+                <div id="showbox_link7"></div>
+            </div>
+
+            <div class="tab-pane" id="rel_dom_js">
+                <h3>此页面用于测试javascript dom中的link对象中的rel</h3>
+                <p></p>
+                <button onclick="testRelOfLink();">click to check rel of link</button>
+                <p></p>
+                <div id="showbox_link8"></div>
+            </div>
+
+            <div class="tab-pane" id="rev_dom_js">
+                <h3>此页面用于测试javascript dom中的link对象中的rev</h3>
+                <p></p>
+                <button onclick="testRevOfLink();">click to check rev of link</button>
+                <p></p>
+                <div id="showbox_link9"></div>
+            </div>
+
+            <div class="tab-pane" id="type_dom_js">
+                <h3>此页面用于测试javascript dom中的link对象中的type</h3>
+                <p></p>
+                <button onclick="testTypeOfLink();">click to check type of link</button>
+                <p></p>
+                <div id="showbox_link10"></div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+</html>
